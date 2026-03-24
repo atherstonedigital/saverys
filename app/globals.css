@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colours */
+  --color-charcoal: #2C2C2C;
+  --color-stone: #8A8275;
+  --color-clay: #A0896C;
+  --color-cream: #F5F0EB;
+  --color-linen: #EDE8E1;
+  --color-white-soft: #FAFAF8;
+  --color-ink: #1A1A1A;
+
+  /* Fonts */
+  --font-display: "Cormorant Garamond", "Georgia", serif;
+  --font-body: "Jost", "Helvetica Neue", sans-serif;
+
+  /* Easing */
+  --ease-saverys: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+  /* Durations */
+  --duration-slow: 1.2s;
+  --duration-medium: 0.8s;
+  --duration-fast: 0.5s;
+}
+
+/* Base styles */
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-cream);
+  color: var(--color-charcoal);
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Focus states */
+*:focus-visible {
+  outline: 1px solid var(--color-clay);
+  outline-offset: 2px;
+}
+
+/* Selection */
+::selection {
+  background-color: var(--color-clay);
+  color: var(--color-cream);
+}
+
+/* Scrollbar — minimal */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-cream);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-stone);
+}
