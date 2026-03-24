@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProjectGrid } from "@/components/sections/ProjectGrid";
@@ -54,22 +55,33 @@ export default function HomePage() {
         image="/images/hero/home.jpg"
       />
 
-      <section className="px-6 py-16 md:px-12 md:py-32">
+      <section className="px-6 py-16 md:px-12 md:py-24">
         <div className="mx-auto max-w-7xl">
-          <SectionReveal>
-            <Text as="h2">A studio of quiet intention</Text>
-            <Text variant="body" className="mt-6 max-w-2xl text-stone">
-              Savery&apos;s works with those who understand that true quality is
-              felt before it is seen. We compose interiors that endure — rooms
-              built on provenance, proportion, and an unhurried attention to
-              detail.
-            </Text>
-            <div className="mt-10">
-              <Button href="/about" variant="text">
-                Learn more
-              </Button>
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center md:gap-16">
+            <SectionReveal>
+              <Text as="h2">A studio of quiet intention</Text>
+              <Text variant="body" className="mt-6 max-w-2xl text-stone">
+                Savery&apos;s works with those who understand that true quality
+                is felt before it is seen. We compose interiors that endure —
+                rooms built on provenance, proportion, and an unhurried
+                attention to detail.
+              </Text>
+              <div className="mt-10">
+                <Button href="/about" variant="text">
+                  Learn more
+                </Button>
+              </div>
+            </SectionReveal>
+            <div className="relative aspect-[4/3] w-full overflow-hidden">
+              <Image
+                src="/images/projects/old-mill-details.jpg"
+                alt="Curated interior details at The Old Mill"
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             </div>
-          </SectionReveal>
+          </div>
         </div>
       </section>
 
