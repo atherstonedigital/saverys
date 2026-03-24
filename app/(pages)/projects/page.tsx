@@ -10,29 +10,46 @@ export const metadata: Metadata = {
 
 const projects = [
   {
-    name: "The Mill House",
+    name: "The Old Mill, Broadway",
     description:
-      "A considered restoration of a Georgian mill, marrying original stone with hand-finished English linen.",
+      "A considered restoration of a Cotswold mill, marrying original stone with hand-finished English linen.",
+    image: "/images/projects/old-mill-kitchen.jpg",
   },
   {
-    name: "Burford Rectory",
+    name: "The Old Mill — Bedroom Suite",
     description:
-      "Quiet elegance in a Cotswold rectory. Every room composed around the light.",
+      "Quiet elegance composed around the light. Botanical fabrics and aged oak.",
+    image: "/images/projects/old-mill-bedroom.jpg",
   },
   {
-    name: "Chipping Norton Estate",
+    name: "The Old Mill — Window Seat",
     description:
-      "An enduring country house, layered with provenance and warmth.",
+      "Intimate spaces shaped by floral prints, local stone, and the quiet rhythm of the valley.",
+    image: "/images/projects/old-mill-chair.jpg",
   },
   {
-    name: "Stow Manor",
+    name: "Jams House",
     description:
-      "A study in restraint. Natural materials and measured proportions throughout.",
+      "A country house layered with character. Exposed beams, rich velvets, and golden drapes.",
+    image: "/images/projects/jams-house-living.jpg",
   },
   {
-    name: "Windrush Cottage",
+    name: "Jams House — Reading Corner",
     description:
-      "Intimate spaces shaped by aged oak, local stone, and the quiet rhythm of the valley.",
+      "Curated cushions in muted tones. Every detail chosen for comfort and colour.",
+    image: "/images/projects/jams-house-cushions.jpg",
+  },
+  {
+    name: "The Grantly Collection",
+    description:
+      "Bold pattern meets timeless form. A patterned sofa against rich blue wallpaper.",
+    image: "/images/projects/grantly-sofa.jpg",
+  },
+  {
+    name: "Hallway Study",
+    description:
+      "A quiet corner with painted chest of drawers, botanical cushion, and a sense of calm.",
+    image: "/images/projects/hallway-chair.jpg",
   },
 ];
 
@@ -41,7 +58,7 @@ export default function ProjectsPage() {
     <>
       <Hero
         heading="The collection"
-        image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+        image="/images/hero/projects.jpg"
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">

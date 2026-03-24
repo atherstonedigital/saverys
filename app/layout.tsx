@@ -6,10 +6,23 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: SITE_NAME,
+    default: `${SITE_NAME} — Luxury Interior Design`,
     template: `%s — ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
+  openGraph: {
+    siteName: SITE_NAME,
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({
@@ -20,10 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Text } from "@/components/ui/Text";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
@@ -24,8 +25,18 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
               delay={i * 0.15}
               className={i % 3 === 0 ? "md:col-span-2" : ""}
             >
-              <div className="group">
-                <div className="aspect-[4/3] w-full bg-linen" />
+              <div className="group cursor-pointer">
+                <div className="relative aspect-[4/3] w-full overflow-hidden bg-linen">
+                  {project.image && (
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-cover transition-transform duration-700 ease-[var(--ease-saverys)] group-hover:scale-[1.02]"
+                      sizes={i % 3 === 0 ? "100vw" : "50vw"}
+                    />
+                  )}
+                </div>
                 <div className="mt-4">
                   <Text variant="caption" className="text-stone">
                     {project.name}

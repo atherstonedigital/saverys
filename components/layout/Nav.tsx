@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { NAV_LINKS } from "@/lib/constants";
 
@@ -35,11 +36,15 @@ export function Nav() {
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-          <Link
-            href="/"
-            className="font-display text-lg tracking-[0.12em] text-cream uppercase"
-          >
-            Saverys
+          <Link href="/" className="relative block h-10 w-36">
+            <Image
+              src="/logo-black.png"
+              alt="Savery's of Broadway"
+              fill
+              className="object-contain brightness-0 invert"
+              sizes="144px"
+              priority
+            />
           </Link>
 
           {/* Desktop nav */}

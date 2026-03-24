@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
@@ -12,7 +13,7 @@ export default function AboutPage() {
     <>
       <Hero
         heading="A room that remembers"
-        image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+        image="/images/hero/about.jpg"
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
@@ -20,9 +21,9 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
             <SectionReveal>
               <Text variant="body" className="text-stone">
-                Saverys is an interior design studio rooted in the Cotswolds. We
-                work with those who understand that true quality is felt before
-                it is seen.
+                Savery&apos;s is an interior design studio rooted in the
+                Cotswolds. We work with those who understand that true quality is
+                felt before it is seen.
               </Text>
               <Text variant="body" className="mt-6 text-stone">
                 Founded on the principle that restraint is the highest form of
@@ -30,6 +31,36 @@ export default function AboutPage() {
                 always existed — rooms layered with provenance, proportion, and
                 an enduring sense of calm.
               </Text>
+            </SectionReveal>
+
+            <SectionReveal delay={0.2}>
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <Image
+                  src="/images/projects/old-mill-details.jpg"
+                  alt="Curated interior details at The Old Mill"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 py-16 md:px-12 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <div className="grid grid-cols-1 gap-16 md:grid-cols-2">
+            <SectionReveal>
+              <div className="relative aspect-[4/3] w-full overflow-hidden">
+                <Image
+                  src="/images/projects/old-mill-chair.jpg"
+                  alt="Antique chair with botanical fabric"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </SectionReveal>
 
             <SectionReveal delay={0.2}>
@@ -41,9 +72,9 @@ export default function AboutPage() {
               <Text variant="body" className="mt-6 text-stone">
                 Our work draws on a network of the finest mills, workshops, and
                 artisans across Britain and Europe. We source materials of
-                genuine quality — hand-finished linens, aged timbers, stones
-                with character — because craftsmanship is never a detail. It is
-                the foundation.
+                genuine quality — hand-finished linens, aged timbers, stones with
+                character — because craftsmanship is never a detail. It is the
+                foundation.
               </Text>
             </SectionReveal>
           </div>

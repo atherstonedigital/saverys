@@ -11,7 +11,7 @@ export default function ContactPage() {
     <>
       <Hero
         heading="Get in touch"
-        image="https://images.unsplash.com/photo-1600566753086-00f18f6b6cf3?w=1920&q=80"
+        image="/images/hero/contact.jpg"
       />
       <ContactSection />
     </>

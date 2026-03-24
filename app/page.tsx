@@ -8,19 +8,22 @@ import { Button } from "@/components/ui/Button";
 
 const featuredProjects = [
   {
-    name: "The Mill House",
+    name: "The Old Mill, Broadway",
     description:
-      "A considered restoration of a Georgian mill, marrying original stone with hand-finished English linen.",
+      "A considered restoration of a Cotswold mill, marrying original stone with hand-finished English linen.",
+    image: "/images/projects/old-mill-kitchen.jpg",
   },
   {
-    name: "Burford Rectory",
+    name: "Jams House",
     description:
-      "Quiet elegance in a Cotswold rectory. Every room composed around the light.",
+      "Quiet elegance in a country house. Every room composed around the light.",
+    image: "/images/projects/jams-house-living.jpg",
   },
   {
-    name: "Chipping Norton Estate",
+    name: "The Grantly Collection",
     description:
       "An enduring country house, layered with provenance and warmth.",
+    image: "/images/projects/grantly-sofa.jpg",
   },
 ];
 
@@ -48,7 +51,7 @@ export default function HomePage() {
       <Hero
         heading="Rooms composed with care"
         subtitle="An interior design studio rooted in the Cotswolds, where craftsmanship and restraint define every space."
-        image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
+        image="/images/hero/home.jpg"
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
@@ -56,9 +59,10 @@ export default function HomePage() {
           <SectionReveal>
             <Text as="h2">A studio of quiet intention</Text>
             <Text variant="body" className="mt-6 max-w-2xl text-stone">
-              Saverys works with those who understand that true quality is felt
-              before it is seen. We compose interiors that endure — rooms built
-              on provenance, proportion, and an unhurried attention to detail.
+              Savery&apos;s works with those who understand that true quality is
+              felt before it is seen. We compose interiors that endure — rooms
+              built on provenance, proportion, and an unhurried attention to
+              detail.
             </Text>
             <div className="mt-10">
               <Button href="/about" variant="text">

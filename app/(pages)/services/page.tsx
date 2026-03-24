@@ -41,16 +41,16 @@ export default function ServicesPage() {
     <>
       <Hero
         heading="What we do"
-        image="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=80"
+        image="/images/hero/services.jpg"
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-3xl">
           <SectionReveal>
             <Text variant="body" className="text-stone">
-              Every project begins with listening. We take the time to
-              understand how you live, what you value, and what a room should
-              feel like before a single fabric is chosen.
+              Every project begins with listening. We take the time to understand
+              how you live, what you value, and what a room should feel like
+              before a single fabric is chosen.
             </Text>
           </SectionReveal>
         </div>
