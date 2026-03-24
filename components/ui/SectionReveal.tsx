@@ -1,8 +1,8 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { ANIMATION } from "@/lib/constants";
-import { motion, useReducedMotion } from "framer-motion";
+import { motion, useReducedMotion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 interface SectionRevealProps {
   children: React.ReactNode;
@@ -16,6 +16,8 @@ export function SectionReveal({
   delay = 0,
 }: SectionRevealProps) {
   const shouldReduceMotion = useReducedMotion();
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
 
   if (shouldReduceMotion) {
     return <div className={className}>{children}</div>;
@@ -23,9 +25,9 @@ export function SectionReveal({
 
   return (
     <motion.div
+      ref={ref}
       initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      animate={isInView ? "visible" : "hidden"}
       variants={{
         hidden: ANIMATION.reveal.hidden,
         visible: {

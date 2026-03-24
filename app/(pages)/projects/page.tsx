@@ -39,7 +39,10 @@ const projects = [
 export default function ProjectsPage() {
   return (
     <>
-      <Hero heading="The collection" />
+      <Hero
+        heading="The collection"
+        image="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1920&q=80"
+      />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-3xl">

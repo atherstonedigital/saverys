@@ -10,7 +10,10 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <>
-      <Hero heading="A room that remembers" />
+      <Hero
+        heading="A room that remembers"
+        image="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80"
+      />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">

@@ -9,7 +9,10 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Hero heading="Get in touch" />
+      <Hero
+        heading="Get in touch"
+        image="https://images.unsplash.com/photo-1600566753086-00f18f6b6cf3?w=1920&q=80"
+      />
       <ContactSection />
     </>
   );

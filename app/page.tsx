@@ -48,6 +48,7 @@ export default function HomePage() {
       <Hero
         heading="Rooms composed with care"
         subtitle="An interior design studio rooted in the Cotswolds, where craftsmanship and restraint define every space."
+        image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=1920&q=80"
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">

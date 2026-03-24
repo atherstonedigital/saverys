@@ -39,7 +39,10 @@ const services = [
 export default function ServicesPage() {
   return (
     <>
-      <Hero heading="What we do" />
+      <Hero
+        heading="What we do"
+        image="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1920&q=80"
+      />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-3xl">
