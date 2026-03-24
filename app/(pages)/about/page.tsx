@@ -52,7 +52,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      <section className="px-6 py-16 md:px-12 md:py-32">
+      <section className="px-6 pb-16 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:items-center">
             <div className="relative aspect-[4/3] w-full overflow-hidden">

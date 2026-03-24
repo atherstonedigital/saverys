@@ -4,6 +4,26 @@ import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 
+const showrooms = [
+  {
+    name: "Broadway",
+    address: "Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ",
+    phone: "01386 858941",
+    mobile: "07894 096098",
+  },
+  {
+    name: "Ludlow",
+    address: "1 Tower Street, Ludlow, SY8 1RL",
+    phone: "01584 708381",
+    mobile: "07415 065580",
+  },
+  {
+    name: "Chelsea",
+    address: "Suite 9, 405 Kings Road, Chelsea",
+    phone: "020 3668 1000",
+  },
+];
+
 export function ContactSection() {
   return (
     <section className="px-6 py-16 md:px-12 md:py-32">
@@ -20,24 +40,40 @@ export function ContactSection() {
                 understand how you live, what you value, and what a room should
                 feel like.
               </Text>
+
               <div className="mt-8">
-                <Text variant="caption" className="text-stone">
+                <Text variant="caption" className="text-charcoal">
                   Email
                 </Text>
                 <Text variant="body" className="mt-1">
                   studio@saverys.co.uk
                 </Text>
               </div>
-              <div className="mt-6">
-                <Text variant="caption" className="text-stone">
-                  Studio
+
+              <div className="mt-10">
+                <Text variant="caption" className="text-charcoal">
+                  Come and visit us
                 </Text>
-                <Text variant="body" className="mt-1">
-                  Broadway, Worcestershire
-                </Text>
-                <Text variant="small" className="mt-1 text-stone">
-                  The Cotswolds, England
-                </Text>
+                <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-3">
+                  {showrooms.map((showroom) => (
+                    <div key={showroom.name}>
+                      <Text variant="small" className="font-normal text-charcoal">
+                        {showroom.name}
+                      </Text>
+                      <Text variant="small" className="mt-1 text-stone">
+                        {showroom.address}
+                      </Text>
+                      <Text variant="small" className="mt-2 text-stone">
+                        {showroom.phone}
+                      </Text>
+                      {showroom.mobile && (
+                        <Text variant="small" className="text-stone">
+                          {showroom.mobile}
+                        </Text>
+                      )}
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </SectionReveal>

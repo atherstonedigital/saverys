@@ -23,17 +23,21 @@ export function ServicesOverview({ services }: ServicesOverviewProps) {
           return (
             <SectionReveal key={service.title} delay={i * 0.1}>
               <div className="border-t border-clay/30 py-12 md:py-20">
-                <div
-                  className={`grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16 ${
-                    !isEven ? "md:direction-rtl" : ""
-                  }`}
-                >
+                <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
                   {/* Text — alternates left/right */}
-                  <div className={!isEven ? "md:order-2 md:text-right" : ""}>
+                  <div
+                    className={
+                      !isEven
+                        ? "md:order-2 md:ml-auto md:text-right"
+                        : ""
+                    }
+                  >
                     <Text as="h2">{service.title}</Text>
                     <Text
                       variant="body"
-                      className="mt-4 max-w-lg text-stone md:text-lg md:leading-relaxed"
+                      className={`mt-4 max-w-lg text-stone md:text-lg md:leading-relaxed ${
+                        !isEven ? "md:ml-auto" : ""
+                      }`}
                     >
                       {service.description}
                     </Text>

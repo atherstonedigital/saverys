@@ -88,7 +88,7 @@ export default function HomePage() {
       <section className="bg-linen px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
           <SectionReveal>
-            <Text as="h2">What we do</Text>
+            <Text as="h2" className="text-center">What we do</Text>
           </SectionReveal>
           <div className="mt-12 grid grid-cols-1 gap-0 md:grid-cols-3">
             {services.map((service, i) => (
@@ -101,7 +101,7 @@ export default function HomePage() {
                   } ${i < services.length - 1 ? "md:pr-10" : ""}`}
                 >
                   <Text as="h3">{service.title}</Text>
-                  <Text variant="small" className="mt-3 text-stone">
+                  <Text variant="body" className="mt-3 text-stone">
                     {service.description}
                   </Text>
                 </div>
