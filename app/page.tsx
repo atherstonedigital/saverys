@@ -1,7 +1,6 @@
 import { Hero } from "@/components/sections/Hero";
 import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProjectGrid } from "@/components/sections/ProjectGrid";
-import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ContactSection } from "@/components/sections/ContactSection";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
@@ -86,7 +85,36 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ServicesOverview services={services} />
+      <section className="bg-linen px-6 py-16 md:px-12 md:py-32">
+        <div className="mx-auto max-w-7xl">
+          <SectionReveal>
+            <Text as="h2">What we do</Text>
+          </SectionReveal>
+          <div className="mt-12 grid grid-cols-1 gap-0 md:grid-cols-3">
+            {services.map((service, i) => (
+              <SectionReveal key={service.title} delay={i * 0.1}>
+                <div
+                  className={`py-8 md:py-0 ${
+                    i > 0
+                      ? "border-t border-clay/30 md:border-t-0 md:border-l md:border-clay/30 md:pl-10"
+                      : ""
+                  } ${i < services.length - 1 ? "md:pr-10" : ""}`}
+                >
+                  <Text as="h3">{service.title}</Text>
+                  <Text variant="small" className="mt-3 text-stone">
+                    {service.description}
+                  </Text>
+                </div>
+              </SectionReveal>
+            ))}
+          </div>
+          <div className="mt-12 text-center">
+            <SectionReveal delay={0.3}>
+              <Button href="/services">View all services</Button>
+            </SectionReveal>
+          </div>
+        </div>
+      </section>
 
       <ContactSection />
     </>
