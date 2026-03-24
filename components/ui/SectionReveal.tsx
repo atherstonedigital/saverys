@@ -22,13 +22,13 @@ export function SectionReveal({
 
   return (
     <motion.div
-      initial={ANIMATION.reveal.hidden}
-      animate={{
-        ...ANIMATION.reveal.visible,
-        transition: {
-          ...ANIMATION.reveal.visible.transition,
-          delay: delay + 0.3,
-        },
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.15 }}
+      transition={{
+        duration: ANIMATION.duration.medium,
+        ease: ANIMATION.ease,
+        delay,
       }}
       className={className}
     >

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { SectionReveal } from "@/components/ui/SectionReveal";
@@ -33,8 +34,9 @@ export function ContactSection() {
         </SectionReveal>
 
         <div className="mt-12 grid grid-cols-1 gap-16 md:mt-16 md:grid-cols-2">
-          <SectionReveal delay={0.1}>
-            <div>
+          {/* Left: details + form */}
+          <div>
+            <SectionReveal delay={0.1}>
               <Text variant="body" className="max-w-md text-stone">
                 Every project begins with listening. We take the time to
                 understand how you live, what you value, and what a room should
@@ -57,7 +59,10 @@ export function ContactSection() {
                 <div className="mt-4 grid grid-cols-1 gap-8 sm:grid-cols-3">
                   {showrooms.map((showroom) => (
                     <div key={showroom.name}>
-                      <Text variant="small" className="font-normal text-charcoal">
+                      <Text
+                        variant="small"
+                        className="font-normal text-charcoal"
+                      >
                         {showroom.name}
                       </Text>
                       <Text variant="small" className="mt-1 text-stone">
@@ -75,58 +80,73 @@ export function ContactSection() {
                   ))}
                 </div>
               </div>
-            </div>
-          </SectionReveal>
+            </SectionReveal>
 
-          <SectionReveal delay={0.2}>
-            <form className="flex flex-col gap-8">
-              <div>
-                <label
-                  htmlFor="name"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
-                >
-                  Name
-                </label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+            <SectionReveal delay={0.2}>
+              <form className="mt-12 flex flex-col gap-8">
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="email"
+                    className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    rows={4}
+                    className="mt-2 w-full resize-none border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  />
+                </div>
+                <div>
+                  <Button type="submit">Send message</Button>
+                </div>
+              </form>
+            </SectionReveal>
+          </div>
+
+          {/* Right: atmospheric image */}
+          <div className="hidden md:block">
+            <SectionReveal delay={0.15}>
+              <div className="relative aspect-[3/4] w-full overflow-hidden">
+                <Image
+                  src="/images/hero/contact.jpg"
+                  alt="Ikat armchair with botanical prints"
+                  fill
+                  className="object-cover"
+                  sizes="50vw"
                 />
               </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="message"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
-                >
-                  Message
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={4}
-                  className="mt-2 w-full resize-none border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
-                />
-              </div>
-              <div>
-                <Button type="submit">Send message</Button>
-              </div>
-            </form>
-          </SectionReveal>
+            </SectionReveal>
+          </div>
         </div>
       </div>
     </section>

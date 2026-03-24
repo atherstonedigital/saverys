@@ -32,7 +32,9 @@ export function Nav() {
       <nav
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
-          isScrolled ? "bg-ink" : "bg-transparent"
+          isScrolled
+            ? "bg-cream/90 shadow-sm backdrop-blur-xl"
+            : "bg-transparent"
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
@@ -41,7 +43,10 @@ export function Nav() {
               src="/logo-black.png"
               alt="Savery's of Broadway"
               fill
-              className="object-contain brightness-0 invert"
+              className={cn(
+                "object-contain transition-all duration-[var(--duration-fast)]",
+                isScrolled ? "" : "brightness-0 invert"
+              )}
               sizes="144px"
               priority
             />
@@ -53,7 +58,12 @@ export function Nav() {
               <Link
                 key={link.href}
                 href={link.href}
-                className="font-body text-xs font-normal uppercase tracking-[0.06em] text-cream/80 transition-colors duration-[var(--duration-fast)] ease-[var(--ease-saverys)] hover:text-cream"
+                className={cn(
+                  "font-body text-xs font-normal uppercase tracking-[0.06em] transition-colors duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                  isScrolled
+                    ? "text-charcoal/70 hover:text-charcoal"
+                    : "text-cream/80 hover:text-cream"
+                )}
               >
                 {link.label}
               </Link>
@@ -68,13 +78,15 @@ export function Nav() {
           >
             <span
               className={cn(
-                "block h-px w-6 bg-cream transition-transform duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                "block h-px w-6 transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                isScrolled ? "bg-charcoal" : "bg-cream",
                 isMobileOpen && "translate-y-[3.5px] rotate-45"
               )}
             />
             <span
               className={cn(
-                "block h-px w-6 bg-cream transition-transform duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                "block h-px w-6 transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                isScrolled ? "bg-charcoal" : "bg-cream",
                 isMobileOpen && "-translate-y-[3.5px] -rotate-45"
               )}
             />

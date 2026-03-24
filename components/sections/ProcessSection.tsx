@@ -23,13 +23,16 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="px-6 py-16 md:px-12 md:py-32">
+    <section className="px-6 py-12 md:px-12 md:py-20">
       <div className="mx-auto max-w-7xl">
+        {/* Thin decorative rule */}
+        <div className="mb-12 h-px w-16 bg-clay/40" />
+
         <SectionReveal>
           <Text as="h2">Our process</Text>
         </SectionReveal>
 
-        <div className="mt-12 grid grid-cols-1 gap-12 md:mt-16 md:grid-cols-3 md:gap-0">
+        <div className="mt-10 grid grid-cols-1 gap-10 md:mt-14 md:grid-cols-3 md:gap-0">
           {steps.map((step, i) => (
             <SectionReveal key={step.title} delay={i * 0.15}>
               <div
