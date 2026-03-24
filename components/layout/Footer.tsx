@@ -18,7 +18,7 @@ export function Footer() {
               />
             </Link>
             <Text variant="small" className="mt-4 max-w-xs text-cream/50">
-              An interior design studio rooted in the Cotswolds, est. 1991.
+              Luxury interior design, rooted in the Cotswolds since 1991.
             </Text>
           </div>
 
@@ -30,7 +30,10 @@ export function Footer() {
               studio@saverys.co.uk
             </Text>
             <Text variant="small" className="mt-1 text-cream/60">
-              Broadway, The Cotswolds
+              Broadway, Worcestershire
+            </Text>
+            <Text variant="small" className="mt-1 text-cream/40">
+              The Cotswolds, England
             </Text>
           </div>
         </div>

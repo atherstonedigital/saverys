@@ -33,6 +33,9 @@ export function ContactSection() {
                   Studio
                 </Text>
                 <Text variant="body" className="mt-1">
+                  Broadway, Worcestershire
+                </Text>
+                <Text variant="small" className="mt-1 text-stone">
                   The Cotswolds, England
                 </Text>
               </div>
@@ -44,7 +47,7 @@ export function ContactSection() {
               <div>
                 <label
                   htmlFor="name"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-stone"
+                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
                 >
                   Name
                 </label>
@@ -52,13 +55,13 @@ export function ContactSection() {
                   type="text"
                   id="name"
                   name="name"
-                  className="mt-2 w-full border-b border-stone/30 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                 />
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-stone"
+                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
                 >
                   Email
                 </label>
@@ -66,13 +69,13 @@ export function ContactSection() {
                   type="email"
                   id="email"
                   name="email"
-                  className="mt-2 w-full border-b border-stone/30 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                 />
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-stone"
+                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
                 >
                   Message
                 </label>
@@ -80,7 +83,7 @@ export function ContactSection() {
                   id="message"
                   name="message"
                   rows={4}
-                  className="mt-2 w-full resize-none border-b border-stone/30 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  className="mt-2 w-full resize-none border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                 />
               </div>
               <div>

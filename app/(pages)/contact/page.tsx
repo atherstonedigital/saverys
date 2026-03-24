@@ -3,7 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { ContactSection } from "@/components/sections/ContactSection";
 
 export const metadata: Metadata = {
-  title: "Contact",
+  title: "Begin a Conversation",
 };
 
 export default function ContactPage() {

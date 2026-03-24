@@ -1,4 +1,5 @@
 import { Hero } from "@/components/sections/Hero";
+import { ProcessSection } from "@/components/sections/ProcessSection";
 import { ProjectGrid } from "@/components/sections/ProjectGrid";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { ContactSection } from "@/components/sections/ContactSection";
@@ -72,6 +73,8 @@ export default function HomePage() {
           </SectionReveal>
         </div>
       </section>
+
+      <ProcessSection />
 
       <ProjectGrid projects={featuredProjects} />
 

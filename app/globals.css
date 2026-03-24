@@ -13,6 +13,7 @@
   /* Fonts */
   --font-display: "Cormorant Garamond", "Georgia", serif;
   --font-body: "Jost", "Helvetica Neue", sans-serif;
+  --font-caption: "Courier Prime", "Courier New", monospace;
 
   /* Easing */
   --ease-saverys: cubic-bezier(0.25, 0.1, 0.25, 1);
@@ -53,9 +54,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--color-cream);
+  background: transparent;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-stone);
+  background: var(--color-clay);
+  opacity: 0.4;
+  border-radius: 3px;
 }
