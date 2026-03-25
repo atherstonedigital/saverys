@@ -13,21 +13,21 @@ const featuredProjects = [
     slug: "the-old-mill-broadway",
     description:
       "A considered restoration of a Cotswold mill, marrying original stone with hand-finished English linen.",
-    image: "/images/projects/old-mill-bedroom.jpg",
+    image: "/images/projects/old-mill-bedroom.webp",
   },
   {
     name: "Jams House",
     slug: "jams-house",
     description:
       "Quiet elegance in a country house. Every room composed around the light.",
-    image: "/images/projects/jams-house-living.jpg",
+    image: "/images/projects/jams-house-living.webp",
   },
   {
     name: "The Grantly Collection",
     slug: "the-grantly-collection",
     description:
       "An enduring country house, layered with provenance and warmth.",
-    image: "/images/projects/grantly-sofa.jpg",
+    image: "/images/projects/grantly-sofa.webp",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function HomePage() {
       <Hero
         heading="Rooms composed with care"
         subtitle="An interior design studio rooted in the Cotswolds, where craftsmanship and restraint define every space."
-        image="/images/hero/home.jpg"
+        image="/images/hero/home.webp"
         cta={{ label: "View our work", href: "/projects" }}
       />
 
@@ -78,7 +78,7 @@ export default function HomePage() {
             </SectionReveal>
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src="/images/projects/old-mill-details.jpg"
+                src="/images/projects/old-mill-details.webp"
                 alt="Curated interior details at The Old Mill"
                 fill
                 className="object-cover"
@@ -109,7 +109,7 @@ export default function HomePage() {
               <SectionReveal>
                 <div className="relative aspect-[3/4] w-full overflow-hidden">
                   <Image
-                    src="/images/hero/services.jpg"
+                    src="/images/hero/services.webp"
                     alt="Hand-selected fabrics and curtains"
                     fill
                     className="object-cover"

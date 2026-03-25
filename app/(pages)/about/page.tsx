@@ -16,7 +16,7 @@ export default function AboutPage() {
     <>
       <Hero
         heading="A room that remembers"
-        image="/images/hero/about.jpg"
+        image="/images/hero/about.webp"
       />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
@@ -44,7 +44,7 @@ export default function AboutPage() {
 
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
-                src="/images/projects/old-mill-details.jpg"
+                src="/images/projects/old-mill-details.webp"
                 alt="Curated interior details at The Old Mill"
                 fill
                 className="object-cover"
@@ -60,7 +60,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:items-center">
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src="/images/projects/old-mill-chair.jpg"
+                src="/images/projects/old-mill-chair.webp"
                 alt="Antique chair with botanical fabric"
                 fill
                 className="object-cover"

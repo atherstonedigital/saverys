@@ -16,7 +16,7 @@ interface ServicesOverviewProps {
 
 export function ServicesOverview({ services }: ServicesOverviewProps) {
   return (
-    <section className="px-6 py-16 md:px-12 md:py-32">
+    <section className="px-6 py-12 md:px-12 md:py-20">
       <div className="mx-auto max-w-7xl">
         {services.map((service, i) => {
           const isEven = i % 2 === 0;

@@ -14,40 +14,40 @@ const services = [
     title: "Full interior design",
     description:
       "From initial concept through to final placement, we manage every detail of your interior with the care it deserves. Our process is unhurried and thorough — the way considered work should be.",
-    image: "/images/hero/home.jpg",
+    image: "/images/hero/home.webp",
   },
   {
     title: "Fabric and material sourcing",
     description:
       "We work directly with mills, workshops, and artisans across Britain and Europe to source materials of genuine quality. Hand-finished linens, aged timbers, stones with character.",
-    image: "/images/hero/services.jpg",
+    image: "/images/hero/services.webp",
   },
   {
     title: "Furniture curation",
     description:
       "A considered selection of antique and contemporary pieces, chosen for how they live rather than how they look. Each piece earns its place through proportion, comfort, and craftsmanship.",
-    image: "/images/projects/old-mill-chair.jpg",
+    image: "/images/projects/old-mill-chair.webp",
   },
   {
     title: "Colour and light consultation",
     description:
       "Colour is never chosen from a chart. We work with your rooms through the seasons, observing how light moves and changes, before a single shade is committed.",
-    image: "/images/projects/old-mill-bedroom.jpg",
+    image: "/images/projects/old-mill-bedroom.webp",
   },
   {
     title: "Project management",
     description:
       "We coordinate every craftsperson, supplier, and timeline so that the process feels as calm as the finished room. You should never have to chase a detail.",
-    image: "/images/projects/old-mill-kitchen.jpg",
+    image: "/images/projects/old-mill-kitchen.webp",
   },
 ];
 
 export default function ServicesPage() {
   return (
     <>
-      <Hero heading="What we do" image="/images/hero/services.jpg" />
+      <Hero heading="What we do" image="/images/hero/services.webp" />
 
-      <section className="px-6 py-12 md:px-12 md:py-20">
+      <section className="px-6 py-10 md:px-12 md:py-16">
         <div className="mx-auto max-w-3xl">
           <SectionReveal>
             <Text variant="body" className="text-stone">

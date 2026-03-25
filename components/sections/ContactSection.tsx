@@ -11,18 +11,23 @@ const showrooms = [
     name: "Broadway",
     address: "Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ",
     phone: "01386 858941",
+    phoneTel: "+441386858941",
     mobile: "07894 096098",
+    mobileTel: "+447894096098",
   },
   {
     name: "Ludlow",
     address: "1 Tower Street, Ludlow, SY8 1RL",
     phone: "01584 708381",
+    phoneTel: "+441584708381",
     mobile: "07415 065580",
+    mobileTel: "+447415065580",
   },
   {
     name: "Chelsea",
     address: "Suite 9, 405 Kings Road, Chelsea",
     phone: "020 3668 1000",
+    phoneTel: "+442036681000",
   },
 ];
 
@@ -63,9 +68,12 @@ export function ContactSection() {
                 <Text variant="caption" className="text-charcoal">
                   Email
                 </Text>
-                <Text variant="body" className="mt-1">
+                <a
+                  href="mailto:studio@saverys.co.uk"
+                  className="mt-1 block font-body text-base font-light leading-[1.7] tracking-[0.02em] text-charcoal transition-colors duration-[var(--duration-fast)] hover:text-clay"
+                >
                   studio@saverys.co.uk
-                </Text>
+                </a>
               </div>
 
               <div className="mt-10">
@@ -84,13 +92,19 @@ export function ContactSection() {
                       <Text variant="small" className="mt-1 text-stone">
                         {showroom.address}
                       </Text>
-                      <Text variant="small" className="mt-2 text-stone">
+                      <a
+                        href={`tel:${showroom.phoneTel}`}
+                        className="mt-2 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-stone transition-colors duration-[var(--duration-fast)] hover:text-clay"
+                      >
                         {showroom.phone}
-                      </Text>
-                      {showroom.mobile && (
-                        <Text variant="small" className="text-stone">
+                      </a>
+                      {showroom.mobile && showroom.mobileTel && (
+                        <a
+                          href={`tel:${showroom.mobileTel}`}
+                          className="block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-stone transition-colors duration-[var(--duration-fast)] hover:text-clay"
+                        >
                           {showroom.mobile}
-                        </Text>
+                        </a>
                       )}
                     </div>
                   ))}
@@ -188,7 +202,7 @@ export function ContactSection() {
             <SectionReveal delay={0.15}>
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
-                  src="/images/hero/contact.jpg"
+                  src="/images/hero/contact.webp"
                   alt="Ikat armchair with botanical prints"
                   fill
                   className="object-cover object-top"

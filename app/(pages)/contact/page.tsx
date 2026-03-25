@@ -11,7 +11,7 @@ export default function ContactPage() {
     <>
       <Hero
         heading="Get in touch"
-        image="/images/hero/contact.jpg"
+        image="/images/hero/contact.webp"
       />
       <ContactSection />
     </>

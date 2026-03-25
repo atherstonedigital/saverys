@@ -23,7 +23,7 @@ const masonryProjects = projects.map((p) => ({
 export default function ProjectsPage() {
   return (
     <>
-      <Hero heading="The collection" image="/images/hero/projects.jpg" />
+      <Hero heading="The collection" image="/images/hero/projects.webp" />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-3xl">

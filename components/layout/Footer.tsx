@@ -20,9 +20,12 @@ export function Footer() {
             <Text variant="small" className="mt-4 max-w-xs text-cream/50">
               Luxury interior design, rooted in the Cotswolds since 1991.
             </Text>
-            <Text variant="small" className="mt-3 text-cream/60">
+            <a
+              href="mailto:studio@saverys.co.uk"
+              className="mt-3 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/60 transition-colors duration-300 hover:text-cream"
+            >
               studio@saverys.co.uk
-            </Text>
+            </a>
             <a
               href="https://instagram.com/saverycotswolds"
               target="_blank"
@@ -41,9 +44,12 @@ export function Footer() {
               <Text variant="small" className="mt-2 max-w-[11rem] text-cream/60">
                 Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ
               </Text>
-              <Text variant="small" className="mt-1 text-cream/50">
+              <a
+                href="tel:+441386858941"
+                className="mt-1 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/50 transition-colors duration-300 hover:text-cream"
+              >
                 01386 858941
-              </Text>
+              </a>
             </div>
             <div>
               <Text variant="caption" className="text-cream/40">
@@ -52,9 +58,12 @@ export function Footer() {
               <Text variant="small" className="mt-2 max-w-[11rem] text-cream/60">
                 1 Tower Street, Ludlow, SY8 1RL
               </Text>
-              <Text variant="small" className="mt-1 text-cream/50">
+              <a
+                href="tel:+441584708381"
+                className="mt-1 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/50 transition-colors duration-300 hover:text-cream"
+              >
                 01584 708381
-              </Text>
+              </a>
             </div>
             <div>
               <Text variant="caption" className="text-cream/40">
@@ -63,9 +72,12 @@ export function Footer() {
               <Text variant="small" className="mt-2 max-w-[11rem] text-cream/60">
                 Suite 9, 405 Kings Road, Chelsea
               </Text>
-              <Text variant="small" className="mt-1 text-cream/50">
+              <a
+                href="tel:+442036681000"
+                className="mt-1 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/50 transition-colors duration-300 hover:text-cream"
+              >
                 020 3668 1000
-              </Text>
+              </a>
             </div>
           </div>
         </div>
