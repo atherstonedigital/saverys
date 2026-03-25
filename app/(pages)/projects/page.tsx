@@ -8,7 +8,10 @@ import { projects } from "@/lib/projects";
 import { getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Our Work",
+  title: "Interior Design Portfolio | Saverys of Broadway — Cotswolds",
+  description:
+    "Browse the Saverys portfolio of luxury interior design projects — from private Cotswold residences to high-end hotels. Timeless spaces crafted with care and precision.",
+  alternates: { canonical: "/projects" },
 };
 
 interface ProjectsContent {

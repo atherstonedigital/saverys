@@ -7,6 +7,7 @@ import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { getPageContent } from "@/lib/content";
+import { generateSchema } from "@/lib/schema";
 
 interface HomeContent {
   hero: { heading: string; subtitle?: string; image: string };
@@ -25,6 +26,12 @@ export default function HomePage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: generateSchema({ pageType: "home" }),
+        }}
+      />
       <Hero
         heading={content.hero.heading}
         subtitle={content.hero.subtitle}

@@ -7,9 +7,10 @@ import { Text } from "@/components/ui/Text";
 import { getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "Our History | Saverys of Broadway — Interior Design Since 1991",
   description:
-    "Established in 1991, Savery's is a luxury interior design studio rooted in the Cotswolds. Over three decades of considered, crafted interiors.",
+    "Established in 1991 in the heart of the Cotswolds, Saverys has been creating exceptional interiors for discerning clients across the UK for over 30 years. Broadway, Ludlow and Chelsea.",
+  alternates: { canonical: "/about" },
 };
 
 interface AboutContent {

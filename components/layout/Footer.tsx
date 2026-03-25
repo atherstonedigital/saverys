@@ -11,7 +11,7 @@ export function Footer() {
             <Link href="/" className="relative block h-10 w-36">
               <Image
                 src="/logo-black.png"
-                alt="Savery's of Broadway"
+                alt="Saverys of Broadway — Luxury Interior Design"
                 fill
                 className="object-contain brightness-0 invert"
                 sizes="144px"
@@ -27,7 +27,7 @@ export function Footer() {
               studio@saverys.co.uk
             </a>
             <a
-              href="https://instagram.com/saverycotswolds"
+              href="https://www.instagram.com/saverysofbroadway/"
               target="_blank"
               rel="noopener noreferrer"
               className="mt-2 inline-block font-body text-xs uppercase tracking-[0.1em] text-cream/50 transition-colors duration-300 hover:text-cream"

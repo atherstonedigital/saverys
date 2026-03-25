@@ -4,7 +4,10 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Begin a Conversation",
+  title: "Contact Us | Saverys Interior Design — Broadway, Ludlow & Chelsea",
+  description:
+    "Get in touch with Saverys of Broadway. Visit our interior design studios in Broadway, Ludlow or Chelsea. Call 01386 858941 to discuss your project.",
+  alternates: { canonical: "/contact" },
 };
 
 interface ContactContent {

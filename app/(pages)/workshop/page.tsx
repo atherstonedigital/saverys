@@ -7,9 +7,11 @@ import { Text } from "@/components/ui/Text";
 import { getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Workshop & Store",
+  title:
+    "Workshop & Store | Saverys — Hand Upholstery & Luxury Fabrics, Broadway",
   description:
-    "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery, premium fabrics, exquisite rugs, and expert interior design service from a team with over 50 years of expertise.",
+    "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, exquisite rugs, and bespoke furniture. Over 50 years of combined expertise.",
+  alternates: { canonical: "/workshop" },
 };
 
 interface WorkshopContent {

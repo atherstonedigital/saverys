@@ -4,3 +4,45 @@
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=86400"
+
+[[headers]]
+  for = "/_next/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[redirects]]
+  from = "/our-portfolio"
+  to = "/projects"
+  status = 301
+
+[[redirects]]
+  from = "/our-history"
+  to = "/about"
+  status = 301
+
+[[redirects]]
+  from = "/portfolio"
+  to = "/projects"
+  status = 301
+
+[[redirects]]
+  from = "/history"
+  to = "/about"
+  status = 301

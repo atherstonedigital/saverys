@@ -41,7 +41,7 @@ export function Nav() {
           <Link href="/" className="relative block h-12 w-[172px]">
             <Image
               src="/logo-black.png"
-              alt="Savery's of Broadway"
+              alt="Saverys of Broadway — Luxury Interior Design"
               fill
               className={cn(
                 "object-contain transition-all duration-[var(--duration-fast)]",

@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/sections/Hero";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { getProject, getAllProjectSlugs } from "@/lib/projects";
+import { generateSchema } from "@/lib/schema";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,7 +22,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.name}, ${project.location}`,
+    title: `${project.name} — ${project.location} | Saverys Portfolio`,
+    description: `Interior design project by Saverys of Broadway: ${project.name} in ${project.location}. View the full gallery.`,
+    alternates: { canonical: `/projects/${slug}` },
+    openGraph: {
+      title: `${project.name} — ${project.location} | Saverys Portfolio`,
+      description: `Interior design project by Saverys of Broadway: ${project.name} in ${project.location}.`,
+      images: [{ url: project.heroImage }],
+      type: "website",
+    },
   };
 }
 
@@ -29,13 +39,30 @@ export default async function ProjectPage({ params }: Props) {
   const project = getProject(slug);
   if (!project) notFound();
 
-  // Split images into two columns for masonry
   const leftImages = project.images.filter((_, i) => i % 2 === 0);
   const rightImages = project.images.filter((_, i) => i % 2 === 1);
 
+  const schemaJson = generateSchema({
+    pageType: "project",
+    projectTitle: `${project.name}, ${project.location}`,
+    gallery: project.images.map((img) => img.src),
+    breadcrumbs: [
+      { name: "Projects", url: `${SITE_URL}/projects` },
+      { name: project.name, url: `${SITE_URL}/projects/${slug}` },
+    ],
+  });
+
   return (
     <>
-      <Hero heading={project.name} subtitle={project.location} image={project.heroImage} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schemaJson }}
+      />
+      <Hero
+        heading={project.name}
+        subtitle={project.location}
+        image={project.heroImage}
+      />
 
       <section className="px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-3xl">
@@ -48,7 +75,6 @@ export default async function ProjectPage({ params }: Props) {
       <section className="px-6 pb-16 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
-            {/* Left column */}
             <div className="flex flex-col gap-6 md:gap-8">
               {leftImages.map((img) => (
                 <div
@@ -69,7 +95,6 @@ export default async function ProjectPage({ params }: Props) {
                 </div>
               ))}
             </div>
-            {/* Right column — offset */}
             <div className="flex flex-col gap-6 md:mt-16 md:gap-8">
               {rightImages.map((img) => (
                 <div

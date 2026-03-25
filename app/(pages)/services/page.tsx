@@ -7,7 +7,10 @@ import { Text } from "@/components/ui/Text";
 import { getPageContent } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "What We Do",
+  title: "Interior Design Services | Saverys of Broadway — Cotswolds",
+  description:
+    "Full interior design, fabric and material sourcing, furniture curation, colour consultation, and project management. Luxury design service from Broadway, Cotswolds.",
+  alternates: { canonical: "/services" },
 };
 
 interface ServicesContent {
