@@ -83,7 +83,13 @@ export function ContactSection() {
             </SectionReveal>
 
             <SectionReveal delay={0.2}>
-              <form className="mt-12 flex flex-col gap-8">
+              <form className="mt-12 flex flex-col gap-8"
+                        name="contact"
+                                  method="POST"
+                                            data-netlify="true"
+                                                      data-netlify-honeypot="bot-field"
+                                                                <input type="hidden" name="form-name" value="contact" />
+                                                                          <input type="hidden" name="bot-field" />>
                 <div>
                   <label
                     htmlFor="enquiry_type"

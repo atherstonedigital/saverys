@@ -15,12 +15,13 @@ export function SectionReveal({
 }: SectionRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
+  useEffect(() => 
     const el = ref.current;
     if (!el) return;
 
     // Check for reduced motion preference
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.classList.remove("sr-hidden");
       el.classList.add("sr-visible");
       return;
     }
@@ -30,7 +31,8 @@ export function SectionReveal({
         if (entry.isIntersecting) {
           // Apply staggered delay then reveal
           setTimeout(() => {
-            el.classList.add("sr-visible");
+          el.classList.remove("sr-hidden");
+                      el.classList.add("sr-visible");
           }, delay * 1000);
           observer.unobserve(el);
         }
