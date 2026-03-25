@@ -1,5 +1,6 @@
 "use client";
 
+import { FormEvent, useState } from "react";
 import Image from "next/image";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
@@ -26,6 +27,21 @@ const showrooms = [
 ];
 
 export function ContactSection() {
+  const [submitted, setSubmitted] = useState(false);
+
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const body = new URLSearchParams(new FormData(form) as unknown as Record<string, string>).toString();
+    await fetch("/__forms.html", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body,
+    });
+    setSubmitted(true);
+    form.reset();
+  }
+
   return (
     <section className="px-6 py-16 md:px-12 md:py-32">
       <div className="mx-auto max-w-7xl">
@@ -83,13 +99,16 @@ export function ContactSection() {
             </SectionReveal>
 
             <SectionReveal delay={0.2}>
-              <form className="mt-12 flex flex-col gap-8"
-                        name="contact"
-                                  method="POST"
-                                            data-netlify="true"
-                                                      data-netlify-honeypot="bot-field">
-                                                                <input type="hidden" name="form-name" value="contact" />
-                                                                          <input type="hidden" name="bot-field" />
+              <form
+                className="mt-12 flex flex-col gap-8"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
+              >
+                <input type="hidden" name="form-name" value="contact" />
+                <input type="hidden" name="bot-field" />
                 <div>
                   <label
                     htmlFor="enquiry_type"
@@ -154,6 +173,11 @@ export function ContactSection() {
                 </div>
                 <div>
                   <Button type="submit">Send message</Button>
+                  {submitted && (
+                    <p className="mt-4 font-body text-sm text-charcoal">
+                      Thank you for your enquiry. We will be in touch shortly.
+                    </p>
+                  )}
                 </div>
               </form>
             </SectionReveal>
