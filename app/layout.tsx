@@ -44,12 +44,15 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Courier+Prime&family=Jost:wght@300;400&display=swap"
           rel="stylesheet"
         />
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
       </head>
       <body>
         <Nav />
         <main>{children}</main>
         <Footer />
+        <Script
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          strategy="beforeInteractive"
+        />
         <Script id="netlify-identity-redirect" strategy="afterInteractive">
           {`
             if (window.netlifyIdentity) {
