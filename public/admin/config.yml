@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: atherstonedigital/saverys
   branch: main
 
 media_folder: "public/images/uploads"
