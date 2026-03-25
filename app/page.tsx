@@ -6,56 +6,29 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
+import { getPageContent } from "@/lib/content";
 
-const featuredProjects = [
-  {
-    name: "The Old Mill, Broadway",
-    slug: "the-old-mill-broadway",
-    description:
-      "A considered restoration of a Cotswold mill, marrying original stone with hand-finished English linen.",
-    image: "/images/projects/old-mill-bedroom.webp",
-  },
-  {
-    name: "Jams House",
-    slug: "jams-house",
-    description:
-      "Quiet elegance in a country house. Every room composed around the light.",
-    image: "/images/projects/jams-house-living.webp",
-  },
-  {
-    name: "The Grantly Collection",
-    slug: "the-grantly-collection",
-    description:
-      "An enduring country house, layered with provenance and warmth.",
-    image: "/images/projects/grantly-sofa.webp",
-  },
-];
-
-const services = [
-  {
-    title: "Full interior design",
-    description:
-      "From initial concept through to final placement, we manage every detail of your interior with the care it deserves.",
-  },
-  {
-    title: "Fabric and material sourcing",
-    description:
-      "We work directly with mills, workshops, and artisans across Britain and Europe to source materials of genuine quality.",
-  },
-  {
-    title: "Furniture curation",
-    description:
-      "A considered selection of antique and contemporary pieces, chosen for how they live rather than how they look.",
-  },
-];
+interface HomeContent {
+  hero: { heading: string; subtitle?: string; image: string };
+  studioIntro: { heading: string; body: string; image: string };
+  featuredProjects: { name: string; slug: string; image: string; description?: string }[];
+  services: {
+    heading: string;
+    image: string;
+    items: { title: string; description: string }[];
+  };
+  cta: { heading: string; buttonText: string; buttonLink: string };
+}
 
 export default function HomePage() {
+  const content = getPageContent<HomeContent>("home");
+
   return (
     <>
       <Hero
-        heading="Rooms composed with care"
-        subtitle="An interior design studio rooted in the Cotswolds, where craftsmanship and restraint define every space."
-        image="/images/hero/home.webp"
+        heading={content.hero.heading}
+        subtitle={content.hero.subtitle}
+        image={content.hero.image}
         cta={{ label: "View our work", href: "/projects" }}
       />
 
@@ -63,12 +36,9 @@ export default function HomePage() {
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:items-center md:gap-16">
             <SectionReveal>
-              <Text as="h2">A studio of quiet intention</Text>
+              <Text as="h2">{content.studioIntro.heading}</Text>
               <Text variant="body" className="mt-6 max-w-2xl text-stone">
-                Savery&apos;s works with those who understand that true quality
-                is felt before it is seen. We compose interiors that endure —
-                rooms built on provenance, proportion, and an unhurried
-                attention to detail.
+                {content.studioIntro.body}
               </Text>
               <div className="mt-10">
                 <Button href="/about" variant="text">
@@ -78,8 +48,8 @@ export default function HomePage() {
             </SectionReveal>
             <div className="relative aspect-[4/3] w-full overflow-hidden">
               <Image
-                src="/images/projects/old-mill-details.webp"
-                alt="Curated interior details at The Old Mill"
+                src={content.studioIntro.image}
+                alt="Curated interior details"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -91,7 +61,7 @@ export default function HomePage() {
 
       <ProcessSection />
 
-      <ProjectGrid projects={featuredProjects} />
+      <ProjectGrid projects={content.featuredProjects} />
 
       <section className="px-6 py-8 md:px-12">
         <div className="mx-auto max-w-7xl text-center">
@@ -104,12 +74,11 @@ export default function HomePage() {
       <section className="bg-linen px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-start md:gap-16">
-            {/* Left: fabric/material image */}
             <div className="md:col-span-4">
               <SectionReveal>
                 <div className="relative aspect-[3/4] w-full overflow-hidden">
                   <Image
-                    src="/images/hero/services.webp"
+                    src={content.services.image}
                     alt="Hand-selected fabrics and curtains"
                     fill
                     className="object-cover"
@@ -119,13 +88,12 @@ export default function HomePage() {
               </SectionReveal>
             </div>
 
-            {/* Right: services list */}
             <div className="md:col-span-8">
               <SectionReveal>
-                <Text as="h2">What we do</Text>
+                <Text as="h2">{content.services.heading}</Text>
               </SectionReveal>
               <div className="mt-10 flex flex-col">
-                {services.map((service, i) => (
+                {content.services.items.map((service, i) => (
                   <SectionReveal key={service.title} delay={i * 0.1}>
                     <div
                       className={`py-6 ${

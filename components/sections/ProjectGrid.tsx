@@ -8,7 +8,7 @@ import { SectionReveal } from "@/components/ui/SectionReveal";
 interface Project {
   name: string;
   slug?: string;
-  description: string;
+  description?: string;
   image?: string;
 }
 
