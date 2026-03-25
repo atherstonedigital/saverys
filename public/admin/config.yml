@@ -288,14 +288,28 @@ collections:
     label: "Journal"
     folder: "content/journal"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
-      - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short description for listings and SEO (155 chars max)" }
+      - { label: "Featured Image Alt Text", name: "featuredImageAlt", widget: "string", required: false, hint: "Describe the image for accessibility and SEO" }
+      - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short description for listings, social cards, and SEO (max 155 characters)" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Tags", name: "tags", widget: "list", required: false, hint: "e.g. Cotswolds, fabrics, renovation" }
+      - label: "Pillar"
+        name: "pillar"
+        widget: "select"
+        options:
+          - { label: "Craft & Making", value: "craft" }
+          - { label: "Fabric & Material", value: "fabric" }
+          - { label: "Place & Cotswolds", value: "place" }
+          - { label: "Design Thinking", value: "design" }
+          - { label: "Project Stories", value: "project" }
+        required: false
+        hint: "Editorial category — helps organise content"
+      - { label: "Tags", name: "tags", widget: "list", required: false, hint: "e.g. Cotswolds, Fabrics, Upholstery, Broadway, Ludlow" }
+      - { label: "SEO Title Override", name: "seoTitle", widget: "string", required: false, hint: "Custom title tag (defaults to 'Title | Saverys Journal' if empty)" }
+      - { label: "SEO Description Override", name: "seoDescription", widget: "string", required: false, hint: "Custom meta description (defaults to Summary if empty)" }
 
   # ── Portfolio Projects ──────────────────────────────────
 

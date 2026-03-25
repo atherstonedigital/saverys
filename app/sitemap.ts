@@ -37,6 +37,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
+      url: `${SITE_URL}/journal`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/contact`,
       lastModified: new Date(),
       changeFrequency: "yearly",
@@ -63,7 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       .readdirSync(journalDir)
       .filter((f) => f.endsWith(".md") || f.endsWith(".json"));
     journalPages = files.map((file) => {
-      const slug = file.replace(/\.(md|json)$/, "");
+      const slug = file.replace(/\.(md|json)$/, "").replace(/^\d{4}-\d{2}-\d{2}-/, "");
       return {
         url: `${SITE_URL}/journal/${slug}`,
         lastModified: new Date(),
