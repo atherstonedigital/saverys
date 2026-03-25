@@ -1,0 +1,60 @@
+{
+  "hero": {
+    "heading": "The Workshop & Store",
+    "subtitle": "Broadway, Cotswolds — Where Craft Meets Design",
+    "image": "/images/hero/services.webp"
+  },
+  "introduction": {
+    "heading": "A Dying Art, Kept Alive in Broadway",
+    "paragraphs": [
+      "In the heart of Broadway, behind the showroom floor, there is a workshop where things are still made properly. Frames are built by hand. Fabrics are cut and stretched with the patience that good work demands. It is a quieter way of doing things — and an increasingly rare one.",
+      "Hand upholstery is a dying art in Britain. The number of workshops practising traditional techniques has dwindled to a handful. At Savery's, we are one of the few studios keeping this craft alive — not out of nostalgia, but because we know that nothing machine-made can match what skilled hands produce.",
+      "Our team brings over fifty years of combined expertise in hand upholstery, fabric selection, and bespoke furniture making. Every piece is crafted on-site by expert hands — not outsourced, not mass-produced. This is real making, done with real care."
+    ],
+    "image": "/images/WINCHELSEA-LORFORDS-CHAIR-MASTER-1-scaled-1 (1).webp"
+  },
+  "showroom": {
+    "heading": "An Exquisite Showroom",
+    "paragraphs": [
+      "The Savery's showroom, set within the Cotswold Design Centre in Broadway, is a destination for those who appreciate considered design. It is not a conventional shop — it is a curated space where premium fabrics, rugs, wallpapers, and finishes can be experienced as they are meant to be: in person, by touch.",
+      "Here, clients compare silks against linens, feel the weight of a velvet, and see how a colour shifts in natural Cotswolds light. There is no substitute for this tactile experience — it is how the finest interiors begin.",
+      "Our team is always on hand to guide selections, drawing on decades of experience with the world's most prestigious fabric houses."
+    ],
+    "image": "/images/projects/old-mill-details.webp"
+  },
+  "workshop": {
+    "heading": "Crafted by Hand, Built to Last",
+    "paragraphs": [
+      "Step behind the showroom and you will find a working workshop — the kind of place that smells of timber and fabric, where progress is measured in careful, unhurried hours rather than production targets.",
+      "Frames are constructed from seasoned hardwoods. Springs are hand-tied. Fabrics are precisely cut and stretched over forms built to last generations. This is traditional upholstery as it has been practised for centuries — and as it should continue to be.",
+      "Clients are welcome to visit and see their furniture being crafted. There is something deeply reassuring about watching skilled hands at work — upholsterers, seamstresses, and finishers who have dedicated their careers to this quiet, exacting art."
+    ],
+    "image": "/images/The-Old-Mill-Broadway-003-scaled-1 (1).webp"
+  },
+  "fabrics": {
+    "heading": "The Finest Fabrics & Rugs",
+    "paragraphs": [
+      "Savery's sources from the world's most prestigious fabric houses — names trusted by the finest decorators in Britain and beyond. Our showroom holds an unrivalled selection of premium textiles: silks, linens, velvets, wools, and performance fabrics suited to every application.",
+      "Choosing the right fabric is an art in itself. Our team offers expert guidance on durability, drape, colour fastness, and texture — ensuring every selection is not only beautiful but entirely fit for purpose.",
+      "Alongside our textile collection, we hold handpicked rug collections available to view and feel in the showroom. From hand-knotted wool to antique kilims, each piece is chosen for its character and quality."
+    ],
+    "image": "/images/Grantly-Sofa-crop-Final-New-Lamp-scaled-1 (1).webp"
+  },
+  "expertise": {
+    "heading": "Guided by Expertise",
+    "paragraphs": [
+      "The Savery's team offers a consultative, personal service that begins with listening and ends only when every detail is right. From initial concept through to final installation, clients work with experienced designers who understand fabric, form, and function.",
+      "With over fifty years of combined expertise across the team, there is very little we have not seen, solved, or made. Whether furnishing a single room or an entire country house, the level of care and attention remains the same."
+    ],
+    "image": "/images/The-Old-Mill-Broadway-057-scaled-1.webp"
+  },
+  "visitUs": {
+    "heading": "Visit the Workshop & Store",
+    "body": "We welcome visitors to the showroom and workshop by appointment. Come and experience our fabrics, see our craftspeople at work, and begin a conversation about your next project.",
+    "address": "Cotswold Design Centre, Kennel Lane\nBroadway, Worcestershire WR12 7DJ",
+    "phone": "01386 858941",
+    "visits": "By appointment",
+    "buttonText": "Get in touch",
+    "buttonLink": "/contact"
+  }
+}

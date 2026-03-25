@@ -93,6 +93,64 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
+      - name: "workshop"
+        label: "Workshop & Store"
+        file: "content/pages/workshop.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Introduction"
+            name: "introduction"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Showroom"
+            name: "showroom"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Workshop"
+            name: "workshop"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Fabrics & Rugs"
+            name: "fabrics"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Expert Service"
+            name: "expertise"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Visit Us"
+            name: "visitUs"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Visits", name: "visits", widget: "string", hint: "e.g. By appointment" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
       - name: "services"
         label: "Services"
         file: "content/pages/services.json"
