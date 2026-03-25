@@ -4,14 +4,17 @@ import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Our History | Saverys of Broadway — Interior Design Since 1991",
-  description:
-    "Established in 1991 in the heart of the Cotswolds, Saverys has been creating exceptional interiors for discerning clients across the UK for over 30 years. Broadway, Ludlow and Chelsea.",
-  alternates: { canonical: "/about" },
-};
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("about");
+  return buildMetadata(
+    seo,
+    "/about",
+    "Our History | Saverys of Broadway — Interior Design Since 1991",
+    "Established in 1991 in the heart of the Cotswolds, Saverys has been creating exceptional interiors for discerning clients across the UK for over 30 years.",
+  );
+}
 
 interface AboutContent {
   hero: { heading: string; image: string };

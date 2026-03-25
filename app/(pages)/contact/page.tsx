@@ -1,14 +1,17 @@
 import type { Metadata } from "next";
 import { Hero } from "@/components/sections/Hero";
 import { ContactSection } from "@/components/sections/ContactSection";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Contact Us | Saverys Interior Design — Broadway, Ludlow & Chelsea",
-  description:
-    "Get in touch with Saverys of Broadway. Visit our interior design studios in Broadway, Ludlow or Chelsea. Call 01386 858941 to discuss your project.",
-  alternates: { canonical: "/contact" },
-};
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("contact");
+  return buildMetadata(
+    seo,
+    "/contact",
+    "Contact Us | Saverys Interior Design — Broadway, Ludlow & Chelsea",
+    "Get in touch with Saverys of Broadway. Visit our interior design studios in Broadway, Ludlow or Chelsea.",
+  );
+}
 
 interface ContactContent {
   hero: { heading: string; image: string };

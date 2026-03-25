@@ -4,14 +4,17 @@ import { Hero } from "@/components/sections/Hero";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Interior Design Services | Saverys of Broadway — Cotswolds",
-  description:
-    "Full interior design, fabric and material sourcing, furniture curation, colour consultation, and project management. Luxury design service from Broadway, Cotswolds.",
-  alternates: { canonical: "/services" },
-};
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("services");
+  return buildMetadata(
+    seo,
+    "/services",
+    "Interior Design Services | Saverys of Broadway — Cotswolds",
+    "Full interior design, fabric and material sourcing, furniture curation, colour consultation, and project management.",
+  );
+}
 
 interface ServicesContent {
   hero: { heading: string; image: string };

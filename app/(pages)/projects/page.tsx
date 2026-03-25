@@ -5,14 +5,17 @@ import { MasonryGrid } from "@/components/sections/MasonryGrid";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { projects } from "@/lib/projects";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title: "Interior Design Portfolio | Saverys of Broadway — Cotswolds",
-  description:
-    "Browse the Saverys portfolio of luxury interior design projects — from private Cotswold residences to high-end hotels. Timeless spaces crafted with care and precision.",
-  alternates: { canonical: "/projects" },
-};
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("projects");
+  return buildMetadata(
+    seo,
+    "/projects",
+    "Interior Design Portfolio | Saverys of Broadway — Cotswolds",
+    "Browse the Saverys portfolio of luxury interior design projects — from private Cotswold residences to high-end hotels.",
+  );
+}
 
 interface ProjectsContent {
   hero: { heading: string; image: string };

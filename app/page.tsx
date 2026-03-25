@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import { Hero } from "@/components/sections/Hero";
 import { ProcessSection } from "@/components/sections/ProcessSection";
@@ -6,8 +7,18 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 import { generateSchema } from "@/lib/schema";
+
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("home");
+  return buildMetadata(
+    seo,
+    "/",
+    "Luxury Interior Design | Saverys of Broadway — Cotswolds & Ludlow",
+    "Saverys of Broadway creates luxurious, timeless interiors for private residences and luxury hotels.",
+  );
+}
 
 interface HomeContent {
   hero: { heading: string; subtitle?: string; image: string };

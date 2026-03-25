@@ -4,15 +4,17 @@ import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
-import { getPageContent } from "@/lib/content";
+import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 
-export const metadata: Metadata = {
-  title:
+export function generateMetadata(): Metadata {
+  const { seo } = getPageContent<{ seo?: PageSeo }>("workshop");
+  return buildMetadata(
+    seo,
+    "/workshop",
     "Workshop & Store | Saverys — Hand Upholstery & Luxury Fabrics, Broadway",
-  description:
-    "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, exquisite rugs, and bespoke furniture. Over 50 years of combined expertise.",
-  alternates: { canonical: "/workshop" },
-};
+    "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, exquisite rugs, and bespoke furniture.",
+  );
+}
 
 interface WorkshopContent {
   hero: { heading: string; subtitle?: string; image: string };
