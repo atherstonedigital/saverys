@@ -38,7 +38,7 @@ export function Nav() {
         )}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 md:px-12">
-          <Link href="/" className="relative block h-10 w-36">
+          <Link href="/" className="relative block h-12 w-[172px]">
             <Image
               src="/logo-black.png"
               alt="Savery's of Broadway"
@@ -49,7 +49,7 @@ export function Nav() {
                   ? ""
                   : "brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
               )}
-              sizes="144px"
+              sizes="172px"
               priority
             />
           </Link>
