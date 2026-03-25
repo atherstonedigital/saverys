@@ -45,7 +45,9 @@ export function Nav() {
               fill
               className={cn(
                 "object-contain transition-all duration-[var(--duration-fast)]",
-                isScrolled ? "" : "brightness-0 invert"
+                isScrolled
+                  ? ""
+                  : "brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]"
               )}
               sizes="144px"
               priority
@@ -59,10 +61,10 @@ export function Nav() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "font-body text-xs font-normal uppercase tracking-[0.06em] transition-colors duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+                  "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
                   isScrolled
-                    ? "text-charcoal/70 hover:text-charcoal"
-                    : "text-cream/80 hover:text-cream"
+                    ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
+                    : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
                 )}
               >
                 {link.label}

@@ -31,6 +31,8 @@ export function Hero({ heading, subtitle, image, cta }: HeroProps) {
           sizes="100vw"
         />
       )}
+      {/* Top gradient scrim — protects nav legibility on bright images */}
+      <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/50 to-transparent" />
       {/* Dark bottom gradient — no colour tint */}
       <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent" />
       <div className="absolute inset-0 flex items-end">
