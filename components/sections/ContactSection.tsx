@@ -119,6 +119,7 @@ export function ContactSection() {
                 method="POST"
                 data-netlify="true"
                 data-netlify-honeypot="bot-field"
+                data-netlify-recaptcha="true"
                 onSubmit={handleSubmit}
               >
                 <input type="hidden" name="form-name" value="contact" />
@@ -184,6 +185,9 @@ export function ContactSection() {
                     rows={4}
                     className="mt-2 w-full resize-none border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                   />
+                </div>
+                <div>
+                  <div data-netlify-recaptcha="true" />
                 </div>
                 <div>
                   <Button type="submit">Send message</Button>
