@@ -86,6 +86,26 @@ export function ContactSection() {
               <form className="mt-12 flex flex-col gap-8">
                 <div>
                   <label
+                    htmlFor="enquiry_type"
+                    className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
+                  >
+                    Enquiry type
+                  </label>
+                  <select
+                    id="enquiry_type"
+                    name="enquiry_type"
+                    className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
+                  >
+                    <option value="">Please select</option>
+                    <option value="full-interior-design">Full interior design project</option>
+                    <option value="fabric-sourcing">Fabric &amp; material sourcing</option>
+                    <option value="furniture-curation">Furniture curation</option>
+                    <option value="consultation">Initial consultation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label
                     htmlFor="name"
                     className="font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal"
                   >
@@ -141,7 +161,7 @@ export function ContactSection() {
                   src="/images/hero/contact.jpg"
                   alt="Ikat armchair with botanical prints"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="50vw"
                 />
               </div>

@@ -1,7 +1,6 @@
 "use client";
 
-import { ANIMATION } from "@/lib/constants";
-import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useRef } from "react";
 
 interface SectionRevealProps {
   children: React.ReactNode;
@@ -14,25 +13,41 @@ export function SectionReveal({
   className,
   delay = 0,
 }: SectionRevealProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLDivElement>(null);
 
-  if (shouldReduceMotion) {
-    return <div className={className}>{children}</div>;
-  }
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    // Check for reduced motion preference
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      el.classList.add("sr-visible");
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Apply staggered delay then reveal
+          setTimeout(() => {
+            el.classList.add("sr-visible");
+          }, delay * 1000);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0, rootMargin: "0px 0px -60px 0px" }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [delay]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, amount: 0.15 }}
-      transition={{
-        duration: ANIMATION.duration.medium,
-        ease: ANIMATION.ease,
-        delay,
-      }}
-      className={className}
+    <div
+      ref={ref}
+      className={`sr-hidden ${className ?? ""}`}
     >
       {children}
-    </motion.div>
+    </div>
   );
 }

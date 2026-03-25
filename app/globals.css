@@ -3,7 +3,7 @@
 @theme {
   /* Colours */
   --color-charcoal: #2C2C2C;
-  --color-stone: #8A8275;
+  --color-stone: #6b6358;
   --color-clay: #A0896C;
   --color-cream: #F5F0EB;
   --color-linen: #EDE8E1;
@@ -60,4 +60,26 @@ body {
 ::-webkit-scrollbar-thumb {
   background: rgba(158, 138, 94, 0.3);
   border-radius: 2px;
+}
+
+/* Hero fade-in — CSS-driven, no framer-motion */
+.hero-hidden {
+  opacity: 0;
+  transition: opacity 1.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.hero-visible {
+  opacity: 1;
+}
+
+/* Scroll reveal animations — CSS-driven, no framer-motion */
+.sr-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 700ms ease, transform 700ms ease;
+}
+
+.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
 }

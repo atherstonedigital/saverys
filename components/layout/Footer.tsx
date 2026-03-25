@@ -23,6 +23,14 @@ export function Footer() {
             <Text variant="small" className="mt-3 text-cream/60">
               studio@saverys.co.uk
             </Text>
+            <a
+              href="https://instagram.com/saverycotswolds"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-2 inline-block font-body text-xs uppercase tracking-[0.1em] text-cream/50 transition-colors duration-300 hover:text-cream"
+            >
+              Instagram
+            </a>
           </div>
 
           <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 md:gap-16">

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { SectionReveal } from "@/components/ui/SectionReveal";
@@ -46,7 +47,7 @@ export default function ServicesPage() {
     <>
       <Hero heading="What we do" image="/images/hero/services.jpg" />
 
-      <section className="px-6 py-16 md:px-12 md:py-32">
+      <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-3xl">
           <SectionReveal>
             <Text variant="body" className="text-stone">
@@ -59,6 +60,20 @@ export default function ServicesPage() {
       </section>
 
       <ServicesOverview services={services} />
+
+      <section className="bg-linen px-6 py-16 text-center md:px-12">
+        <SectionReveal>
+          <Text as="h2" className="mb-6">
+            Every project begins with listening
+          </Text>
+          <Link
+            href="/contact"
+            className="inline-block border border-charcoal bg-transparent px-8 py-3 font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal transition-all duration-500 hover:bg-charcoal hover:text-cream"
+          >
+            Start a conversation
+          </Link>
+        </SectionReveal>
+      </section>
     </>
   );
 }

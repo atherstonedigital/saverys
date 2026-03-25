@@ -62,7 +62,7 @@ function MasonryCard({
             src={project.image}
             alt={project.name}
             fill
-            className="object-cover transition-transform duration-700 ease-[var(--ease-saverys)] group-hover:scale-[1.02]"
+            className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>

@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 
 export const metadata: Metadata = {
-  title: "Our History",
+  title: "About",
+  description:
+    "Established in 1991, Savery's is a luxury interior design studio rooted in the Cotswolds. Over three decades of considered, crafted interiors.",
 };
 
 export default function AboutPage() {
@@ -16,7 +19,7 @@ export default function AboutPage() {
         image="/images/hero/about.jpg"
       />
 
-      <section className="px-6 py-16 md:px-12 md:py-32">
+      <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:items-center">
             <SectionReveal>
@@ -112,6 +115,20 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="bg-linen px-6 py-16 text-center md:px-12">
+        <SectionReveal>
+          <Text as="h2" className="mb-6">
+            See our work
+          </Text>
+          <Link
+            href="/projects"
+            className="inline-block border border-charcoal bg-transparent px-8 py-3 font-body text-xs font-normal uppercase tracking-[0.06em] text-charcoal transition-all duration-500 hover:bg-charcoal hover:text-cream"
+          >
+            View projects
+          </Link>
+        </SectionReveal>
       </section>
     </>
   );

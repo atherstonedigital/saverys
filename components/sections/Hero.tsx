@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
-import { ANIMATION } from "@/lib/constants";
+import { useEffect, useRef } from "react";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import Image from "next/image";
@@ -17,10 +16,22 @@ interface HeroProps {
 }
 
 export function Hero({ heading, subtitle, image, cta }: HeroProps) {
-  const shouldReduceMotion = useReducedMotion();
+  const ref = useRef<HTMLElement>(null);
 
-  const content = (
-    <>
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    // Trigger fade-in on mount
+    requestAnimationFrame(() => {
+      el.classList.add("hero-visible");
+    });
+  }, []);
+
+  return (
+    <section
+      ref={ref}
+      className="hero-hidden relative h-screen w-full bg-ink"
+    >
       {image && (
         <Image
           src={image}
@@ -57,29 +68,6 @@ export function Hero({ heading, subtitle, image, cta }: HeroProps) {
           )}
         </div>
       </div>
-    </>
-  );
-
-  if (shouldReduceMotion) {
-    return (
-      <section className="relative h-screen w-full bg-ink">
-        {content}
-      </section>
-    );
-  }
-
-  return (
-    <motion.section
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: ANIMATION.duration.slow,
-        ease: ANIMATION.ease,
-        delay: 0.1,
-      }}
-      className="relative h-screen w-full bg-ink"
-    >
-      {content}
-    </motion.section>
+    </section>
   );
 }
