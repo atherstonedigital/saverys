@@ -7,6 +7,177 @@ media_folder: "public/images"
 public_folder: "/images"
 
 collections:
+  # ── Page content (single files) ──────────────────────────
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - name: "home"
+        label: "Homepage"
+        file: "content/pages/home.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Studio Intro"
+            name: "studioIntro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Featured Projects"
+            name: "featuredProjects"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly name, e.g. the-old-mill-broadway" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Services Section"
+            name: "services"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+              - label: "Service Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "about"
+        label: "About"
+        file: "content/pages/about.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image 1", name: "image1", widget: "image" }
+              - { label: "Image 2", name: "image2", widget: "image" }
+          - label: "Process"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "services"
+        label: "Services"
+        file: "content/pages/services.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Services"
+            name: "services"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "projects-page"
+        label: "Projects Page"
+        file: "content/pages/projects.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "CTA Section"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "contact"
+        label: "Contact"
+        file: "content/pages/contact.json"
+        fields:
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Showrooms"
+            name: "showrooms"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Address Line 1", name: "address1", widget: "string" }
+              - { label: "Address Line 2", name: "address2", widget: "string", required: false }
+              - { label: "Phone", name: "phone", widget: "string", required: false }
+          - { label: "Email", name: "email", widget: "string" }
+          - label: "Enquiry Types"
+            name: "enquiryTypes"
+            widget: "list"
+            field: { label: "Type", name: "type", widget: "string" }
+
+  # ── Site settings ────────────────────────────────────────
+
+  - name: "settings"
+    label: "Settings"
+    files:
+      - name: "general"
+        label: "General Settings"
+        file: "content/settings/general.json"
+        fields:
+          - { label: "Site Name", name: "siteName", widget: "string" }
+          - { label: "Site Description", name: "siteDescription", widget: "text" }
+          - { label: "Logo", name: "logo", widget: "image" }
+          - { label: "Social Image", name: "socialImage", widget: "image", hint: "Used for Open Graph / social sharing" }
+
+  # ── Blog / Journal ──────────────────────────────────────
+
   - name: "journal"
     label: "Journal"
     folder: "content/journal"
@@ -19,6 +190,8 @@ collections:
       - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short description for listings and SEO" }
       - { label: "Body", name: "body", widget: "markdown" }
       - { label: "Tags", name: "tags", widget: "list", required: false, hint: "e.g. Cotswolds, fabrics, renovation" }
+
+  # ── Portfolio Projects ──────────────────────────────────
 
   - name: "projects"
     label: "Projects"

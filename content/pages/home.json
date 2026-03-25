@@ -1,0 +1,52 @@
+{
+  "hero": {
+    "heading": "Rooms composed with care",
+    "subtitle": "A luxury interior design studio rooted in the Cotswolds, crafting considered spaces since 1991.",
+    "image": "/images/hero/home.webp"
+  },
+  "studioIntro": {
+    "heading": "A studio of quiet intention",
+    "body": "At Savery's, we believe the most beautiful rooms are those that feel as though they have always existed. Our approach is one of restraint and consideration — where every fabric, finish and form is chosen not for trend, but for truth.",
+    "image": "/images/projects/old-mill-details.webp"
+  },
+  "featuredProjects": [
+    {
+      "name": "The Old Mill, Broadway",
+      "slug": "the-old-mill-broadway",
+      "image": "/images/projects/old-mill-bedroom.webp"
+    },
+    {
+      "name": "Jams House",
+      "slug": "jams-house",
+      "image": "/images/projects/jams-house-living.webp"
+    },
+    {
+      "name": "The Grantly Collection",
+      "slug": "the-grantly-collection",
+      "image": "/images/projects/grantly-sofa.webp"
+    }
+  ],
+  "services": {
+    "heading": "What we do",
+    "image": "/images/hero/services.webp",
+    "items": [
+      {
+        "title": "Full interior design",
+        "description": "Complete room and property schemes, from concept through to final styling."
+      },
+      {
+        "title": "Fabric and material sourcing",
+        "description": "Access to the finest mills and makers — linens, wools, silks and beyond."
+      },
+      {
+        "title": "Furniture curation",
+        "description": "Handpicked antiques and contemporary pieces, chosen for character and quality."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "Begin a conversation",
+    "buttonText": "Get in touch",
+    "buttonLink": "/contact"
+  }
+}

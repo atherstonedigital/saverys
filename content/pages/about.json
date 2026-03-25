@@ -1,0 +1,37 @@
+{
+  "hero": {
+    "heading": "A room that remembers",
+    "image": "/images/hero/about.webp"
+  },
+  "about": {
+    "paragraphs": [
+      "Savery's was established in 1991 by a family with a deep love of beautiful things — not for the sake of beauty alone, but for the quiet comfort it brings to daily life.",
+      "Over three decades, the studio has cultivated a philosophy of restraint. We do not follow trends. We listen — to the architecture, to the light, to the people who will live within the spaces we shape.",
+      "Based in the village of Broadway in the Cotswolds, our studio sits within one of England's most cherished landscapes — a place that reminds us, daily, of the value of things made well and built to last."
+    ],
+    "image1": "/images/projects/old-mill-details.webp",
+    "image2": "/images/projects/old-mill-chair.webp"
+  },
+  "process": {
+    "heading": "How we work",
+    "steps": [
+      {
+        "title": "Listen",
+        "description": "Every project begins with listening. We take time to understand not just the brief, but the rhythms and rituals of the people who will inhabit the space."
+      },
+      {
+        "title": "Compose",
+        "description": "We compose schemes with the care of a curator — balancing colour, texture and form until the room feels inevitable, not designed."
+      },
+      {
+        "title": "Craft",
+        "description": "We work with the finest makers and craftspeople, ensuring every detail is executed with precision and care."
+      }
+    ]
+  },
+  "cta": {
+    "heading": "See our work",
+    "buttonText": "View projects",
+    "buttonLink": "/projects"
+  }
+}

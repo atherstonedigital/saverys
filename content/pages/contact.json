@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "heading": "Get in touch",
+    "image": "/images/hero/contact.webp"
+  },
+  "showrooms": [
+    {
+      "name": "Broadway",
+      "address1": "27 High Street",
+      "address2": "Broadway, Worcestershire WR12 7DP",
+      "phone": "01386 858100"
+    },
+    {
+      "name": "Ludlow",
+      "address1": "4 King Street",
+      "address2": "Ludlow, Shropshire SY8 1AQ",
+      "phone": "01584 877588"
+    },
+    {
+      "name": "Chelsea",
+      "address1": "Chelsea Harbour Design Centre",
+      "address2": "London SW10 0XE",
+      "phone": ""
+    }
+  ],
+  "email": "studio@saverys.co.uk",
+  "enquiryTypes": [
+    "Full interior design project",
+    "Fabric & material sourcing",
+    "Furniture curation",
+    "Initial consultation",
+    "Other"
+  ]
+}

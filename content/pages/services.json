@@ -1,0 +1,39 @@
+{
+  "hero": {
+    "heading": "What we do",
+    "image": "/images/hero/services.webp"
+  },
+  "intro": "We begin every project by listening. Before a single fabric is chosen or a colour considered, we take time to understand the architecture, the light, and the lives that will unfold within the space.",
+  "services": [
+    {
+      "title": "Full interior design",
+      "description": "Complete room and property schemes, from initial concept through to final styling. We manage every detail — spatial planning, colour palettes, furniture selection, soft furnishings, and finishing touches.",
+      "image": "/images/hero/home.webp"
+    },
+    {
+      "title": "Fabric and material sourcing",
+      "description": "Access to the finest mills and makers across Britain and Europe. Linens, wools, silks, velvets — each chosen for quality, character, and how they feel beneath the hand.",
+      "image": "/images/projects/old-mill-chair.webp"
+    },
+    {
+      "title": "Furniture curation",
+      "description": "A considered mix of antique and contemporary pieces, handpicked for their craftsmanship and character. We source from trusted dealers, estates, and artisan makers.",
+      "image": "/images/projects/old-mill-bedroom.webp"
+    },
+    {
+      "title": "Colour and light consultation",
+      "description": "Colour is the foundation of every room we compose. We consider how light moves through a space at every hour, selecting tones that feel natural and enduring.",
+      "image": "/images/projects/old-mill-kitchen.webp"
+    },
+    {
+      "title": "Project management",
+      "description": "From initial concept to final installation, we oversee every aspect of the project. Our clients are free to enjoy the process, knowing every detail is in careful hands.",
+      "image": "/images/hero/services.webp"
+    }
+  ],
+  "cta": {
+    "heading": "Every project begins with listening",
+    "buttonText": "Start a conversation",
+    "buttonLink": "/contact"
+  }
+}
