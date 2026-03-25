@@ -15,7 +15,7 @@ export function SectionReveal({
 }: SectionRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
 
-  useEffect(() => 
+  useEffect(() =>  {
     const el = ref.current;
     if (!el) return;
 
