@@ -25,7 +25,6 @@ export default function ContactPage() {
       <Hero
         heading={content.hero.heading}
         image={content.hero.image}
-        seoHeading="Contact Savery's of Broadway — Interior Design Studios"
       />
       <ContactSection />
     </>

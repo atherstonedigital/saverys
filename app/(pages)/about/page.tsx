@@ -31,7 +31,6 @@ export default function AboutPage() {
       <Hero
         heading={content.hero.heading}
         image={content.hero.image}
-        seoHeading="About Savery's Interior Design Studio"
       />
 
       <section className="px-6 py-12 md:px-12 md:py-20">

@@ -85,19 +85,6 @@ body {
     transition: opacity 700ms ease, transform 700ms ease;
 }
 
-/* Visually hidden but accessible to screen readers and search engines */
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border-width: 0;
-}
-
 /* Journal article body — markdown-generated HTML */
 .journal-body {
   font-family: var(--font-body);

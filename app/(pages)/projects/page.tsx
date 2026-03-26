@@ -38,7 +38,7 @@ export default function ProjectsPage() {
 
   return (
     <>
-      <Hero heading={content.hero.heading} image={content.hero.image} seoHeading="Interior Design Portfolio — Cotswolds & Beyond" />
+      <Hero heading={content.hero.heading} image={content.hero.image} />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-3xl">
