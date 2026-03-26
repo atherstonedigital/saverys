@@ -5,12 +5,216 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Saverys — Content Manager</title>
+    <link rel="icon" href="/favicon.png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Courier+Prime&family=Jost:wght@300;400&display=swap"
       rel="stylesheet"
     />
     <style>
-      /* Preview pane styling to match the live site */
+      /* ═══════════════════════════════════════════════════════
+         Saverys Brand Theme for Decap CMS
+         Colours: charcoal #2C2C2C, stone #6b6358, clay #A0896C,
+                  cream #F5F0EB, linen #EDE8E1, ink #1A1A1A
+         Fonts: Cormorant Garamond (display), Jost (body)
+         ═══════════════════════════════════════════════════════ */
+
+      /* ── Global font override ─────────────────────────────── */
+      body {
+        font-family: "Jost", "Helvetica Neue", sans-serif !important;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      /* ── Top header bar ───────────────────────────────────── */
+      header {
+        background: #1A1A1A !important;
+        border-bottom: none !important;
+      }
+      /* Logo area — replace Decap text with Saverys branding */
+      header a[href="#/"] {
+        font-family: "Cormorant Garamond", Georgia, serif !important;
+        font-weight: 300 !important;
+        font-size: 1.25rem !important;
+        letter-spacing: 0.06em !important;
+        color: #F5F0EB !important;
+        text-transform: none !important;
+      }
+      header a[href="#/"]::after {
+        content: "" !important;
+      }
+      /* Header nav links */
+      header a, header span {
+        color: #F5F0EB !important;
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.03em !important;
+      }
+      header a:hover {
+        color: #A0896C !important;
+      }
+      /* Header dropdown */
+      header ul {
+        background: #1A1A1A !important;
+        border: 1px solid rgba(245, 240, 235, 0.1) !important;
+      }
+      header ul a {
+        color: rgba(245, 240, 235, 0.7) !important;
+      }
+      header ul a:hover {
+        color: #F5F0EB !important;
+        background: rgba(245, 240, 235, 0.05) !important;
+      }
+
+      /* ── Sidebar / Collection nav ─────────────────────────── */
+      aside, [class*="Sidebar"] {
+        background: #F5F0EB !important;
+        border-right: 1px solid #EDE8E1 !important;
+      }
+      aside a, aside span, aside h2,
+      [class*="Sidebar"] a, [class*="Sidebar"] span {
+        font-family: "Jost", sans-serif !important;
+        color: #2C2C2C !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.02em !important;
+      }
+      aside a:hover, [class*="Sidebar"] a:hover {
+        color: #A0896C !important;
+        background: rgba(160, 137, 108, 0.08) !important;
+      }
+      /* Active sidebar item */
+      aside a[class*="active"],
+      [class*="Sidebar"] a[class*="active"] {
+        color: #2C2C2C !important;
+        background: #EDE8E1 !important;
+        font-weight: 400 !important;
+      }
+
+      /* ── Main content area ────────────────────────────────── */
+      main, [class*="AppMainContainer"] {
+        background: #F5F0EB !important;
+      }
+
+      /* ── Collection list / entries table ───────────────────── */
+      [class*="ListCard"], [class*="ObjectWidgetTopBar"] {
+        border-color: #EDE8E1 !important;
+      }
+      [class*="ListCardLink"] {
+        font-family: "Jost", sans-serif !important;
+      }
+
+      /* ── Headings throughout CMS ──────────────────────────── */
+      h1, h2 {
+        font-family: "Cormorant Garamond", Georgia, serif !important;
+        font-weight: 300 !important;
+        letter-spacing: 0.04em !important;
+        color: #2C2C2C !important;
+      }
+
+      /* ── Form fields and inputs ───────────────────────────── */
+      input[type="text"],
+      input[type="url"],
+      input[type="email"],
+      input[type="number"],
+      textarea,
+      select {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        font-size: 0.95rem !important;
+        color: #2C2C2C !important;
+        background: #FAFAF8 !important;
+        border: 1px solid #EDE8E1 !important;
+        border-radius: 2px !important;
+        transition: border-color 0.3s ease !important;
+      }
+      input:focus, textarea:focus, select:focus {
+        border-color: #A0896C !important;
+        box-shadow: 0 0 0 1px rgba(160, 137, 108, 0.2) !important;
+        outline: none !important;
+      }
+
+      /* Field labels */
+      label, [class*="ControlLabel"], [class*="FieldLabel"] {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        color: #6b6358 !important;
+      }
+
+      /* Hint text */
+      [class*="ControlHint"] {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        color: #A0896C !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* ── Buttons ──────────────────────────────────────────── */
+      /* Primary / Publish button */
+      button[class*="PublishButton"],
+      [class*="ToolbarButton"][class*="publish"],
+      button[data-testid*="publish"],
+      [class*="AppHeader"] button:not([class*="Avatar"]) {
+        background: #2C2C2C !important;
+        color: #F5F0EB !important;
+        border: 1px solid #2C2C2C !important;
+        font-family: "Jost", sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        border-radius: 0 !important;
+        transition: all 0.3s ease !important;
+      }
+      button[class*="PublishButton"]:hover,
+      [class*="ToolbarButton"][class*="publish"]:hover,
+      button[data-testid*="publish"]:hover,
+      [class*="AppHeader"] button:not([class*="Avatar"]):hover {
+        background: #A0896C !important;
+        border-color: #A0896C !important;
+      }
+
+      /* Secondary / ghost buttons */
+      button {
+        font-family: "Jost", sans-serif !important;
+        letter-spacing: 0.03em !important;
+        border-radius: 0 !important;
+      }
+
+      /* ── Widget panels / field groups ─────────────────────── */
+      [class*="ObjectWidgetTopBar"] {
+        background: #EDE8E1 !important;
+        font-family: "Jost", sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 0.7rem !important;
+        letter-spacing: 0.06em !important;
+        text-transform: uppercase !important;
+        color: #2C2C2C !important;
+      }
+
+      /* Nested field containers */
+      [class*="StyledListItemTopBar"],
+      [class*="NestedObjectLabel"] {
+        background: #EDE8E1 !important;
+        color: #2C2C2C !important;
+        font-family: "Jost", sans-serif !important;
+      }
+
+      /* ── Toolbar / editor toolbar ─────────────────────────── */
+      [class*="Toolbar"], [class*="EditorToolbar"] {
+        background: #FAFAF8 !important;
+        border-color: #EDE8E1 !important;
+      }
+      [class*="Toolbar"] button {
+        color: #6b6358 !important;
+      }
+      [class*="Toolbar"] button:hover {
+        color: #2C2C2C !important;
+        background: rgba(160, 137, 108, 0.1) !important;
+      }
+
+      /* ── Markdown editor pane ─────────────────────────────── */
       [data-slate-editor] {
         font-family: "Jost", "Helvetica Neue", sans-serif !important;
         font-weight: 300 !important;
@@ -20,12 +224,13 @@
         color: #6b6358 !important;
         max-width: 720px !important;
         padding: 2rem !important;
+        background: #FAFAF8 !important;
       }
       [data-slate-editor] h1,
       [data-slate-editor] h2,
       [data-slate-editor] h3 {
         font-family: "Cormorant Garamond", Georgia, serif !important;
-        color: #2c2c2c !important;
+        color: #2C2C2C !important;
       }
       [data-slate-editor] h2 {
         font-weight: 300 !important;
@@ -47,16 +252,16 @@
       }
       [data-slate-editor] strong {
         font-weight: 400 !important;
-        color: #2c2c2c !important;
+        color: #2C2C2C !important;
       }
       [data-slate-editor] blockquote {
-        border-left: 2px solid #a0896c !important;
+        border-left: 2px solid #A0896C !important;
         padding-left: 1.5rem !important;
         margin: 1.5rem 0 !important;
         font-style: italic !important;
       }
       [data-slate-editor] a {
-        color: #2c2c2c !important;
+        color: #2C2C2C !important;
         text-decoration: underline !important;
         text-underline-offset: 3px !important;
       }
@@ -65,10 +270,39 @@
         height: auto !important;
         margin: 1.5rem 0 !important;
       }
-      /* Preview template styling */
+
+      /* ── Preview pane ─────────────────────────────────────── */
       .frame-content {
         font-family: "Jost", "Helvetica Neue", sans-serif !important;
-        background: #f5f0eb !important;
+        background: #F5F0EB !important;
+      }
+
+      /* ── Media library modal ──────────────────────────────── */
+      [class*="MediaLibrary"] {
+        font-family: "Jost", sans-serif !important;
+      }
+
+      /* ── Scrollbar styling ────────────────────────────────── */
+      ::-webkit-scrollbar {
+        width: 4px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: rgba(160, 137, 108, 0.3);
+        border-radius: 2px;
+      }
+
+      /* ── Selection ────────────────────────────────────────── */
+      ::selection {
+        background-color: #A0896C;
+        color: #F5F0EB;
+      }
+
+      /* ── Loading screen ───────────────────────────────────── */
+      [class*="AppLoader"], .nc-app-loading {
+        background: #F5F0EB !important;
       }
     </style>
   </head>
