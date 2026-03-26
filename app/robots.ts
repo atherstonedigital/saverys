@@ -8,16 +8,30 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/admin/", "/api/"],
       },
+      // Block AI training crawlers
       {
         userAgent: "GPTBot",
-        allow: "/",
+        disallow: "/",
+      },
+      {
+        userAgent: "CCBot",
+        disallow: "/",
+      },
+      {
+        userAgent: "anthropic-ai",
+        disallow: "/",
       },
       {
         userAgent: "Google-Extended",
-        allow: "/",
+        disallow: "/",
       },
       {
-        userAgent: "ClaudeBot",
+        userAgent: "Bytespider",
+        disallow: "/",
+      },
+      // Allow AI search/retrieval bots
+      {
+        userAgent: "ChatGPT-User",
         allow: "/",
       },
       {

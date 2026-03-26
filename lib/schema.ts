@@ -25,13 +25,21 @@ interface SchemaOptions {
 
 function getOrganizationSchema() {
   return {
-    "@type": "InteriorDesigner",
+    "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
-    name: "Saverys of Broadway",
-    alternateName: "Savery's of Broadway",
+    name: "Savery's of Broadway",
+    alternateName: "Saverys of Broadway",
     description:
-      "Luxury interior design studio established in 1991, creating timeless interiors for private residences and luxury hotels across the UK. Hand upholstery workshop, premium fabrics showroom, and expert design service.",
+      "Luxury interior design studio rooted in the Cotswolds since 1991. Bespoke interior schemes, hand upholstery, and the finest fabrics.",
     url: SITE_URL,
+    telephone: "+441386858941",
+    email: "studio@saverys.co.uk",
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+441386858941",
+      email: "studio@saverys.co.uk",
+      contactType: "Customer Service",
+    },
     logo: {
       "@type": "ImageObject",
       url: `${SITE_URL}/logo-black.png`,
