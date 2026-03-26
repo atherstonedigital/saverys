@@ -1,7 +1,7 @@
 ---
 title: "The Anatomy of a Hand-Sprung Seat"
 date: 2026-03-05T09:00:00.000Z
-featuredImage: "/images/upholstery work shop 4.jpg"
+featuredImage: "/images/upholstery work shop 4.webp"
 featuredImageAlt: "Coil springs being hand-tied in the Saverys upholstery workshop, Broadway"
 summary: "What's inside a properly made seat — and why hand-sprung upholstery feels different from anything built with modern shortcuts."
 pillar: "craft"
@@ -39,7 +39,7 @@ Tying springs is skilled, physical work. Each knot must be secure, each cord ten
 
 **The top cover.** Finally, the chosen fabric is applied over the calico. On a hand-sprung seat, the fabric sits on a surface that has been meticulously shaped and tensioned. It lies flat, it doesn't pull, and it ages evenly because the structure underneath is sound.
 
-![Upholsterer hand-working fabric at the cutting table in the Saverys workshop](/images/upholstery%20work%20shop%201.jpg)
+![Upholsterer hand-working fabric at the cutting table in the Saverys workshop](/images/upholstery work shop 1.webp)
 
 ## Why it matters
 

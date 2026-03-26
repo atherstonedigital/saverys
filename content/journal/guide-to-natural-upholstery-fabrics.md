@@ -1,7 +1,7 @@
 ---
 title: "Linen, Velvet, Wool: A Guide to Natural Upholstery Fabrics"
 date: 2026-02-20T09:00:00.000Z
-featuredImage: "/images/saverys broadway shop 2.jpg"
+featuredImage: "/images/saverys broadway shop 2.webp"
 featuredImageAlt: "Natural upholstery fabric samples — linen, velvet, and wool — at the Saverys showroom"
 summary: "The natural fabrics we reach for most often in the workshop, how they behave, and where each one works best."
 pillar: "fabric"
@@ -45,7 +45,7 @@ The weight and pile density matter enormously. A good upholstery velvet should f
 
 **Where to be cautious:** Very sunny rooms where prolonged direct light can cause uneven fading. Households with cats, who find velvet irresistible.
 
-![Fabric sample books from leading British and European houses](/images/saverys%20broadway%20shop%201.jpg)
+![Fabric sample books from leading British and European houses](/images/saverys broadway shop 1.webp)
 
 ## Wool
 

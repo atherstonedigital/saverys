@@ -1,7 +1,7 @@
 ---
 title: "What Happens When You Commission a Bespoke Sofa"
 date: 2026-03-15T09:00:00.000Z
-featuredImage: "/images/saverys broadway shop 5.jpg"
+featuredImage: "/images/saverys broadway shop 5.webp"
 featuredImageAlt: "A bespoke sofa being hand-upholstered in the Saverys workshop, Broadway"
 summary: "From first conversation to finished piece — the full process of commissioning a handmade sofa from a working upholstery workshop."
 pillar: "craft"
@@ -37,7 +37,7 @@ The frame is constructed by hand in our workshop. We don't use staple guns on st
 
 The base is sprung using traditional coil springs, hand-tied with an eight-way pattern. This is the element that gives the seat its response — that gentle, supportive give when you sit down, without the bottoming-out that foam alone produces. Hand-springing takes significantly longer than modern drop-in spring units, but the difference in comfort is immediately apparent.
 
-![Upholsterer working on fabric at the Saverys workshop cutting table](/images/upholstery%20work%20shop%202.jpg)
+![Upholsterer working on fabric at the Saverys workshop cutting table](/images/upholstery work shop 2.webp)
 
 ## Upholstering
 

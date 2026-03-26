@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "optimize-images": "node scripts/optimize-images.js && node scripts/update-image-refs.js",
+    "build": "npm run optimize-images && next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -17,6 +18,7 @@
     "react-dom": "^19.0.0",
     "remark": "^15.0.1",
     "remark-html": "^16.0.1",
+    "sharp": "^0.34.5",
     "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {

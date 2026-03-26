@@ -1,7 +1,7 @@
 ---
 title: "Ludlow: A Design Lover's Guide to Shropshire's Finest Town"
 date: 2026-02-15T09:00:00.000Z
-featuredImage: /images/ludlow-hero.jpg
+featuredImage: /images/ludlow-hero.webp
 featuredImageAlt: The historic market town of Ludlow, Shropshire — home to a
   Saverys interior design studio
 summary: Why Ludlow is quietly becoming one of the most interesting design
