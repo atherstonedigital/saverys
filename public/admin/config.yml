@@ -372,6 +372,13 @@ collections:
               - { label: "Address", name: "address", widget: "string" }
               - { label: "Phone (display)", name: "phone", widget: "string" }
               - { label: "Phone (tel: link)", name: "phoneTel", widget: "string", hint: "International format, e.g. +441386858941" }
+          - label: "Footer Links"
+            name: "links"
+            widget: "list"
+            hint: "Links shown in the 'Explore' column. Use descriptive anchor text for SEO."
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Link", name: "href", widget: "string" }
 
   # ── Blog / Journal ──────────────────────────────────────
 

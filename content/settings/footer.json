@@ -21,5 +21,14 @@
       "phone": "020 3668 1000",
       "phoneTel": "+442036681000"
     }
+  ],
+  "links": [
+    { "label": "About", "href": "/about" },
+    { "label": "Interior design portfolio", "href": "/projects" },
+    { "label": "Broadway workshop & showroom", "href": "/workshop-stores/broadway" },
+    { "label": "Ludlow store", "href": "/workshop-stores/ludlow" },
+    { "label": "Design services", "href": "/services" },
+    { "label": "Journal", "href": "/journal" },
+    { "label": "Get in touch", "href": "/contact" }
   ]
 }

@@ -9,11 +9,17 @@ interface FooterLocation {
   phoneTel: string;
 }
 
+interface FooterLink {
+  label: string;
+  href: string;
+}
+
 interface FooterData {
   tagline: string;
   email: string;
   instagram: string;
   locations: FooterLocation[];
+  links?: FooterLink[];
 }
 
 interface FooterProps {
@@ -21,6 +27,18 @@ interface FooterProps {
 }
 
 export function Footer({ data }: FooterProps) {
+  const defaultLinks: FooterLink[] = [
+    { label: "About", href: "/about" },
+    { label: "Projects", href: "/projects" },
+    { label: "Broadway Workshop", href: "/workshop-stores/broadway" },
+    { label: "Ludlow Store", href: "/workshop-stores/ludlow" },
+    { label: "Services", href: "/services" },
+    { label: "Journal", href: "/journal" },
+    { label: "Contact", href: "/contact" },
+  ];
+
+  const links = data.links && data.links.length > 0 ? data.links : defaultLinks;
+
   return (
     <footer className="bg-ink px-6 py-16 md:px-12 md:py-24">
       <div className="mx-auto max-w-7xl">
@@ -52,6 +70,23 @@ export function Footer({ data }: FooterProps) {
             >
               Instagram
             </a>
+          </div>
+
+          <div>
+            <Text variant="caption" className="text-cream/40">
+              Explore
+            </Text>
+            <nav className="mt-3 flex flex-col gap-2">
+              {links.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/50 transition-colors duration-300 hover:text-cream"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
           </div>
 
           <div className="flex flex-col gap-6 sm:flex-row sm:gap-12 md:gap-16">

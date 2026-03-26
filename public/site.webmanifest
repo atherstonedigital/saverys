@@ -1,0 +1,16 @@
+{
+  "name": "Savery's of Broadway",
+  "short_name": "Saverys",
+  "description": "Luxury interior design studio, Broadway, Cotswolds",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#F5F0EB",
+  "theme_color": "#1A1A1A",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "112x112",
+      "type": "image/png"
+    }
+  ]
+}

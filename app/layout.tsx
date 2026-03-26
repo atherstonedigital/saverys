@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
+  manifest: "/site.webmanifest",
   openGraph: {
     siteName: SITE_NAME,
     images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
