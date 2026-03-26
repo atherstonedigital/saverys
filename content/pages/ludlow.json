@@ -1,0 +1,60 @@
+{
+  "seo": {
+    "title": "Our Ludlow Store | Savery's of Broadway — Luxury Interior Design",
+    "description": "Visit Savery's of Broadway in Ludlow — our carefully curated interiors store at 1 Tower Street, in the heart of this historic market town. Fabrics, furnishings & design consultations."
+  },
+  "hero": {
+    "heading": "Our Ludlow Store",
+    "locationLabel": "1 Tower Street, Ludlow"
+  },
+  "intro": {
+    "heading": "A destination for exceptional interiors",
+    "paragraphs": [
+      "Nestled in the heart of one of England's finest market towns, our Ludlow store brings the Savery's experience to the Welsh Marches. Set within a beautifully appointed space on Tower Street, it's a place to explore our curated collection of fabrics, wallpapers, furniture, and decorative pieces — each chosen to reflect the quality and craftsmanship that defines everything we do.",
+      "Whether you're embarking on a full renovation or searching for that one perfect finishing touch, our Ludlow team is on hand to guide, inspire, and bring your vision to life."
+    ]
+  },
+  "features": [
+    {
+      "title": "Fabric Library",
+      "description": "Browse an extensive collection of the finest fabrics from leading British and European houses — available to view, touch, and take away as samples."
+    },
+    {
+      "title": "Wallpapers & Finishes",
+      "description": "From hand-printed wallpapers to artisan paint finishes, discover the materials that bring walls to life with character and depth."
+    },
+    {
+      "title": "Furniture & Pieces",
+      "description": "A changing selection of furniture, lighting, and decorative accessories — sourced for quality, beauty, and that unmistakable sense of place."
+    },
+    {
+      "title": "Design Consultations",
+      "description": "Book a one-to-one consultation with our team to discuss your project. Whether it's a single room or an entire property, we're here to help."
+    },
+    {
+      "title": "Curtain & Soft Furnishings",
+      "description": "All our curtains and soft furnishings are made in-house at our own workroom — ensuring impeccable quality and a truly bespoke result."
+    },
+    {
+      "title": "Gifts & Home",
+      "description": "Thoughtfully chosen candles, ceramics, and homeware — perfect for gifting or adding a considered finishing touch to any room."
+    }
+  ],
+  "gallery": {
+    "heading": "Step inside",
+    "images": []
+  },
+  "visitUs": {
+    "heading": "Visit us in Ludlow",
+    "address": "1 Tower Street\nLudlow, Shropshire\nSY8 1RL",
+    "phone": "01584 708381",
+    "mobile": "07415 065580",
+    "hours": "Monday – Saturday: 10am – 5pm\nSunday: By appointment",
+    "parking": "Castle Square car park is a short walk away"
+  },
+  "cta": {
+    "heading": "Start a conversation",
+    "buttonText": "Get in touch",
+    "buttonLink": "/contact"
+  }
+}

@@ -109,8 +109,8 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
-      - name: "workshop"
-        label: "Workshop & Store"
+      - name: "workshop-broadway"
+        label: "Broadway Workshop & Store"
         file: "content/pages/workshop.json"
         fields:
           - label: "SEO"
@@ -172,6 +172,62 @@ collections:
               - { label: "Address", name: "address", widget: "text" }
               - { label: "Phone", name: "phone", widget: "string" }
               - { label: "Visits", name: "visits", widget: "string", hint: "e.g. By appointment" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "workshop-ludlow"
+        label: "Ludlow Store"
+        file: "content/pages/ludlow.json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "ogImage", widget: "image", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Location Label", name: "locationLabel", widget: "string" }
+              - { label: "Image", name: "image", widget: "image", required: false }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" } }
+              - { label: "Image", name: "image", widget: "image", required: false }
+          - label: "Features"
+            name: "features"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Images", name: "images", widget: "list", field: { label: "Image", name: "image", widget: "image" } }
+          - label: "Visit Us"
+            name: "visitUs"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Address", name: "address", widget: "text" }
+              - { label: "Phone", name: "phone", widget: "string" }
+              - { label: "Mobile", name: "mobile", widget: "string", required: false }
+              - { label: "Opening Hours", name: "hours", widget: "text" }
+              - { label: "Parking", name: "parking", widget: "string", required: false }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
