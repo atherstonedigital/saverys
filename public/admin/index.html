@@ -11,210 +11,232 @@
       rel="stylesheet"
     />
     <style>
-      /* ═══════════════════════════════════════════════════════
-         Saverys Brand Theme for Decap CMS
-         Colours: charcoal #2C2C2C, stone #6b6358, clay #A0896C,
-                  cream #F5F0EB, linen #EDE8E1, ink #1A1A1A
-         Fonts: Cormorant Garamond (display), Jost (body)
-         ═══════════════════════════════════════════════════════ */
+      /*  Saverys CMS Theme
+          charcoal #2C2C2C · stone #6b6358 · clay #A0896C
+          cream #F5F0EB · linen #EDE8E1 · ink #1A1A1A  */
 
-      /* ── Global font override ─────────────────────────────── */
-      body {
+      /* ── Reset the grey ────────────────────────────────────── */
+      html, body, #nc-root, #root,
+      [class*="AppMainContainer"], [class*="defaultMain"],
+      main, [id="main"] {
+        background: #EDE8E1 !important;
         font-family: "Jost", "Helvetica Neue", sans-serif !important;
         -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
       }
 
-      /* ── Top header bar ───────────────────────────────────── */
-      header {
+      /* Catch-all for the grey wrapper divs */
+      #nc-root > div,
+      #nc-root > div > div,
+      #nc-root > div > div > div {
+        background: #EDE8E1 !important;
+      }
+
+      /* ── Header ────────────────────────────────────────────── */
+      header, nav[class*="Header"], [class*="AppHeader"] {
         background: #1A1A1A !important;
         border-bottom: none !important;
+        box-shadow: none !important;
       }
-      /* Logo area — replace Decap text with Saverys branding */
-      header a[href="#/"] {
+      header *, nav[class*="Header"] * {
+        font-family: "Jost", sans-serif !important;
+        letter-spacing: 0.04em !important;
+      }
+      header a[href="#/"],
+      header a[href="#/"]:visited {
         font-family: "Cormorant Garamond", Georgia, serif !important;
         font-weight: 300 !important;
-        font-size: 1.25rem !important;
-        letter-spacing: 0.06em !important;
+        font-size: 1.2rem !important;
+        letter-spacing: 0.08em !important;
         color: #F5F0EB !important;
-        text-transform: none !important;
       }
-      header a[href="#/"]::after {
-        content: "" !important;
-      }
-      /* Header nav links */
-      header a, header span {
-        color: #F5F0EB !important;
-        font-family: "Jost", sans-serif !important;
-        font-weight: 300 !important;
-        letter-spacing: 0.03em !important;
-      }
-      header a:hover {
-        color: #A0896C !important;
-      }
-      /* Header dropdown */
-      header ul {
-        background: #1A1A1A !important;
-        border: 1px solid rgba(245, 240, 235, 0.1) !important;
-      }
-      header ul a {
+      header a, header span, header button {
         color: rgba(245, 240, 235, 0.7) !important;
-      }
-      header ul a:hover {
-        color: #F5F0EB !important;
-        background: rgba(245, 240, 235, 0.05) !important;
-      }
-
-      /* ── Sidebar / Collection nav ─────────────────────────── */
-      aside, [class*="Sidebar"] {
-        background: #F5F0EB !important;
-        border-right: 1px solid #EDE8E1 !important;
-      }
-      aside a, aside span, aside h2,
-      [class*="Sidebar"] a, [class*="Sidebar"] span {
-        font-family: "Jost", sans-serif !important;
-        color: #2C2C2C !important;
         font-weight: 300 !important;
-        letter-spacing: 0.02em !important;
       }
-      aside a:hover, [class*="Sidebar"] a:hover {
-        color: #A0896C !important;
-        background: rgba(160, 137, 108, 0.08) !important;
+      header a:hover, header button:hover {
+        color: #F5F0EB !important;
       }
-      /* Active sidebar item */
-      aside a[class*="active"],
-      [class*="Sidebar"] a[class*="active"] {
-        color: #2C2C2C !important;
-        background: #EDE8E1 !important;
-        font-weight: 400 !important;
+      /* Quick add button */
+      header button[class*="DropdownButton"],
+      header button[class*="dropdown"] {
+        background: transparent !important;
+        border: 1px solid rgba(245, 240, 235, 0.25) !important;
+        color: rgba(245, 240, 235, 0.7) !important;
+        font-size: 0.7rem !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.06em !important;
+        border-radius: 0 !important;
+        padding: 6px 14px !important;
+      }
+      header button[class*="DropdownButton"]:hover,
+      header button[class*="dropdown"]:hover {
+        border-color: rgba(245, 240, 235, 0.5) !important;
+        color: #F5F0EB !important;
       }
 
-      /* ── Main content area ────────────────────────────────── */
-      main, [class*="AppMainContainer"] {
+      /* ── Sidebar ───────────────────────────────────────────── */
+      aside, [class*="SidebarContainer"], [class*="Sidebar"] {
         background: #F5F0EB !important;
+        border-right: 1px solid rgba(160, 137, 108, 0.15) !important;
       }
-
-      /* ── Collection list / entries table ───────────────────── */
-      [class*="ListCard"], [class*="ObjectWidgetTopBar"] {
-        border-color: #EDE8E1 !important;
-      }
-      [class*="ListCardLink"] {
-        font-family: "Jost", sans-serif !important;
-      }
-
-      /* ── Headings throughout CMS ──────────────────────────── */
-      h1, h2 {
+      /* "Collections" heading */
+      aside h2, [class*="SidebarHeading"] {
         font-family: "Cormorant Garamond", Georgia, serif !important;
         font-weight: 300 !important;
+        font-size: 1.4rem !important;
         letter-spacing: 0.04em !important;
         color: #2C2C2C !important;
+        padding-left: 20px !important;
       }
-
-      /* ── Form fields and inputs ───────────────────────────── */
-      input[type="text"],
-      input[type="url"],
-      input[type="email"],
-      input[type="number"],
-      textarea,
-      select {
+      /* Search input */
+      aside input, [class*="Sidebar"] input {
+        background: #EDE8E1 !important;
+        border: 1px solid rgba(160, 137, 108, 0.15) !important;
+        border-radius: 0 !important;
         font-family: "Jost", sans-serif !important;
         font-weight: 300 !important;
-        font-size: 0.95rem !important;
         color: #2C2C2C !important;
-        background: #FAFAF8 !important;
-        border: 1px solid #EDE8E1 !important;
-        border-radius: 2px !important;
-        transition: border-color 0.3s ease !important;
       }
-      input:focus, textarea:focus, select:focus {
+      aside input:focus {
         border-color: #A0896C !important;
-        box-shadow: 0 0 0 1px rgba(160, 137, 108, 0.2) !important;
-        outline: none !important;
+      }
+      /* Nav items */
+      aside a, [class*="SidebarNavLink"] {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        font-size: 0.875rem !important;
+        letter-spacing: 0.02em !important;
+        color: #6b6358 !important;
+        border-left: 3px solid transparent !important;
+        transition: all 0.2s ease !important;
+      }
+      aside a:hover, [class*="SidebarNavLink"]:hover {
+        color: #2C2C2C !important;
+        background: rgba(160, 137, 108, 0.06) !important;
+      }
+      aside a[class*="active"],
+      aside a[href][class*="selected"],
+      [class*="SidebarNavLink"][class*="active"] {
+        color: #2C2C2C !important;
+        font-weight: 400 !important;
+        border-left-color: #A0896C !important;
+        background: rgba(160, 137, 108, 0.08) !important;
+      }
+      /* Sidebar icons */
+      aside svg {
+        color: #A0896C !important;
+        opacity: 0.6 !important;
+      }
+
+      /* ── Collection list heading ───────────────────────────── */
+      [class*="CollectionTop"] h2,
+      [class*="ViewHeader"] h2 {
+        font-family: "Cormorant Garamond", Georgia, serif !important;
+        font-weight: 300 !important;
+        font-size: 1.6rem !important;
+        letter-spacing: 0.04em !important;
+        color: #2C2C2C !important;
+        background: #F5F0EB !important;
+        border-bottom: 1px solid rgba(160, 137, 108, 0.12) !important;
+        padding: 24px 28px !important;
+      }
+
+      /* ── Entry list cards ──────────────────────────────────── */
+      [class*="ListCard"], [class*="EntryCard"] {
+        background: #F5F0EB !important;
+        border: 1px solid rgba(160, 137, 108, 0.12) !important;
+        border-radius: 0 !important;
+        transition: all 0.2s ease !important;
+        box-shadow: none !important;
+      }
+      [class*="ListCard"]:hover, [class*="EntryCard"]:hover {
+        border-color: #A0896C !important;
+        box-shadow: 0 2px 12px rgba(160, 137, 108, 0.1) !important;
+      }
+      [class*="ListCard"] a, [class*="ListCardLink"],
+      [class*="EntryCard"] a {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        color: #2C2C2C !important;
+        letter-spacing: 0.01em !important;
+      }
+      [class*="ListCard"] h2 {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        font-size: 1rem !important;
+        color: #2C2C2C !important;
+      }
+
+      /* ── Sort / view controls ──────────────────────────────── */
+      [class*="SortControls"] span,
+      [class*="ViewControls"] button {
+        font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        color: #6b6358 !important;
+        font-size: 0.8rem !important;
+      }
+
+      /* ── Editor page ───────────────────────────────────────── */
+      /* Field groups / object widgets */
+      [class*="ObjectWidgetTopBar"],
+      [class*="StyledListItemTopBar"],
+      fieldset > legend {
+        background: #EDE8E1 !important;
+        font-family: "Jost", sans-serif !important;
+        font-weight: 400 !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 0.08em !important;
+        text-transform: uppercase !important;
+        color: #6b6358 !important;
+        border: none !important;
+        border-bottom: 1px solid rgba(160, 137, 108, 0.1) !important;
       }
 
       /* Field labels */
       label, [class*="ControlLabel"], [class*="FieldLabel"] {
         font-family: "Jost", sans-serif !important;
         font-weight: 400 !important;
-        font-size: 0.7rem !important;
-        letter-spacing: 0.06em !important;
+        font-size: 0.65rem !important;
+        letter-spacing: 0.08em !important;
         text-transform: uppercase !important;
         color: #6b6358 !important;
       }
 
       /* Hint text */
-      [class*="ControlHint"] {
+      [class*="ControlHint"], p[class*="hint"] {
         font-family: "Jost", sans-serif !important;
         font-weight: 300 !important;
-        color: #A0896C !important;
         font-size: 0.75rem !important;
+        color: #A0896C !important;
+        font-style: italic !important;
       }
 
-      /* ── Buttons ──────────────────────────────────────────── */
-      /* Primary / Publish button */
-      button[class*="PublishButton"],
-      [class*="ToolbarButton"][class*="publish"],
-      button[data-testid*="publish"],
-      [class*="AppHeader"] button:not([class*="Avatar"]) {
-        background: #2C2C2C !important;
-        color: #F5F0EB !important;
-        border: 1px solid #2C2C2C !important;
+      /* Inputs */
+      input[type="text"], input[type="url"], input[type="email"],
+      input[type="number"], textarea, select {
         font-family: "Jost", sans-serif !important;
-        font-weight: 400 !important;
-        font-size: 0.7rem !important;
-        letter-spacing: 0.06em !important;
-        text-transform: uppercase !important;
-        border-radius: 0 !important;
-        transition: all 0.3s ease !important;
-      }
-      button[class*="PublishButton"]:hover,
-      [class*="ToolbarButton"][class*="publish"]:hover,
-      button[data-testid*="publish"]:hover,
-      [class*="AppHeader"] button:not([class*="Avatar"]):hover {
-        background: #A0896C !important;
-        border-color: #A0896C !important;
-      }
-
-      /* Secondary / ghost buttons */
-      button {
-        font-family: "Jost", sans-serif !important;
-        letter-spacing: 0.03em !important;
-        border-radius: 0 !important;
-      }
-
-      /* ── Widget panels / field groups ─────────────────────── */
-      [class*="ObjectWidgetTopBar"] {
-        background: #EDE8E1 !important;
-        font-family: "Jost", sans-serif !important;
-        font-weight: 400 !important;
-        font-size: 0.7rem !important;
-        letter-spacing: 0.06em !important;
-        text-transform: uppercase !important;
+        font-weight: 300 !important;
+        font-size: 0.95rem !important;
         color: #2C2C2C !important;
-      }
-
-      /* Nested field containers */
-      [class*="StyledListItemTopBar"],
-      [class*="NestedObjectLabel"] {
-        background: #EDE8E1 !important;
-        color: #2C2C2C !important;
-        font-family: "Jost", sans-serif !important;
-      }
-
-      /* ── Toolbar / editor toolbar ─────────────────────────── */
-      [class*="Toolbar"], [class*="EditorToolbar"] {
         background: #FAFAF8 !important;
-        border-color: #EDE8E1 !important;
+        border: 1px solid rgba(160, 137, 108, 0.2) !important;
+        border-radius: 0 !important;
+        transition: border-color 0.3s ease !important;
       }
-      [class*="Toolbar"] button {
-        color: #6b6358 !important;
-      }
-      [class*="Toolbar"] button:hover {
-        color: #2C2C2C !important;
-        background: rgba(160, 137, 108, 0.1) !important;
+      input:focus, textarea:focus, select:focus {
+        border-color: #A0896C !important;
+        box-shadow: none !important;
+        outline: none !important;
       }
 
-      /* ── Markdown editor pane ─────────────────────────────── */
+      /* ── Publish button ────────────────────────────────────── */
+      [class*="ToolbarButton"],
+      [class*="PublishButton"],
+      button[class*="DropdownButton"] {
+        border-radius: 0 !important;
+      }
+
+      /* ── Markdown editor ───────────────────────────────────── */
       [data-slate-editor] {
         font-family: "Jost", "Helvetica Neue", sans-serif !important;
         font-weight: 300 !important;
@@ -238,17 +260,12 @@
         line-height: 1.2 !important;
         letter-spacing: 0.04em !important;
         margin-top: 2rem !important;
-        margin-bottom: 0.75rem !important;
       }
       [data-slate-editor] h3 {
         font-weight: 400 !important;
         font-size: 1.25rem !important;
         line-height: 1.2 !important;
         margin-top: 1.5rem !important;
-        margin-bottom: 0.5rem !important;
-      }
-      [data-slate-editor] p {
-        margin-bottom: 1.25rem !important;
       }
       [data-slate-editor] strong {
         font-weight: 400 !important;
@@ -257,52 +274,52 @@
       [data-slate-editor] blockquote {
         border-left: 2px solid #A0896C !important;
         padding-left: 1.5rem !important;
-        margin: 1.5rem 0 !important;
         font-style: italic !important;
-      }
-      [data-slate-editor] a {
-        color: #2C2C2C !important;
-        text-decoration: underline !important;
-        text-underline-offset: 3px !important;
       }
       [data-slate-editor] img {
         max-width: 100% !important;
         height: auto !important;
-        margin: 1.5rem 0 !important;
       }
 
-      /* ── Preview pane ─────────────────────────────────────── */
-      .frame-content {
+      /* ── Preview pane ──────────────────────────────────────── */
+      .frame-content,
+      [class*="PreviewPaneFrame"] {
         font-family: "Jost", "Helvetica Neue", sans-serif !important;
         background: #F5F0EB !important;
       }
 
-      /* ── Media library modal ──────────────────────────────── */
-      [class*="MediaLibrary"] {
+      /* ── Dropdowns / menus ─────────────────────────────────── */
+      ul[class*="DropdownList"], [class*="MenuList"],
+      [role="listbox"] {
+        background: #F5F0EB !important;
+        border: 1px solid rgba(160, 137, 108, 0.15) !important;
+        border-radius: 0 !important;
+        box-shadow: 0 4px 20px rgba(26, 26, 26, 0.08) !important;
+      }
+      [class*="DropdownItem"], [role="option"] {
         font-family: "Jost", sans-serif !important;
+        font-weight: 300 !important;
+        color: #2C2C2C !important;
+      }
+      [class*="DropdownItem"]:hover, [role="option"]:hover {
+        background: rgba(160, 137, 108, 0.08) !important;
       }
 
-      /* ── Scrollbar styling ────────────────────────────────── */
-      ::-webkit-scrollbar {
-        width: 4px;
-      }
-      ::-webkit-scrollbar-track {
-        background: transparent;
-      }
+      /* ── Scrollbar ─────────────────────────────────────────── */
+      ::-webkit-scrollbar { width: 5px; height: 5px; }
+      ::-webkit-scrollbar-track { background: transparent; }
       ::-webkit-scrollbar-thumb {
-        background: rgba(160, 137, 108, 0.3);
-        border-radius: 2px;
+        background: rgba(160, 137, 108, 0.25);
+        border-radius: 3px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: rgba(160, 137, 108, 0.45);
       }
 
-      /* ── Selection ────────────────────────────────────────── */
+      /* ── Selection ─────────────────────────────────────────── */
       ::selection {
         background-color: #A0896C;
         color: #F5F0EB;
-      }
-
-      /* ── Loading screen ───────────────────────────────────── */
-      [class*="AppLoader"], .nc-app-loading {
-        background: #F5F0EB !important;
       }
     </style>
   </head>
