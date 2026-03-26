@@ -1,16 +1,19 @@
 ---
 title: "Ludlow: A Design Lover's Guide to Shropshire's Finest Town"
 date: 2026-02-15T09:00:00.000Z
-featuredImage: "/images/uploads/NEEDS_PHOTO.jpg"
-featuredImageAlt: "The historic market town of Ludlow, Shropshire — home to a Saverys interior design studio"
-summary: "Why Ludlow is quietly becoming one of the most interesting design destinations in the Marches — and what to see when you visit."
-pillar: "place"
+featuredImage: /images/20260323_135019.jpg
+featuredImageAlt: The historic market town of Ludlow, Shropshire — home to a
+  Saverys interior design studio
+summary: Why Ludlow is quietly becoming one of the most interesting design
+  destinations in the Marches — and what to see when you visit.
+pillar: place
 tags:
   - Ludlow
   - Shropshire
-seoTitle: "Ludlow Interior Design & Interiors Guide | Saverys of Broadway"
-seoDescription: "Ludlow, Shropshire — a design lover's guide to the architecture, interiors, and independent shops of one of England's most beautiful market towns. Visit the Saverys studio at Tower Street."
-# NOTE: featuredImage needs a photo of Ludlow town, Tower Street, or Shropshire landscape
+seoTitle: Ludlow Interior Design & Interiors Guide | Saverys of Broadway
+seoDescription: Ludlow, Shropshire — a design lover's guide to the architecture,
+  interiors, and independent shops of one of England's most beautiful market
+  towns. Visit the Saverys studio at Tower Street.
 ---
 
 Ludlow doesn't shout. It never has. While the Cotswolds draws coaches of visitors and the Lake District fills Instagram feeds, this small market town in south Shropshire goes about its business with a quiet assurance that suits it perfectly. The medieval street plan is largely intact. The castle stands on its promontory above the River Teme. The timber-framed buildings along Broad Street are among the finest in England. And the food — Ludlow's reputation as a food town is thoroughly deserved and shows no sign of diminishing.
