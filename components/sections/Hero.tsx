@@ -9,19 +9,19 @@ interface HeroProps {
   heading: string;
   subtitle?: string;
   image?: string;
+  seoHeading?: string;
   cta?: {
     label: string;
     href: string;
   };
 }
 
-export function Hero({ heading, subtitle, image, cta }: HeroProps) {
+export function Hero({ heading, subtitle, image, seoHeading, cta }: HeroProps) {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
-    // Trigger fade-in on mount
     requestAnimationFrame(() => {
       el.classList.add("hero-visible");
     });
@@ -42,13 +42,14 @@ export function Hero({ heading, subtitle, image, cta }: HeroProps) {
           sizes="100vw"
         />
       )}
-      {/* Top gradient scrim — protects nav legibility on bright images */}
       <div className="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-ink/50 to-transparent" />
-      {/* Dark bottom gradient — no colour tint */}
       <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent" />
       <div className="absolute inset-0 flex items-end">
         <div className="mx-auto w-full max-w-7xl px-6 pb-16 md:px-12 md:pb-24">
-          <Text as="h1" className="text-cream">
+          {seoHeading && (
+            <h1 className="sr-only">{seoHeading}</h1>
+          )}
+          <Text as={seoHeading ? "p" : "h1"} className="text-cream">
             {heading}
           </Text>
           {subtitle && (

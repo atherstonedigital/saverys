@@ -47,6 +47,7 @@ export default function HomePage() {
         heading={content.hero.heading}
         subtitle={content.hero.subtitle}
         image={content.hero.image}
+        seoHeading="Luxury Interior Design in the Cotswolds, Ludlow & London"
         cta={{ label: "View our work", href: "/projects" }}
       />
 
@@ -77,6 +78,7 @@ export default function HomePage() {
         </div>
       </section>
 
+      <h2 className="sr-only">Our Interior Design Process</h2>
       <ProcessSection />
 
       <ProjectGrid projects={content.featuredProjects} />
@@ -90,6 +92,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-linen px-6 py-16 md:px-12 md:py-32">
+        <h2 className="sr-only">Bespoke Sourcing &amp; Design Services</h2>
         <div className="mx-auto max-w-7xl">
           <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-start md:gap-16">
             <div className="md:col-span-4">

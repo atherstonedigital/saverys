@@ -85,7 +85,8 @@ export default function LudlowPage() {
               <Text variant="caption" className="mb-4 text-cream/70">
                 {content.hero.locationLabel}
               </Text>
-              <Text as="h1" className="text-cream">
+              <h1 className="sr-only">Interior Design Store in Ludlow, Shropshire</h1>
+              <Text as="p" className="text-cream font-display text-[2.5rem] md:text-[4rem] font-light leading-[1.2] tracking-[0.064em] md:tracking-[0.08em]">
                 {content.hero.heading}
               </Text>
             </div>

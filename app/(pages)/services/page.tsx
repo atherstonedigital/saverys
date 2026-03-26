@@ -48,7 +48,7 @@ export default function ServicesPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
-      <Hero heading={content.hero.heading} image={content.hero.image} />
+      <Hero heading={content.hero.heading} image={content.hero.image} seoHeading="Bespoke Interior Design & Sourcing Services" />
 
       <section className="px-6 py-10 md:px-12 md:py-16">
         <div className="mx-auto max-w-3xl">

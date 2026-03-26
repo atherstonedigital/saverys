@@ -42,6 +42,7 @@ export default function WorkshopPage() {
       <Hero
         heading={content.hero.heading}
         subtitle={content.hero.subtitle}
+        seoHeading="Interior Design Studio & Workshop in Broadway, Cotswolds"
         image={content.hero.image}
       />
 
