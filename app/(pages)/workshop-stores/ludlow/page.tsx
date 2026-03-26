@@ -261,10 +261,6 @@ export default function LudlowPage() {
                 )}
               </div>
             </SectionReveal>
-
-            <SectionReveal delay={0.15}>
-              <Placeholder label="Map embed placeholder" aspect="4/3" />
-            </SectionReveal>
           </div>
         </div>
       </section>
