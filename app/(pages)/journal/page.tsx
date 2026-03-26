@@ -7,9 +7,9 @@ import { Text } from "@/components/ui/Text";
 import { getAllJournalPosts, formatDate, getPillarLabel } from "@/lib/journal";
 
 export const metadata: Metadata = {
-  title: "Journal | Saverys of Broadway — Interior Design Inspiration",
+  title: "Journal — Interior Design Inspiration & Craft",
   description:
-    "Design commentary, project insights, and inspiration from the Saverys studio. Luxury interior design in the Cotswolds, Broadway, and beyond.",
+    "Design commentary, craft insights, and inspiration from the Savery's studio. Upholstery, fabrics, Cotswold interiors, and more.",
   alternates: { canonical: "/journal" },
 };
 

@@ -11,8 +11,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/workshop-stores/broadway",
-    "Workshop & Store | Saverys — Hand Upholstery & Luxury Fabrics, Broadway",
-    "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, exquisite rugs, and bespoke furniture.",
+    "Workshop & Showroom — Broadway, Cotswolds",
+    "Visit the Savery's workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, and bespoke furniture.",
   );
 }
 

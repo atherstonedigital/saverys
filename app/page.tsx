@@ -15,8 +15,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/",
-    "Luxury Interior Design | Saverys of Broadway — Cotswolds & Ludlow",
-    "Saverys of Broadway creates luxurious, timeless interiors for private residences and luxury hotels.",
+    "Luxury Interior Design — Cotswolds, Ludlow & Chelsea",
+    "Luxury interior design studio rooted in the Cotswolds since 1991. Bespoke schemes, hand upholstery, and the finest fabrics. Broadway, Ludlow & Chelsea.",
   );
 }
 

@@ -10,8 +10,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/workshop-stores/ludlow",
-    "Our Ludlow Store | Savery's of Broadway — Luxury Interior Design",
-    "Visit Savery's of Broadway in Ludlow — our carefully curated interiors store at 1 Tower Street, in the heart of this historic market town.",
+    "Our Ludlow Store — Interior Design & Fabrics",
+    "Visit Savery's in Ludlow — our curated interiors store at 1 Tower Street. Fabrics, furnishings, and design consultations.",
   );
 }
 

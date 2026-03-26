@@ -8,8 +8,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/contact",
-    "Contact Us | Saverys Interior Design — Broadway, Ludlow & Chelsea",
-    "Get in touch with Saverys of Broadway. Visit our interior design studios in Broadway, Ludlow or Chelsea.",
+    "Contact Us — Broadway, Ludlow & Chelsea",
+    "Get in touch with Savery's of Broadway. Visit our studios in Broadway, Ludlow, or Chelsea, or enquire about a new project.",
   );
 }
 

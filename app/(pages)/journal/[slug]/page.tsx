@@ -30,17 +30,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const post = getJournalPostBySlug(slug);
   if (!post) return {};
 
-  const title =
-    post.seoTitle || `${post.title} | Saverys Journal`;
+  const titleText =
+    post.seoTitle || `${post.title} | Savery's Journal`;
   const description =
     post.seoDescription || post.summary || post.title;
 
   return {
-    title,
+    title: { absolute: titleText },
     description,
     alternates: { canonical: `/journal/${slug}` },
     openGraph: {
-      title,
+      title: titleText,
       description,
       type: "article",
       images: post.featuredImage

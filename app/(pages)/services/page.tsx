@@ -11,8 +11,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/services",
-    "Interior Design Services | Saverys of Broadway — Cotswolds",
-    "Full interior design, fabric and material sourcing, furniture curation, colour consultation, and project management.",
+    "Interior Design Services — Cotswolds, Ludlow & Chelsea",
+    "Full interior design, fabric sourcing, furniture curation, colour consultation, and project management. From concept to completion.",
   );
 }
 
@@ -26,8 +26,28 @@ interface ServicesContent {
 export default function ServicesPage() {
   const content = getPageContent<ServicesContent>("services");
 
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@graph": content.services.map((s) => ({
+      "@type": "Service",
+      serviceType: "Interior Design",
+      name: s.title,
+      description: s.description,
+      provider: {
+        "@type": "Organization",
+        name: "Savery's of Broadway",
+        url: "https://saverys.co.uk",
+      },
+      areaServed: { "@type": "Country", name: "United Kingdom" },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Hero heading={content.hero.heading} image={content.hero.image} />
 
       <section className="px-6 py-10 md:px-12 md:py-16">

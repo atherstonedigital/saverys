@@ -11,8 +11,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/about",
-    "Our History | Saverys of Broadway — Interior Design Since 1991",
-    "Established in 1991 in the heart of the Cotswolds, Saverys has been creating exceptional interiors for discerning clients across the UK for over 30 years.",
+    "About Us — Interior Design Since 1991",
+    "Established in 1991 in Broadway, Cotswolds. Three decades of crafting considered interiors with restraint, quality, and care.",
   );
 }
 

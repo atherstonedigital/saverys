@@ -109,11 +109,27 @@ export function Footer({ data }: FooterProps) {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-cream/10 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-          <Text variant="caption" className="text-cream/30">
-            &copy; {new Date().getFullYear()} Savery&apos;s of Broadway. All
-            rights reserved.
-          </Text>
+        <div className="mt-16 border-t border-cream/10 pt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:gap-4">
+            <Text variant="caption" className="text-cream/30">
+              &copy; {new Date().getFullYear()} Savery&apos;s of Broadway. All
+              rights reserved.
+            </Text>
+            <div className="flex gap-3">
+              <Link
+                href="/privacy"
+                className="font-body text-[0.6rem] font-light tracking-[0.04em] text-cream/25 transition-colors duration-300 hover:text-cream/50"
+              >
+                Privacy
+              </Link>
+              <Link
+                href="/terms"
+                className="font-body text-[0.6rem] font-light tracking-[0.04em] text-cream/25 transition-colors duration-300 hover:text-cream/50"
+              >
+                Terms
+              </Link>
+            </div>
+          </div>
           <a
             href="https://www.atherstonedigital.com/"
             target="_blank"

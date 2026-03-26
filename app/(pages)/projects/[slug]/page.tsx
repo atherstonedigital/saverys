@@ -22,12 +22,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const project = getProject(slug);
   if (!project) return {};
   return {
-    title: `${project.name} — ${project.location} | Saverys Portfolio`,
-    description: `Interior design project by Saverys of Broadway: ${project.name} in ${project.location}. View the full gallery.`,
+    title: { absolute: `${project.name} — ${project.location} | Savery's Portfolio` },
+    description: `Interior design project by Savery's of Broadway: ${project.name} in ${project.location}. View the full gallery.`,
     alternates: { canonical: `/projects/${slug}` },
     openGraph: {
-      title: `${project.name} — ${project.location} | Saverys Portfolio`,
-      description: `Interior design project by Saverys of Broadway: ${project.name} in ${project.location}.`,
+      title: `${project.name} — ${project.location} | Savery's Portfolio`,
+      description: `Interior design project by Savery's of Broadway: ${project.name} in ${project.location}.`,
       images: [{ url: project.heroImage }],
       type: "website",
     },

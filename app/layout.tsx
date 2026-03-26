@@ -13,8 +13,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
     default:
-      "Luxury Interior Design | Saverys of Broadway — Cotswolds & Ludlow",
-    template: `%s — ${SITE_NAME}`,
+      "Luxury Interior Design — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
+    template: `%s | Savery's of Broadway`,
   },
   description:
     "Saverys of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1991. Studios in Broadway, Ludlow and Chelsea.",

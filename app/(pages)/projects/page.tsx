@@ -12,8 +12,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/projects",
-    "Interior Design Portfolio | Saverys of Broadway — Cotswolds",
-    "Browse the Saverys portfolio of luxury interior design projects — from private Cotswold residences to high-end hotels.",
+    "Interior Design Portfolio — Cotswolds & Beyond",
+    "Explore our portfolio of interior design projects across the Cotswolds and beyond. Country houses, restorations, and bespoke schemes.",
   );
 }
 
