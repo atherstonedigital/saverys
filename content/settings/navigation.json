@@ -1,0 +1,17 @@
+{
+  "items": [
+    { "label": "About", "href": "/about" },
+    { "label": "Projects", "href": "/projects" },
+    {
+      "label": "Workshop & Stores",
+      "href": "/workshop-stores/broadway",
+      "children": [
+        { "label": "Broadway", "href": "/workshop-stores/broadway" },
+        { "label": "Ludlow", "href": "/workshop-stores/ludlow" }
+      ]
+    },
+    { "label": "Services", "href": "/services" },
+    { "label": "Journal", "href": "/journal" },
+    { "label": "Contact", "href": "/contact" }
+  ]
+}

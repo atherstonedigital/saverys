@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { SITE_NAME } from "@/lib/constants";
+import { getSettings } from "@/lib/content";
 import { generateSchema } from "@/lib/schema";
 import "./globals.css";
 
@@ -40,11 +41,25 @@ export const metadata: Metadata = {
   },
 };
 
+interface NavData {
+  items: { label: string; href: string; children?: { label: string; href: string }[] }[];
+}
+
+interface FooterData {
+  tagline: string;
+  email: string;
+  instagram: string;
+  locations: { name: string; address: string; phone: string; phoneTel: string }[];
+}
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const navData = getSettings<NavData>("navigation");
+  const footerData = getSettings<FooterData>("footer");
+
   return (
     <html lang="en">
       <head>
@@ -66,9 +81,9 @@ export default function RootLayout({
         />
       </head>
       <body>
-        <Nav />
+        <Nav items={navData.items} />
         <main>{children}</main>
-        <Footer />
+        <Footer data={footerData} />
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
           strategy="beforeInteractive"

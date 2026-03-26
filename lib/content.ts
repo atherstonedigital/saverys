@@ -14,8 +14,8 @@ export function getPageContent<T>(page: string): T {
   return JSON.parse(raw) as T;
 }
 
-export function getSettings<T>(): T {
-  const filePath = path.join(process.cwd(), "content", "settings", "general.json");
+export function getSettings<T>(file: string = "general"): T {
+  const filePath = path.join(process.cwd(), "content", "settings", `${file}.json`);
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as T;
 }

@@ -1,0 +1,25 @@
+{
+  "tagline": "Luxury interior design, rooted in the Cotswolds since 1991.",
+  "email": "studio@saverys.co.uk",
+  "instagram": "https://www.instagram.com/saverysofbroadway/",
+  "locations": [
+    {
+      "name": "Broadway",
+      "address": "Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ",
+      "phone": "01386 858941",
+      "phoneTel": "+441386858941"
+    },
+    {
+      "name": "Ludlow",
+      "address": "1 Tower Street, Ludlow, SY8 1RL",
+      "phone": "01584 708381",
+      "phoneTel": "+441584708381"
+    },
+    {
+      "name": "Chelsea",
+      "address": "Suite 9, 405 Kings Road, Chelsea",
+      "phone": "020 3668 1000",
+      "phoneTel": "+442036681000"
+    }
+  ]
+}

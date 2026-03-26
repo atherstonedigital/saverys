@@ -4,9 +4,18 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { NAV_LINKS, type NavLink } from "@/lib/constants";
 
-export function Nav() {
+export interface NavItem {
+  label: string;
+  href: string;
+  children?: { label: string; href: string }[];
+}
+
+interface NavProps {
+  items: NavItem[];
+}
+
+export function Nav({ items }: NavProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -45,8 +54,8 @@ export function Nav() {
       : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
   );
 
-  function renderDesktopLink(link: NavLink) {
-    if (!link.children) {
+  function renderDesktopLink(link: NavItem) {
+    if (!link.children || link.children.length === 0) {
       return (
         <Link key={link.href} href={link.href} className={linkClass}>
           {link.label}
@@ -101,8 +110,8 @@ export function Nav() {
     );
   }
 
-  function renderMobileLink(link: NavLink) {
-    if (!link.children) {
+  function renderMobileLink(link: NavItem) {
+    if (!link.children || link.children.length === 0) {
       return (
         <Link
           key={link.href}
@@ -163,7 +172,7 @@ export function Nav() {
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-10 md:flex">
-            {NAV_LINKS.map(renderDesktopLink)}
+            {items.map(renderDesktopLink)}
           </div>
 
           {/* Mobile hamburger */}
@@ -194,7 +203,7 @@ export function Nav() {
       {isMobileOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-ink">
           <div className="flex flex-col items-center gap-8">
-            {NAV_LINKS.map(renderMobileLink)}
+            {items.map(renderMobileLink)}
           </div>
         </div>
       )}
