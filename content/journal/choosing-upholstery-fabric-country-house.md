@@ -42,7 +42,7 @@ As a rough guide from our experience in the workshop:
 
 A number alone doesn't tell the whole story — weave structure, fibre content, and finish all play a role — but it's a sensible starting point. We always check the Martindale rating before recommending a fabric for upholstery, and we'd encourage you to do the same.
 
-![Upholstery craftsman working with fabric at the Saverys workshop in Broadway](/images/upholstery work shop 1.jpg)
+![Upholstery craftsman working with fabric at the Saverys workshop in Broadway](/images/upholstery%20work%20shop%201.jpg)
 
 ## Natural fabrics: the options
 
@@ -64,7 +64,7 @@ For families with young children, for pieces near kitchen areas, or for clients 
 
 The key is choosing performance fabrics from reputable houses where the hand and drape have been carefully considered, not the stiff, plastic-feeling textiles of a decade ago. We stock several in our [Broadway showroom](/workshop), and we always invite clients to feel the difference for themselves.
 
-![Fabric being cut and prepared at the upholstery workbench](/images/upholstery work shop 2.jpg)
+![Fabric being cut and prepared at the upholstery workbench](/images/upholstery%20work%20shop%202.jpg)
 
 ## Colour, pattern, and the scheme
 

@@ -48,7 +48,7 @@ export function getAllJournalPosts(): JournalPost[] {
     const fileContents = fs.readFileSync(filePath, "utf-8");
     const { data, content } = matter(fileContents);
 
-    const processedContent = remark().use(html).processSync(content);
+    const processedContent = remark().use(html, { allowDangerousHtml: true }).processSync(content);
 
     return {
       slug: getSlugFromFilename(filename),
