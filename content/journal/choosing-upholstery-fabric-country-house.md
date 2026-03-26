@@ -1,17 +1,22 @@
 ---
-title: "How to Choose Upholstery Fabric for a Country House"
+title: How to Choose Upholstery Fabric for a Country House
 date: 2026-03-25T09:00:00.000Z
-featuredImage: "/images/saverys broadway shop 1.jpg"
-featuredImageAlt: "Premium upholstery fabric samples displayed at the Saverys showroom in Broadway, Cotswolds"
-summary: "A maker's guide to choosing upholstery fabric that balances beauty with durability — from the Martindale rub test to the fabrics we reach for most often."
-pillar: "fabric"
+featuredImage: /images/The-Old-Mill-Broadway-039-scaled-1.webp
+featuredImageAlt: Premium upholstery fabric samples displayed at the Saverys
+  showroom in Broadway, Cotswolds
+summary: A maker's guide to choosing upholstery fabric that balances beauty with
+  durability — from the Martindale rub test to the fabrics we reach for most
+  often.
+pillar: fabric
 tags:
   - Fabrics
   - Upholstery
   - Country House
   - Cotswolds
-seoTitle: "How to Choose Upholstery Fabric for a Country House | Saverys Journal"
-seoDescription: "Expert guidance on choosing upholstery fabric from Saverys of Broadway. The Martindale test, natural vs performance fabrics, and what 30 years of making has taught us."
+seoTitle: How to Choose Upholstery Fabric for a Country House | Saverys Journal
+seoDescription: Expert guidance on choosing upholstery fabric from Saverys of
+  Broadway. The Martindale test, natural vs performance fabrics, and what 30
+  years of making has taught us.
 ---
 
 Choosing upholstery fabric is one of the most consequential decisions in any interior scheme. The fabric you select will determine how a room feels to sit in, how it ages, how light plays across its surfaces, and — practically — how it holds up against the realities of daily life. A poorly chosen fabric on a beautifully made sofa is a waste of good craftsmanship. A well-chosen one becomes more beautiful with time.
