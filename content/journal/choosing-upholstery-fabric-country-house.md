@@ -16,7 +16,7 @@ seoDescription: "Expert guidance on choosing upholstery fabric from Saverys of B
 
 Choosing upholstery fabric is one of the most consequential decisions in any interior scheme. The fabric you select will determine how a room feels to sit in, how it ages, how light plays across its surfaces, and — practically — how it holds up against the realities of daily life. A poorly chosen fabric on a beautifully made sofa is a waste of good craftsmanship. A well-chosen one becomes more beautiful with time.
 
-In our [Broadway workshop](/workshop), we've been upholstering furniture by hand for over thirty years. We've seen what lasts, what fades, what pills after a season, and what still looks impeccable after a decade. This guide draws on that experience — not theory, but the accumulated knowledge of working with fabric every day.
+In our [Broadway workshop](/workshop-stores/broadway), we've been upholstering furniture by hand for over thirty years. We've seen what lasts, what fades, what pills after a season, and what still looks impeccable after a decade. This guide draws on that experience — not theory, but the accumulated knowledge of working with fabric every day.
 
 ## Start with how the piece will be used
 
@@ -62,7 +62,7 @@ There's a perception that performance fabrics — the new generation of stain-re
 
 For families with young children, for pieces near kitchen areas, or for clients who entertain frequently, we often recommend a performance fabric without apology. A sofa that can be wiped clean after a glass of red wine is not a compromise — it's intelligent design.
 
-The key is choosing performance fabrics from reputable houses where the hand and drape have been carefully considered, not the stiff, plastic-feeling textiles of a decade ago. We stock several in our [Broadway showroom](/workshop), and we always invite clients to feel the difference for themselves.
+The key is choosing performance fabrics from reputable houses where the hand and drape have been carefully considered, not the stiff, plastic-feeling textiles of a decade ago. We stock several in our [Broadway showroom](/workshop-stores/broadway), and we always invite clients to feel the difference for themselves.
 
 ![Fabric being cut and prepared at the upholstery workbench](/images/upholstery%20work%20shop%202.jpg)
 
@@ -80,4 +80,4 @@ We tend to advocate for a considered palette of no more than three or four fabri
 
 If you're starting from scratch and want a single, reliable approach: choose a heavy linen-cotton blend in a neutral tone for your main seating, add depth with a wool or velvet on an accent chair, and bring personality through cushions and throws where the commitment is lower and the fabric can be more adventurous.
 
-If you'd like to discuss fabric options for a specific project, our showroom at the [Cotswold Design Centre in Broadway](/workshop) has an extensive library of samples from the fabric houses we work with. You're welcome to visit — seeing and touching the fabric is always better than choosing from a screen.
+If you'd like to discuss fabric options for a specific project, our showroom at the [Cotswold Design Centre in Broadway](/workshop-stores/broadway) has an extensive library of samples from the fabric houses we work with. You're welcome to visit — seeing and touching the fabric is always better than choosing from a screen.

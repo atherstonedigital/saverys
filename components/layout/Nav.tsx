@@ -1,14 +1,16 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, type NavLink } from "@/lib/constants";
 
 export function Nav() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
@@ -26,6 +28,111 @@ export function Nav() {
       document.body.style.overflow = "";
     };
   }, [isMobileOpen]);
+
+  function handleMouseEnter(label: string) {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setOpenDropdown(label);
+  }
+
+  function handleMouseLeave() {
+    dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 150);
+  }
+
+  const linkClass = cn(
+    "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+    isScrolled
+      ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
+      : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
+  );
+
+  function renderDesktopLink(link: NavLink) {
+    if (!link.children) {
+      return (
+        <Link key={link.href} href={link.href} className={linkClass}>
+          {link.label}
+        </Link>
+      );
+    }
+
+    return (
+      <div
+        key={link.label}
+        className="relative"
+        onMouseEnter={() => handleMouseEnter(link.label)}
+        onMouseLeave={handleMouseLeave}
+      >
+        <button className={cn(linkClass, "cursor-pointer")}>
+          {link.label}
+        </button>
+        <div
+          className={cn(
+            "absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 transition-all duration-200 ease-[var(--ease-saverys)]",
+            openDropdown === link.label
+              ? "pointer-events-auto translate-y-0 opacity-100"
+              : "pointer-events-none -translate-y-1 opacity-0"
+          )}
+        >
+          <div
+            className={cn(
+              "flex flex-col gap-1 rounded-sm border px-5 py-3 shadow-sm",
+              isScrolled
+                ? "border-charcoal/10 bg-cream/95 backdrop-blur-xl"
+                : "border-cream/10 bg-ink/90 backdrop-blur-xl"
+            )}
+          >
+            {link.children.map((child) => (
+              <Link
+                key={child.href}
+                href={child.href}
+                className={cn(
+                  "whitespace-nowrap py-1.5 font-body text-xs font-normal uppercase tracking-[0.06em] transition-colors duration-200",
+                  isScrolled
+                    ? "text-charcoal/60 hover:text-charcoal"
+                    : "text-cream/70 hover:text-cream"
+                )}
+                onClick={() => setOpenDropdown(null)}
+              >
+                {child.label}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  function renderMobileLink(link: NavLink) {
+    if (!link.children) {
+      return (
+        <Link
+          key={link.href}
+          href={link.href}
+          onClick={() => setIsMobileOpen(false)}
+          className="font-display text-2xl font-light tracking-[0.06em] text-cream"
+        >
+          {link.label}
+        </Link>
+      );
+    }
+
+    return (
+      <div key={link.label} className="flex flex-col items-center gap-3">
+        <span className="font-display text-2xl font-light tracking-[0.06em] text-cream/50">
+          {link.label}
+        </span>
+        {link.children.map((child) => (
+          <Link
+            key={child.href}
+            href={child.href}
+            onClick={() => setIsMobileOpen(false)}
+            className="font-body text-sm font-light tracking-[0.04em] text-cream/80"
+          >
+            {child.label}
+          </Link>
+        ))}
+      </div>
+    );
+  }
 
   return (
     <>
@@ -56,20 +163,7 @@ export function Nav() {
 
           {/* Desktop nav */}
           <div className="hidden items-center gap-10 md:flex">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={cn(
-                  "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
-                  isScrolled
-                    ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
-                    : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
-                )}
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map(renderDesktopLink)}
           </div>
 
           {/* Mobile hamburger */}
@@ -100,16 +194,7 @@ export function Nav() {
       {isMobileOpen && (
         <div className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-ink">
           <div className="flex flex-col items-center gap-8">
-            {NAV_LINKS.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                onClick={() => setIsMobileOpen(false)}
-                className="font-display text-2xl font-light tracking-[0.06em] text-cream"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {NAV_LINKS.map(renderMobileLink)}
           </div>
         </div>
       )}

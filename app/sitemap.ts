@@ -25,7 +25,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${SITE_URL}/workshop`,
+      url: `${SITE_URL}/workshop-stores/broadway`,
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.8,
+    },
+    {
+      url: `${SITE_URL}/workshop-stores/ludlow`,
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.8,

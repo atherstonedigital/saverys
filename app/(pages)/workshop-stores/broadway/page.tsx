@@ -10,7 +10,7 @@ export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("workshop");
   return buildMetadata(
     seo,
-    "/workshop",
+    "/workshop-stores/broadway",
     "Workshop & Store | Saverys — Hand Upholstery & Luxury Fabrics, Broadway",
     "Visit the Saverys workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, exquisite rugs, and bespoke furniture.",
   );
