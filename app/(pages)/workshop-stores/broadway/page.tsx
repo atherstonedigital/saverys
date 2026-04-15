@@ -5,14 +5,16 @@ import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { generateSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("workshop");
   return buildMetadata(
     seo,
     "/workshop-stores/broadway",
-    "Workshop & Showroom — Broadway, Cotswolds",
-    "Visit the Savery's workshop and showroom in Broadway, Cotswolds. Hand upholstery by expert craftspeople, premium fabrics, and bespoke furniture.",
+    "Workshop & Showroom — Hand Upholstery & Luxury Fabrics, Broadway",
+    "Visit the Savery's hand upholstery workshop and luxury fabrics showroom in Broadway, Cotswolds. Expert craftspeople and bespoke furniture.",
   );
 }
 
@@ -37,13 +39,27 @@ interface WorkshopContent {
 export default function WorkshopPage() {
   const content = getPageContent<WorkshopContent>("workshop");
 
+  const schemaJson = generateSchema({
+    pageType: "page",
+    localBusiness: "broadway",
+    breadcrumbs: [
+      { name: "Workshop & Stores", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/workshop-stores/broadway` },
+    ],
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schemaJson }}
+      />
       <Hero
         heading={content.hero.heading}
         subtitle={content.hero.subtitle}
         image={content.hero.image}
+        imageAlt="Hand upholstery workshop at Savery's, Broadway, Cotswolds"
       />
+      <Breadcrumbs items={[{ name: "Workshop & Stores", href: "/workshop-stores/broadway" }]} />
 
       {/* Introduction */}
       <section className="px-6 py-12 md:px-12 md:py-20">
@@ -61,7 +77,7 @@ export default function WorkshopPage() {
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={content.introduction.image}
-                alt="Hand-upholstered armchair in the Saverys showroom"
+                alt="Hand-upholstered armchair in the Savery's Broadway showroom"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -113,7 +129,7 @@ export default function WorkshopPage() {
             <div className="relative aspect-[3/4] w-full overflow-hidden">
               <Image
                 src={content.workshop.image}
-                alt="Upholstered chair in the Saverys workshop"
+                alt="Upholstered chair in the Savery's hand upholstery workshop, Broadway"
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 100vw, 50vw"

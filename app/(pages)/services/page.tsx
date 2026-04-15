@@ -5,14 +5,16 @@ import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("services");
   return buildMetadata(
     seo,
     "/services",
-    "Interior Design Services — Cotswolds, Ludlow & Chelsea",
-    "Full interior design, fabric sourcing, furniture curation, colour consultation, and project management. From concept to completion.",
+    "Interior Design Services — Bespoke Interiors & Upholstery",
+    "Full interior design, bespoke upholstery, premium fabric sourcing, and furniture curation from Savery's of Broadway. Concept to completion.",
   );
 }
 
@@ -35,8 +37,8 @@ export default function ServicesPage() {
       description: s.description,
       provider: {
         "@type": "Organization",
-        name: "Savery's of Broadway",
-        url: "https://saverys.co.uk",
+        name: siteConfig.name,
+        url: siteConfig.url,
       },
       areaServed: { "@type": "Country", name: "United Kingdom" },
     })),
@@ -49,6 +51,7 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
       />
       <Hero heading={content.hero.heading} image={content.hero.image} />
+      <Breadcrumbs items={[{ name: "Services", href: "/services" }]} />
 
       <section className="px-6 py-10 md:px-12 md:py-16">
         <div className="mx-auto max-w-3xl">

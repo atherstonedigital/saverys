@@ -47,7 +47,7 @@ export function Footer({ data }: FooterProps) {
             <Link href="/" className="relative block h-10 w-36">
               <Image
                 src="/logo-black.png"
-                alt="Saverys of Broadway — Luxury Interior Design"
+                alt="Savery's of Broadway — Luxury Interior Design"
                 fill
                 className="object-contain brightness-0 invert"
                 sizes="144px"

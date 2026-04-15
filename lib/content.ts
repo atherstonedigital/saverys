@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
+import { siteConfig } from "@/lib/config";
 
 export interface PageSeo {
   title: string;
@@ -28,12 +29,26 @@ export function buildMetadata(
 ): Metadata {
   const title = seo?.title || fallbackTitle;
   const description = seo?.description || fallbackDescription;
+  const url = canonicalPath === "/"
+    ? siteConfig.url
+    : `${siteConfig.url}${canonicalPath}`;
+  const ogImage = seo?.ogImage || "/og-image.webp";
+
   return {
     title,
     description,
     alternates: { canonical: canonicalPath },
-    openGraph: seo?.ogImage
-      ? { images: [{ url: seo.ogImage }] }
-      : undefined,
+    openGraph: {
+      title,
+      description,
+      url,
+      siteName: siteConfig.name,
+      type: "website",
+      locale: "en_GB",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: `${siteConfig.name} — ${title}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+    },
   };
 }

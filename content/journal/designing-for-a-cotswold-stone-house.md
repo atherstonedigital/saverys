@@ -9,8 +9,8 @@ tags:
   - Cotswolds
   - Country House
   - Listed Building
-seoTitle: "Designing Interiors for a Cotswold Stone House | Saverys of Broadway"
-seoDescription: "How to approach interior design in a Cotswold stone house. Light, colour, proportion, and working with period architecture — from Saverys of Broadway."
+seoTitle: "Designing Interiors for a Cotswold Stone House | Savery's of Broadway"
+seoDescription: "How to approach interior design in a Cotswold stone house. Light, colour, proportion, and working with period architecture — from Savery's of Broadway."
 ---
 
 Cotswold stone has a way of setting the terms. Its warmth — that particular honeyed tone that shifts from pale cream to deep amber depending on the quarry and the light — is not a neutral backdrop. It's a presence in the room. Any interior scheme for a Cotswold stone house needs to acknowledge this from the outset, working with the stone's character rather than attempting to override it.

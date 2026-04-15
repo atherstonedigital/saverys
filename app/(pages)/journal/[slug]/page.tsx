@@ -13,8 +13,9 @@ import {
   getPillarLabel,
 } from "@/lib/journal";
 import { generateSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk";
+import { siteConfig } from "@/lib/config";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -34,19 +35,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     post.seoTitle || `${post.title} | Savery's Journal`;
   const description =
     post.seoDescription || post.summary || post.title;
+  const url = `${siteConfig.url}/journal/${slug}`;
 
   return {
     title: { absolute: titleText },
     description,
     alternates: { canonical: `/journal/${slug}` },
     openGraph: {
-      title: titleText,
+      title: post.title,
       description,
+      url,
       type: "article",
+      publishedTime: post.date,
+      siteName: siteConfig.name,
       images: post.featuredImage
-        ? [{ url: post.featuredImage }]
+        ? [{ url: post.featuredImage, width: 1200, height: 630 }]
         : undefined,
     },
+    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -59,9 +65,10 @@ export default async function JournalPostPage({ params }: Props) {
 
   const schemaJson = generateSchema({
     pageType: "article",
+    url: `${siteConfig.url}/journal/${slug}`,
     breadcrumbs: [
-      { name: "Journal", url: `${SITE_URL}/journal` },
-      { name: post.title, url: `${SITE_URL}/journal/${slug}` },
+      { name: "Journal", url: `${siteConfig.url}/journal` },
+      { name: post.title, url: `${siteConfig.url}/journal/${slug}` },
     ],
     article: {
       headline: post.title,
@@ -90,6 +97,12 @@ export default async function JournalPostPage({ params }: Props) {
           </div>
         </section>
       )}
+      <Breadcrumbs
+        items={[
+          { name: "Journal", href: "/journal" },
+          { name: post.title, href: `/journal/${slug}` },
+        ]}
+      />
 
       <section className="px-6 pb-4 md:px-12">
         <div className="mx-auto max-w-3xl">
@@ -160,7 +173,7 @@ export default async function JournalPostPage({ params }: Props) {
                           src={relPost.featuredImage}
                           alt={
                             relPost.featuredImageAlt ||
-                            `${relPost.title} — Saverys Journal`
+                            `${relPost.title} — Savery's Journal`
                           }
                           fill
                           className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
@@ -169,7 +182,7 @@ export default async function JournalPostPage({ params }: Props) {
                       ) : (
                         <div className="flex h-full items-center justify-center">
                           <Text variant="caption" className="text-stone/40">
-                            Saverys Journal
+                            Savery&apos;s Journal
                           </Text>
                         </div>
                       )}

@@ -2,15 +2,15 @@
 title: "What Happens When You Commission a Bespoke Sofa"
 date: 2026-03-15T09:00:00.000Z
 featuredImage: "/images/saverys broadway shop 5.webp"
-featuredImageAlt: "A bespoke sofa being hand-upholstered in the Saverys workshop, Broadway"
+featuredImageAlt: "A bespoke sofa being hand-upholstered in the Savery's workshop, Broadway"
 summary: "From first conversation to finished piece — the full process of commissioning a handmade sofa from a working upholstery workshop."
 pillar: "craft"
 tags:
   - Upholstery
   - Craft
   - Bespoke
-seoTitle: "Commissioning a Bespoke Sofa | Hand-Built in the Cotswolds | Saverys"
-seoDescription: "What actually happens when you commission a bespoke sofa? From frame to fabric, the full process of handmade furniture at Saverys' Broadway workshop."
+seoTitle: "Commissioning a Bespoke Sofa | Hand-Built in the Cotswolds | Savery's"
+seoDescription: "What actually happens when you commission a bespoke sofa? From frame to fabric, the full process of handmade furniture at Savery's Broadway workshop."
 ---
 
 There's a moment, early in most projects, when a client asks about a sofa. Sometimes they know exactly what they want — a Howard, a Knole, a deep-seated chesterfield. More often, they know how they want it to feel: generous, inviting, something the family will gravitate toward. The specifics — dimensions, depth, arm height, cushion fill — come later, through conversation.
@@ -37,7 +37,7 @@ The frame is constructed by hand in our workshop. We don't use staple guns on st
 
 The base is sprung using traditional coil springs, hand-tied with an eight-way pattern. This is the element that gives the seat its response — that gentle, supportive give when you sit down, without the bottoming-out that foam alone produces. Hand-springing takes significantly longer than modern drop-in spring units, but the difference in comfort is immediately apparent.
 
-![Upholsterer working on fabric at the Saverys workshop cutting table](/images/upholstery work shop 2.webp)
+![Upholsterer working on fabric at the Savery's workshop cutting table](/images/upholstery work shop 2.webp)
 
 ## Upholstering
 

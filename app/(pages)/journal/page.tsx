@@ -5,12 +5,20 @@ import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getAllJournalPosts, formatDate, getPillarLabel } from "@/lib/journal";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export const metadata: Metadata = {
-  title: "Journal — Interior Design Inspiration & Craft",
+  title: "Journal — Interior Design Inspiration & Ideas",
   description:
-    "Design commentary, craft insights, and inspiration from the Savery's studio. Upholstery, fabrics, Cotswold interiors, and more.",
+    "Design commentary, craft insights, and interior inspiration from the Savery's of Broadway studio. Upholstery, fabrics, Cotswold interiors, and more.",
   alternates: { canonical: "/journal" },
+  openGraph: {
+    title: "Journal — Interior Design Inspiration & Ideas",
+    description:
+      "Design commentary, craft insights, and interior inspiration from the Savery's of Broadway studio.",
+    type: "website",
+  },
+  twitter: { card: "summary_large_image" },
 };
 
 export default function JournalPage() {
@@ -20,9 +28,10 @@ export default function JournalPage() {
     <>
       <Hero
         heading="Journal"
-        subtitle="Design commentary, craft insights, and inspiration from the Saverys studio"
+        subtitle="Design commentary, craft insights, and inspiration from the Savery's studio"
         image="/images/hero/services.webp"
       />
+      <Breadcrumbs items={[{ name: "Journal", href: "/journal" }]} />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-7xl">
@@ -46,7 +55,7 @@ export default function JournalPage() {
                           src={post.featuredImage}
                           alt={
                             post.featuredImageAlt ||
-                            `${post.title} — Saverys Journal`
+                            `${post.title} — Savery's Journal`
                           }
                           fill
                           className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
@@ -58,7 +67,7 @@ export default function JournalPage() {
                             variant="caption"
                             className="text-stone/40"
                           >
-                            Saverys Journal
+                            Savery&apos;s Journal
                           </Text>
                         </div>
                       )}

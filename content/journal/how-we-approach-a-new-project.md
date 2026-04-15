@@ -2,14 +2,14 @@
 title: "How We Approach a New Interior Design Project"
 date: 2026-02-28T09:00:00.000Z
 featuredImage: "/images/projects/old-mill-details.webp"
-featuredImageAlt: "A beautifully designed living room interior by Saverys of Broadway"
-summary: "From first visit to finished room — the process behind a Saverys project and why we work the way we do."
+featuredImageAlt: "A beautifully designed living room interior by Savery's of Broadway"
+summary: "From first visit to finished room — the process behind a Savery's project and why we work the way we do."
 pillar: "design"
 tags:
   - Country House
   - Cotswolds
-seoTitle: "Our Interior Design Process | How We Work | Saverys of Broadway"
-seoDescription: "How Saverys of Broadway approaches interior design projects — from first consultation to finished room. Personal, consultative, and rooted in 30 years of experience."
+seoTitle: "Our Interior Design Process | How We Work | Savery's of Broadway"
+seoDescription: "How Savery's of Broadway approaches interior design projects — from first consultation to finished room. Personal, consultative, and rooted in 30 years of experience."
 ---
 
 Every project begins with a visit. Not a questionnaire, not a mood board exercise, not a video call — a visit. We come to the house, we walk through the rooms, we look at the light, we sit where the family sits. We want to understand the building before we start drawing.

@@ -5,14 +5,15 @@ import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("about");
   return buildMetadata(
     seo,
     "/about",
-    "About Us — Interior Design Since 1991",
-    "Established in 1991 in Broadway, Cotswolds. Three decades of crafting considered interiors with restraint, quality, and care.",
+    "Our History — Interior Design Since 1991",
+    "Savery's of Broadway: luxury interior design since 1991. Three decades crafting bespoke Cotswolds interiors with care, quality, and timeless style.",
   );
 }
 
@@ -32,6 +33,7 @@ export default function AboutPage() {
         heading={content.hero.heading}
         image={content.hero.image}
       />
+      <Breadcrumbs items={[{ name: "About", href: "/about" }]} />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-7xl">

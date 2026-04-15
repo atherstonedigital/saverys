@@ -1,4 +1,4 @@
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk";
+import { siteConfig } from "@/lib/config";
 
 interface BreadcrumbItem {
   name: string;
@@ -21,140 +21,96 @@ interface SchemaOptions {
   };
   gallery?: string[];
   projectTitle?: string;
+  localBusiness?: keyof typeof siteConfig.locations;
 }
 
 function getOrganizationSchema() {
   return {
     "@type": "Organization",
-    "@id": `${SITE_URL}/#organization`,
-    name: "Savery's of Broadway",
-    alternateName: "Saverys of Broadway",
-    description:
-      "Luxury interior design studio rooted in the Cotswolds since 1991. Bespoke interior schemes, hand upholstery, and the finest fabrics.",
-    url: SITE_URL,
-    telephone: "+441386858941",
-    email: "studio@saverys.co.uk",
+    "@id": `${siteConfig.url}/#organization`,
+    name: siteConfig.name,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    telephone: siteConfig.locations.broadway.phoneTel,
+    email: siteConfig.email,
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+441386858941",
-      email: "studio@saverys.co.uk",
+      telephone: siteConfig.locations.broadway.phoneTel,
+      email: siteConfig.email,
       contactType: "Customer Service",
+      areaServed: "GB",
     },
     logo: {
       "@type": "ImageObject",
-      url: `${SITE_URL}/logo-black.png`,
+      url: `${siteConfig.url}/logo-black.png`,
     },
-    image: `${SITE_URL}/og-image.webp`,
-    foundingDate: "1991",
+    image: `${siteConfig.url}/og-image.webp`,
+    foundingDate: siteConfig.foundingDate,
     founder: {
       "@type": "Person",
       name: "Lyndsey Savery",
     },
-    sameAs: ["https://www.instagram.com/saverysofbroadway/"],
-    knowsAbout: [
-      "Interior Design",
-      "Hand Upholstery",
-      "Bespoke Furniture",
-      "Luxury Fabrics",
-      "Soft Furnishings",
-      "Rugs",
-      "Residential Interior Design",
-      "Hotel Interior Design",
-    ],
-    areaServed: [
-      { "@type": "Place", name: "Cotswolds" },
-      { "@type": "Place", name: "Worcestershire" },
-      { "@type": "Place", name: "Shropshire" },
-      { "@type": "Place", name: "United Kingdom" },
-    ],
+    sameAs: [siteConfig.instagram],
+    address: Object.values(siteConfig.locations).map((loc) => ({
+      "@type": "PostalAddress",
+      streetAddress: loc.street,
+      addressLocality: loc.locality,
+      addressRegion: loc.region,
+      postalCode: loc.postcode,
+      addressCountry: loc.country,
+    })),
   };
 }
 
-function getLocalBusinessSchemas() {
-  return [
-    {
-      "@type": "LocalBusiness",
-      "@id": `${SITE_URL}/#broadway`,
-      name: "Saverys of Broadway",
-      parentOrganization: { "@id": `${SITE_URL}/#organization` },
-      image: `${SITE_URL}/og-image.webp`,
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Cotswold Design Centre, Kennel Lane",
-        addressLocality: "Broadway",
-        addressRegion: "Worcestershire",
-        postalCode: "WR12 7DJ",
-        addressCountry: "GB",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 52.0353,
-        longitude: -1.8564,
-      },
-      telephone: "+441386858941",
-      url: SITE_URL,
-      priceRange: "$$$$",
+function getLocalBusinessSchema(locationKey: keyof typeof siteConfig.locations) {
+  const loc = siteConfig.locations[locationKey];
+  return {
+    "@type": "LocalBusiness",
+    "@id": `${siteConfig.url}/#${loc.locality.toLowerCase().replace(/,\s*/g, "-")}`,
+    name: loc.name,
+    description: `Luxury interior design showroom and studio in ${loc.locality}. Premium fabrics, bespoke furniture, and expert interior design services.`,
+    url: siteConfig.url,
+    telephone: loc.phoneTel,
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: loc.street,
+      addressLocality: loc.locality,
+      addressRegion: loc.region,
+      postalCode: loc.postcode,
+      addressCountry: loc.country,
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": `${SITE_URL}/#ludlow`,
-      name: "Saverys of Broadway — Ludlow",
-      parentOrganization: { "@id": `${SITE_URL}/#organization` },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "1 Tower Street",
-        addressLocality: "Ludlow",
-        addressRegion: "Shropshire",
-        postalCode: "SY8 1RL",
-        addressCountry: "GB",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 52.3677,
-        longitude: -2.7181,
-      },
-      telephone: "+441584708381",
-      url: SITE_URL,
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: loc.lat,
+      longitude: loc.lng,
     },
-    {
-      "@type": "LocalBusiness",
-      "@id": `${SITE_URL}/#chelsea`,
-      name: "Saverys of Broadway — Chelsea",
-      parentOrganization: { "@id": `${SITE_URL}/#organization` },
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "Suite 9, 405 Kings Road",
-        addressLocality: "Chelsea",
-        addressRegion: "London",
-        addressCountry: "GB",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 51.4846,
-        longitude: -0.1813,
-      },
-      telephone: "+442036681000",
-      url: SITE_URL,
-    },
-  ];
+    parentOrganization: { "@id": `${siteConfig.url}/#organization` },
+  };
 }
 
 export function generateSchema(options: SchemaOptions): string {
-  const graph: Record<string, unknown>[] = [
-    getOrganizationSchema(),
-    ...getLocalBusinessSchemas(),
-  ];
+  const graph: Record<string, unknown>[] = [getOrganizationSchema()];
 
   if (options.pageType === "home") {
+    // Include all LocalBusiness entries on home page
+    graph.push(
+      getLocalBusinessSchema("broadway"),
+      getLocalBusinessSchema("ludlow"),
+      getLocalBusinessSchema("chelsea"),
+    );
     graph.push({
       "@type": "WebSite",
-      "@id": `${SITE_URL}/#website`,
-      name: "Saverys of Broadway",
-      url: SITE_URL,
-      publisher: { "@id": `${SITE_URL}/#organization` },
-      description:
-        "Luxury interior design, hand upholstery, and premium fabrics in Broadway, Cotswolds.",
+      "@id": `${siteConfig.url}/#website`,
+      name: siteConfig.name,
+      url: siteConfig.url,
+      publisher: { "@id": `${siteConfig.url}/#organization` },
+      description: siteConfig.description,
     });
+  }
+
+  // Add specific LocalBusiness for store pages
+  if (options.localBusiness) {
+    graph.push(getLocalBusinessSchema(options.localBusiness));
   }
 
   if (options.breadcrumbs && options.breadcrumbs.length > 0) {
@@ -165,7 +121,7 @@ export function generateSchema(options: SchemaOptions): string {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: SITE_URL,
+          item: siteConfig.url,
         },
         ...options.breadcrumbs.map((item, i) => ({
           "@type": "ListItem",
@@ -185,14 +141,18 @@ export function generateSchema(options: SchemaOptions): string {
       dateModified: options.article.dateModified || options.article.datePublished,
       author: {
         "@type": "Organization",
-        name: "Saverys of Broadway",
-        "@id": `${SITE_URL}/#organization`,
+        name: siteConfig.name,
+        "@id": `${siteConfig.url}/#organization`,
       },
-      publisher: { "@id": `${SITE_URL}/#organization` },
+      publisher: { "@id": `${siteConfig.url}/#organization` },
       image: options.article.image
-        ? `${SITE_URL}${options.article.image}`
+        ? `${siteConfig.url}${options.article.image}`
         : undefined,
       description: options.article.summary,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": options.url,
+      },
     });
   }
 
@@ -200,8 +160,8 @@ export function generateSchema(options: SchemaOptions): string {
     graph.push({
       "@type": "ImageGallery",
       name: `${options.projectTitle} — Interior Design Portfolio`,
-      description: `Interior design project by Saverys of Broadway: ${options.projectTitle}`,
-      image: options.gallery.map((img) => `${SITE_URL}${img}`),
+      description: `Interior design project by ${siteConfig.name}: ${options.projectTitle}`,
+      image: options.gallery.map((img) => `${siteConfig.url}${img}`),
     });
   }
 

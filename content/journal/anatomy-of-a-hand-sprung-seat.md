@@ -2,15 +2,15 @@
 title: "The Anatomy of a Hand-Sprung Seat"
 date: 2026-03-05T09:00:00.000Z
 featuredImage: "/images/upholstery work shop 4.webp"
-featuredImageAlt: "Coil springs being hand-tied in the Saverys upholstery workshop, Broadway"
+featuredImageAlt: "Coil springs being hand-tied in the Savery's upholstery workshop, Broadway"
 summary: "What's inside a properly made seat — and why hand-sprung upholstery feels different from anything built with modern shortcuts."
 pillar: "craft"
 tags:
   - Upholstery
   - Craft
   - Broadway
-seoTitle: "Hand-Sprung Upholstery Explained | Traditional Techniques | Saverys"
-seoDescription: "What makes a hand-sprung seat different? The traditional upholstery techniques still used at Saverys' Broadway workshop — coil springs, eight-way ties, and why it matters."
+seoTitle: "Hand-Sprung Upholstery Explained | Traditional Techniques | Savery's"
+seoDescription: "What makes a hand-sprung seat different? The traditional upholstery techniques still used at Savery's Broadway workshop — coil springs, eight-way ties, and why it matters."
 ---
 
 Sit on a well-made sofa — one with a hand-sprung seat — and something registers immediately, even if you can't quite articulate what. The seat responds to you. It gives, but it supports. There's a resilience underneath that holds its shape without rigidity. It feels, in a word, right.
@@ -39,7 +39,7 @@ Tying springs is skilled, physical work. Each knot must be secure, each cord ten
 
 **The top cover.** Finally, the chosen fabric is applied over the calico. On a hand-sprung seat, the fabric sits on a surface that has been meticulously shaped and tensioned. It lies flat, it doesn't pull, and it ages evenly because the structure underneath is sound.
 
-![Upholsterer hand-working fabric at the cutting table in the Saverys workshop](/images/upholstery work shop 1.webp)
+![Upholsterer hand-working fabric at the cutting table in the Savery's workshop](/images/upholstery work shop 1.webp)
 
 ## Why it matters
 
