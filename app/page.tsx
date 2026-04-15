@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/",
     "Luxury Interior Design — Cotswolds, Ludlow & Chelsea",
-    "Luxury interior design studio rooted in the Cotswolds since 1991. Bespoke schemes, hand upholstery, and the finest fabrics. Broadway, Ludlow & Chelsea.",
+    "Luxury interior design studio in the Cotswolds since 1991. Bespoke interiors, hand upholstery, premium fabrics. Showrooms in Broadway, Ludlow, and Chelsea.",
   );
 }
 
@@ -47,6 +47,7 @@ export default function HomePage() {
         heading={content.hero.heading}
         subtitle={content.hero.subtitle}
         image={content.hero.image}
+        imageAlt="Luxury interior by Savery's of Broadway — Cotswolds interior design"
         cta={{ label: "View our work", href: "/projects" }}
       />
 

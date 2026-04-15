@@ -9,13 +9,14 @@ interface HeroProps {
   heading: string;
   subtitle?: string;
   image?: string;
+  imageAlt?: string;
   cta?: {
     label: string;
     href: string;
   };
 }
 
-export function Hero({ heading, subtitle, image, cta }: HeroProps) {
+export function Hero({ heading, subtitle, image, imageAlt, cta }: HeroProps) {
   const ref = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -34,7 +35,7 @@ export function Hero({ heading, subtitle, image, cta }: HeroProps) {
       {image && (
         <Image
           src={image}
-          alt=""
+          alt={imageAlt || heading}
           fill
           priority
           className="object-cover"

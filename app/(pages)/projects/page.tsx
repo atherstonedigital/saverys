@@ -6,6 +6,7 @@ import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { projects } from "@/lib/projects";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("projects");
@@ -13,7 +14,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/projects",
     "Interior Design Portfolio — Cotswolds & Beyond",
-    "Explore our portfolio of interior design projects across the Cotswolds and beyond. Country houses, restorations, and bespoke schemes.",
+    "Explore our luxury interior design portfolio. Country houses, restorations, and bespoke schemes across the Cotswolds and beyond by Savery's.",
   );
 }
 
@@ -39,6 +40,7 @@ export default function ProjectsPage() {
   return (
     <>
       <Hero heading={content.hero.heading} image={content.hero.image} />
+      <Breadcrumbs items={[{ name: "Projects", href: "/projects" }]} />
 
       <section className="px-6 py-12 md:px-12 md:py-20">
         <div className="mx-auto max-w-3xl">

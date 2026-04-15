@@ -43,7 +43,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
         {project.image && (
           <Image
             src={project.image}
-            alt={project.name}
+            alt={`${project.name} — interior design by Savery's of Broadway`}
             fill
             className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
             sizes={index % 3 === 0 ? "100vw" : "50vw"}

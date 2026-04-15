@@ -3,17 +3,17 @@ title: "Ludlow: A Design Lover's Guide to Shropshire's Finest Town"
 date: 2026-02-15T09:00:00.000Z
 featuredImage: /images/ludlow-hero.webp
 featuredImageAlt: The historic market town of Ludlow, Shropshire — home to a
-  Saverys interior design studio
+  Savery's interior design studio
 summary: Why Ludlow is quietly becoming one of the most interesting design
   destinations in the Marches — and what to see when you visit.
 pillar: place
 tags:
   - Ludlow
   - Shropshire
-seoTitle: Ludlow Interior Design & Interiors Guide | Saverys of Broadway
+seoTitle: Ludlow Interior Design & Interiors Guide | Savery's of Broadway
 seoDescription: Ludlow, Shropshire — a design lover's guide to the architecture,
   interiors, and independent shops of one of England's most beautiful market
-  towns. Visit the Saverys studio at Tower Street.
+  towns. Visit the Savery's studio at Tower Street.
 ---
 
 Ludlow doesn't shout. It never has. While the Cotswolds draws coaches of visitors and the Lake District fills Instagram feeds, this small market town in south Shropshire goes about its business with a quiet assurance that suits it perfectly. The medieval street plan is largely intact. The castle stands on its promontory above the River Teme. The timber-framed buildings along Broad Street are among the finest in England. And the food — Ludlow's reputation as a food town is thoroughly deserved and shows no sign of diminishing.
@@ -38,7 +38,7 @@ For our clients in Shropshire and the Marches, Ludlow serves as both inspiration
 
 ## Our Tower Street studio
 
-The Saverys studio at [1 Tower Street](/workshop-stores/ludlow) is a short walk from the castle, on one of Ludlow's most characterful streets. It serves clients across Shropshire, Herefordshire, and the Welsh Marches — a region rich in beautiful properties that deserve interiors of equal quality.
+The Savery's studio at [1 Tower Street](/workshop-stores/ludlow) is a short walk from the castle, on one of Ludlow's most characterful streets. It serves clients across Shropshire, Herefordshire, and the Welsh Marches — a region rich in beautiful properties that deserve interiors of equal quality.
 
 The studio operates as an extension of our Broadway practice. Clients in the Ludlow area have access to the same fabric libraries, the same design expertise, and the same workshop. Pieces commissioned through the Ludlow studio are built in Broadway by the same team, using the same methods and materials. The standard is identical; only the geography differs.
 

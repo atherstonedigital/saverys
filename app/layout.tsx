@@ -2,30 +2,28 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
-import { SITE_NAME } from "@/lib/constants";
 import { getSettings } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
 import "./globals.css";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL(siteConfig.url),
   title: {
     default:
       "Luxury Interior Design — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
     template: `%s | Savery's of Broadway`,
   },
   description:
-    "Saverys of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1991. Studios in Broadway, Ludlow and Chelsea.",
+    "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1991. Studios in Broadway, Ludlow and Chelsea.",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",
   },
   manifest: "/site.webmanifest",
   openGraph: {
-    siteName: SITE_NAME,
-    images: [{ url: "/og-image.webp", width: 1200, height: 630 }],
+    siteName: siteConfig.name,
+    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Savery's of Broadway interior design studio" }],
     type: "website",
     locale: "en_GB",
   },
@@ -34,7 +32,7 @@ export const metadata: Metadata = {
     images: ["/og-image.webp"],
   },
   alternates: {
-    canonical: SITE_URL,
+    canonical: siteConfig.url,
   },
   other: {
     "geo.region": "GB-WOR",
@@ -80,6 +78,21 @@ export default function RootLayout({
             __html: generateSchema({ pageType: "page" }),
           }}
         />
+        {process.env.NEXT_PUBLIC_GA_ID && process.env.NODE_ENV === "production" && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script
+              dangerouslySetInnerHTML={{
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
+                `,
+              }}
+            />
+          </>
+        )}
       </head>
       <body>
         <Nav items={navData.items} />

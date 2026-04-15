@@ -157,7 +157,7 @@ export function Nav({ items }: NavProps) {
           <Link href="/" className="relative block h-12 w-[172px]">
             <Image
               src="/logo-black.png"
-              alt="Saverys of Broadway — Luxury Interior Design"
+              alt="Savery's of Broadway — Luxury Interior Design"
               fill
               className={cn(
                 "object-contain transition-all duration-[var(--duration-fast)]",

@@ -2,7 +2,7 @@
 title: How to Choose Upholstery Fabric for a Country House
 date: 2026-03-25T09:00:00.000Z
 featuredImage: /images/The-Old-Mill-Broadway-039-scaled-1.webp
-featuredImageAlt: Premium upholstery fabric samples displayed at the Saverys
+featuredImageAlt: Premium upholstery fabric samples displayed at the Savery's
   showroom in Broadway, Cotswolds
 summary: A maker's guide to choosing upholstery fabric that balances beauty with
   durability — from the Martindale rub test to the fabrics we reach for most
@@ -13,8 +13,8 @@ tags:
   - Upholstery
   - Country House
   - Cotswolds
-seoTitle: How to Choose Upholstery Fabric for a Country House | Saverys Journal
-seoDescription: Expert guidance on choosing upholstery fabric from Saverys of
+seoTitle: How to Choose Upholstery Fabric for a Country House | Savery's Journal
+seoDescription: Expert guidance on choosing upholstery fabric from Savery's of
   Broadway. The Martindale test, natural vs performance fabrics, and what 30
   years of making has taught us.
 ---
@@ -47,7 +47,7 @@ As a rough guide from our experience in the workshop:
 
 A number alone doesn't tell the whole story — weave structure, fibre content, and finish all play a role — but it's a sensible starting point. We always check the Martindale rating before recommending a fabric for upholstery, and we'd encourage you to do the same.
 
-![Upholstery craftsman working with fabric at the Saverys workshop in Broadway](/images/upholstery work shop 1.webp)
+![Upholstery craftsman working with fabric at the Savery's workshop in Broadway](/images/upholstery work shop 1.webp)
 
 ## Natural fabrics: the options
 

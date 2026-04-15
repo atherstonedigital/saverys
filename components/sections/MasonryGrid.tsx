@@ -60,7 +60,7 @@ function MasonryCard({
         <div className={`relative ${aspect} w-full overflow-hidden`}>
           <Image
             src={project.image}
-            alt={project.name}
+            alt={`${project.name} — interior design by Savery's of Broadway`}
             fill
             className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
             sizes="(max-width: 768px) 100vw, 50vw"

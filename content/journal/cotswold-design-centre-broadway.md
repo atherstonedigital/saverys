@@ -2,20 +2,20 @@
 title: "The Cotswold Design Centre: A Destination for Interiors in Broadway"
 date: 2026-03-20T09:00:00.000Z
 featuredImage: "/images/broadway hi street.webp"
-featuredImageAlt: "The Saverys showroom at the Cotswold Design Centre in Broadway, Worcestershire"
+featuredImageAlt: "The Savery's showroom at the Cotswold Design Centre in Broadway, Worcestershire"
 summary: "Why Broadway's Cotswold Design Centre has become a quiet destination for anyone serious about interiors — and what you'll find when you visit."
 pillar: "place"
 tags:
   - Broadway
   - Cotswolds
   - Showroom
-seoTitle: "The Cotswold Design Centre, Broadway | Interior Design Showroom | Saverys"
-seoDescription: "Visit the Cotswold Design Centre in Broadway — home to Saverys' showroom of premium fabrics, rugs, and interior design services. Open to visitors."
+seoTitle: "The Cotswold Design Centre, Broadway | Interior Design Showroom | Savery's"
+seoDescription: "Visit the Cotswold Design Centre in Broadway — home to Savery's showroom of premium fabrics, rugs, and interior design services. Open to visitors."
 ---
 
 Broadway has long been one of the Cotswolds' most visited villages. People come for the honey-coloured stone, the wide high street, the walking, and the general sense that things here move at a pace more suited to the thinking mind. What fewer visitors realise is that tucked just off the high street, along Kennel Lane, sits one of the most comprehensive interior design destinations in the region.
 
-The Cotswold Design Centre is where Saverys has been based since the early days of the practice. It's not a shop in the conventional sense — though you can certainly buy here. It's a working environment where design happens: fabrics are selected, schemes are developed, and furniture is made in the workshop that sits behind the showroom. The two activities — making and advising — happen in close proximity, and that proximity shapes everything about how we work.
+The Cotswold Design Centre is where Savery's has been based since the early days of the practice. It's not a shop in the conventional sense — though you can certainly buy here. It's a working environment where design happens: fabrics are selected, schemes are developed, and furniture is made in the workshop that sits behind the showroom. The two activities — making and advising — happen in close proximity, and that proximity shapes everything about how we work.
 
 ## What you'll find
 
@@ -23,7 +23,7 @@ The showroom itself is arranged not as a retail display but as a working library
 
 Beyond fabrics, the showroom holds our rug collections — handknotted pieces sourced from workshops we trust — alongside wallpaper books, trimmings, and the smaller details that bring a scheme together. A passementerie that finishes a pelmet. A gimp braid that defines the edge of a chair seat. These are the details that most people never notice consciously but that register as quality when they enter a well-made room.
 
-![Premium fabric sample books in the Saverys showroom](/images/saverys broadway shop 2.webp)
+![Premium fabric sample books in the Savery's showroom](/images/saverys broadway shop 2.webp)
 
 ## The workshop next door
 
@@ -31,7 +31,7 @@ What makes the Cotswold Design Centre unusual is that the showroom connects dire
 
 This arrangement is increasingly rare in British interior design. Most studios specify furniture that is then manufactured elsewhere. We've always done it differently, and the workshop is the reason. It gives us control over quality that simply isn't possible when you're relying on a third-party manufacturer working from a specification sheet.
 
-![Craftsman at work in the Saverys upholstery workshop, Broadway](/images/upholstery work shop 1.webp)
+![Craftsman at work in the Savery's upholstery workshop, Broadway](/images/upholstery work shop 1.webp)
 
 ## Visiting
 

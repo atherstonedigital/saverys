@@ -6,8 +6,9 @@ import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { getProject, getAllProjectSlugs } from "@/lib/projects";
 import { generateSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk";
+import { siteConfig } from "@/lib/config";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -21,16 +22,20 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const project = getProject(slug);
   if (!project) return {};
+  const url = `${siteConfig.url}/projects/${slug}`;
   return {
     title: { absolute: `${project.name} — ${project.location} | Savery's Portfolio` },
     description: `Interior design project by Savery's of Broadway: ${project.name} in ${project.location}. View the full gallery.`,
     alternates: { canonical: `/projects/${slug}` },
     openGraph: {
-      title: `${project.name} — ${project.location} | Savery's Portfolio`,
+      title: `${project.name} — ${project.location}`,
       description: `Interior design project by Savery's of Broadway: ${project.name} in ${project.location}.`,
-      images: [{ url: project.heroImage }],
+      url,
+      siteName: siteConfig.name,
+      images: [{ url: project.heroImage, width: 1200, height: 630 }],
       type: "website",
     },
+    twitter: { card: "summary_large_image" },
   };
 }
 
@@ -47,8 +52,8 @@ export default async function ProjectPage({ params }: Props) {
     projectTitle: `${project.name}, ${project.location}`,
     gallery: project.images.map((img) => img.src),
     breadcrumbs: [
-      { name: "Projects", url: `${SITE_URL}/projects` },
-      { name: project.name, url: `${SITE_URL}/projects/${slug}` },
+      { name: "Projects", url: `${siteConfig.url}/projects` },
+      { name: project.name, url: `${siteConfig.url}/projects/${slug}` },
     ],
   });
 
@@ -62,6 +67,12 @@ export default async function ProjectPage({ params }: Props) {
         heading={project.name}
         subtitle={project.location}
         image={project.heroImage}
+      />
+      <Breadcrumbs
+        items={[
+          { name: "Projects", href: "/projects" },
+          { name: project.name, href: `/projects/${slug}` },
+        ]}
       />
 
       <section className="px-6 py-16 md:px-12 md:py-32">

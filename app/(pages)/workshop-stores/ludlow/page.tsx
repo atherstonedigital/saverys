@@ -4,14 +4,16 @@ import Link from "next/link";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { generateSchema } from "@/lib/schema";
+import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("ludlow");
   return buildMetadata(
     seo,
     "/workshop-stores/ludlow",
-    "Our Ludlow Store — Interior Design & Fabrics",
-    "Visit Savery's in Ludlow — our curated interiors store at 1 Tower Street. Fabrics, furnishings, and design consultations.",
+    "Our Ludlow Store — Luxury Interior Design, Shropshire",
+    "Visit Savery's in Ludlow — our curated interior design store at 1 Tower Street, Shropshire. Premium fabrics, furnishings, and consultations.",
   );
 }
 
@@ -55,14 +57,26 @@ function Placeholder({
 export default function LudlowPage() {
   const content = getPageContent<LudlowContent>("ludlow");
 
+  const schemaJson = generateSchema({
+    pageType: "page",
+    localBusiness: "ludlow",
+    breadcrumbs: [
+      { name: "Ludlow Store", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/workshop-stores/ludlow` },
+    ],
+  });
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: schemaJson }}
+      />
       {/* Hero */}
       <section className="relative h-screen w-full overflow-hidden">
         {content.hero.image ? (
           <Image
             src={content.hero.image}
-            alt={`${content.hero.heading} — Saverys of Broadway`}
+            alt={`${content.hero.heading} — Savery's of Broadway`}
             fill
             className="object-cover"
             sizes="100vw"
@@ -92,6 +106,12 @@ export default function LudlowPage() {
           </div>
         </div>
       </section>
+      <Breadcrumbs
+        items={[
+          { name: "Workshop & Stores", href: "/workshop-stores/broadway" },
+          { name: "Ludlow", href: "/workshop-stores/ludlow" },
+        ]}
+      />
 
       {/* Intro */}
       <section className="px-6 py-12 md:px-12 md:py-20">
@@ -110,7 +130,7 @@ export default function LudlowPage() {
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
                   src={content.intro.image}
-                  alt="Inside the Saverys Ludlow store"
+                  alt="Inside the Savery's Ludlow interior design store"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -162,7 +182,7 @@ export default function LudlowPage() {
                     >
                       <Image
                         src={img}
-                        alt={`Inside the Saverys Ludlow store`}
+                        alt="Inside the Savery's Ludlow interior design store"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -180,7 +200,7 @@ export default function LudlowPage() {
                     >
                       <Image
                         src={img}
-                        alt={`Inside the Saverys Ludlow store`}
+                        alt="Inside the Savery's Ludlow interior design store"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"

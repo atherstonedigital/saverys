@@ -2,14 +2,14 @@
 title: "Linen, Velvet, Wool: A Guide to Natural Upholstery Fabrics"
 date: 2026-02-20T09:00:00.000Z
 featuredImage: "/images/saverys broadway shop 2.webp"
-featuredImageAlt: "Natural upholstery fabric samples — linen, velvet, and wool — at the Saverys showroom"
+featuredImageAlt: "Natural upholstery fabric samples — linen, velvet, and wool — at the Savery's showroom"
 summary: "The natural fabrics we reach for most often in the workshop, how they behave, and where each one works best."
 pillar: "fabric"
 tags:
   - Fabrics
   - Upholstery
   - Craft
-seoTitle: "Natural Upholstery Fabrics Guide — Linen, Velvet & Wool | Saverys"
+seoTitle: "Natural Upholstery Fabrics Guide — Linen, Velvet & Wool | Savery's"
 seoDescription: "A maker's guide to natural upholstery fabrics: linen, velvet, wool, cotton, and silk. How they wear, where they work best, and what we recommend from 30 years in the workshop."
 ---
 
