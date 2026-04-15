@@ -3,7 +3,7 @@
 import { cn } from "@/lib/utils";
 import type { AnchorHTMLAttributes, ButtonHTMLAttributes } from "react";
 
-type ButtonVariant = "ghost" | "text";
+type ButtonVariant = "ghost" | "secondary" | "text";
 
 type ButtonBaseProps = {
   variant?: ButtonVariant;
@@ -29,6 +29,8 @@ const baseStyles =
 const variantStyles: Record<ButtonVariant, string> = {
   ghost:
     "border border-charcoal bg-transparent text-charcoal px-8 py-3 hover:bg-charcoal hover:text-cream",
+  secondary:
+    "border border-saverys-green bg-transparent text-charcoal px-8 py-3 hover:bg-saverys-green hover:text-cream",
   text: "text-charcoal underline underline-offset-4 hover:text-clay",
 };
 

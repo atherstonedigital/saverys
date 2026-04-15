@@ -57,12 +57,12 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "jams-house",
-    name: "Jams House",
+    slug: "newtown-cottage",
+    name: "Newtown Cottage",
     location: "The Cotswolds",
     description:
       "A country house layered with character. Exposed beams, rich velvets, and golden drapes.",
-    body: "Jams House is a characterful Cotswold property where the owners wanted interiors that felt collected rather than designed. We layered rich velvets, golden botanical-print drapes, and a mix of vintage and contemporary cushions to create spaces that invite you to stay. Every room has its own personality, united by a shared sense of warmth and texture.",
+    body: "Newtown Cottage is a characterful Cotswold property where the owners wanted interiors that felt collected rather than designed. We layered rich velvets, golden botanical-print drapes, and a mix of vintage and contemporary cushions to create spaces that invite you to stay. Every room has its own personality, united by a shared sense of warmth and texture.",
     heroImage: "/images/projects/jams-house-living.webp",
     images: [
       {
@@ -74,27 +74,6 @@ export const projects: Project[] = [
         src: "/images/projects/jams-house-cushions.webp",
         alt: "Reading corner with curated cushion collection",
         orientation: "portrait",
-      },
-    ],
-  },
-  {
-    slug: "the-grantly-collection",
-    name: "The Grantly Collection",
-    location: "Broadway, Worcestershire",
-    description:
-      "Bold pattern meets timeless form. A celebration of fabric and colour.",
-    body: "The Grantly Collection represents our love of pattern and colour at their most confident. A patterned sofa sits against rich blue block-printed wallpaper, paired with antique furniture and a blue-and-white porcelain lamp. The effect is layered, considered, and entirely its own — proof that bold choices, made with care, create rooms of genuine character.",
-    heroImage: "/images/projects/grantly-sofa.webp",
-    images: [
-      {
-        src: "/images/projects/grantly-sofa.webp",
-        alt: "Patterned sofa against blue wallpaper",
-        orientation: "portrait",
-      },
-      {
-        src: "/images/hero/home.webp",
-        alt: "Light-filled room with pale sofa and garden view",
-        orientation: "landscape",
       },
     ],
   },

@@ -20,14 +20,9 @@
       "image": "/images/projects/old-mill-bedroom.webp"
     },
     {
-      "name": "Jams House",
-      "slug": "jams-house",
+      "name": "Newtown Cottage",
+      "slug": "newtown-cottage",
       "image": "/images/projects/jams-house-living.webp"
-    },
-    {
-      "name": "The Grantly Collection",
-      "slug": "the-grantly-collection",
-      "image": "/images/projects/grantly-sofa.webp"
     }
   ],
   "services": {

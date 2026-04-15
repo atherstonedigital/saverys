@@ -65,7 +65,7 @@ export default function JournalPage() {
                     </div>
                     <div className="mt-4">
                       {post.pillar && (
-                        <Text variant="caption" className="text-clay">
+                        <Text variant="caption" className="text-saverys-green">
                           {getPillarLabel(post.pillar)}
                         </Text>
                       )}

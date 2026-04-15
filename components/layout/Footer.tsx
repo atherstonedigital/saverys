@@ -40,7 +40,7 @@ export function Footer({ data }: FooterProps) {
   const links = data.links && data.links.length > 0 ? data.links : defaultLinks;
 
   return (
-    <footer className="bg-ink px-6 py-16 md:px-12 md:py-24">
+    <footer className="border-t-2 border-saverys-green/40 bg-ink px-6 py-16 md:px-12 md:py-24">
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col justify-between gap-12 md:flex-row md:items-start">
           <div>

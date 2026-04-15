@@ -101,7 +101,7 @@ export default async function JournalPostPage({ params }: Props) {
               {post.pillar && (
                 <>
                   <span className="text-stone/30">·</span>
-                  <Text variant="caption" className="text-clay">
+                  <Text variant="caption" className="text-saverys-green">
                     {getPillarLabel(post.pillar)}
                   </Text>
                 </>
@@ -129,7 +129,7 @@ export default async function JournalPostPage({ params }: Props) {
               {post.tags.map((tag) => (
                 <span
                   key={tag}
-                  className="font-body text-xs font-normal uppercase tracking-[0.06em] text-stone/60"
+                  className="rounded-full bg-saverys-green/15 px-3 py-1 font-body text-xs font-normal uppercase tracking-[0.06em] text-stone/80"
                 >
                   {tag}
                 </span>
