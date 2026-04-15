@@ -48,7 +48,7 @@ export function Nav({ items }: NavProps) {
   }
 
   const linkClass = cn(
-    "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]",
+    "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)] hover:underline hover:underline-offset-4 hover:decoration-saverys-green",
     isScrolled
       ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
       : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"

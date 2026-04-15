@@ -5,6 +5,7 @@
   --color-charcoal: #2C2C2C;
   --color-stone: #6b6358;
   --color-clay: #A0896C;
+  --color-saverys-green: #839E83;
   --color-cream: #F5F0EB;
   --color-linen: #EDE8E1;
   --color-white-soft: #FAFAF8;
@@ -142,7 +143,7 @@ body {
 }
 
 .journal-body blockquote {
-  border-left: 2px solid var(--color-clay);
+  border-left: 2px solid var(--color-saverys-green);
   padding-left: 1.5rem;
   margin: 2rem 0;
   font-style: italic;
