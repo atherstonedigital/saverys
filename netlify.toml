@@ -275,9 +275,3 @@
   from = "/projects/the-dower-house/"
   to = "/projects/saverys-4"
   status = 301
-
-# Catch-all trailing slash removal
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
