@@ -2,6 +2,15 @@
   command = "npm run build"
   publish = ".next"
 
+# Disable Netlify's HTML "Pretty URLs" so it doesn't fight Next.js's own
+# trailing-slash handling (Next defaults to trailingSlash: false). Without
+# this, the two engines can canonicalise the same URL in opposite directions
+# and produce ERR_TOO_MANY_REDIRECTS.
+[build.processing]
+  skip_processing = false
+[build.processing.html]
+  pretty_urls = false
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
@@ -274,10 +283,4 @@
 [[redirects]]
   from = "/projects/the-dower-house/"
   to = "/projects/saverys-4"
-  status = 301
-
-# Catch-all trailing slash removal
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
   status = 301
