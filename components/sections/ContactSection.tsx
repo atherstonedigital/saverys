@@ -1,8 +1,8 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import dynamic from "next/dynamic";
 import Image from "next/image";
-import { Turnstile } from "@marsidev/react-turnstile";
 import { Text } from "@/components/ui/Text";
 import { Button } from "@/components/ui/Button";
 import { SectionReveal } from "@/components/ui/SectionReveal";
@@ -10,6 +10,19 @@ import { SectionReveal } from "@/components/ui/SectionReveal";
 import { trackEvent, type EventParams } from "@/lib/analytics";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+
+// SEO launch prep — 2026-04-27
+// ContactSection is embedded on the homepage as well as /contact, so a
+// top-level import of @marsidev/react-turnstile would evaluate the package
+// (and load Cloudflare's challenge script) on every page. Lazy-load it,
+// client-only, so:
+//   - the chunk is only fetched when we actually render the widget, and
+//   - any package-level side effect can't crash hydration on routes that
+//     don't need spam protection.
+const Turnstile = dynamic(
+  () => import("@marsidev/react-turnstile").then((m) => m.Turnstile),
+  { ssr: false },
+);
 
 type ShowroomKey = "broadway" | "ludlow" | "chelsea";
 
