@@ -13,6 +13,23 @@
     "body": "At Savery's, we believe the most beautiful rooms are those that feel as though they have always existed. Our approach is one of restraint and consideration — where every fabric, finish and form is chosen not for trend, but for truth.",
     "image": "/images/projects/old-mill-details.webp"
   },
+  "process": {
+    "heading": "Our process",
+    "steps": [
+      {
+        "title": "Listening",
+        "description": "Every project begins with a conversation about how you live, what you value, and what a room should feel like."
+      },
+      {
+        "title": "Sourcing",
+        "description": "We work directly with mills, workshops, and craftspeople across Britain to select materials of genuine quality."
+      },
+      {
+        "title": "Composing",
+        "description": "From placement of furniture to final dressing, every detail is attended to until the room feels complete."
+      }
+    ]
+  },
   "featuredProjects": [
     {
       "name": "The Old Mill, Broadway",

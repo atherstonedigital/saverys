@@ -23,6 +23,10 @@ export function generateMetadata(): Metadata {
 interface HomeContent {
   hero: { heading: string; subtitle?: string; image: string };
   studioIntro: { heading: string; body: string; image: string };
+  process: {
+    heading: string;
+    steps: { title: string; description: string }[];
+  };
   featuredProjects: { name: string; slug: string; image: string; description?: string }[];
   services: {
     heading: string;
@@ -78,7 +82,10 @@ export default function HomePage() {
         </div>
       </section>
 
-      <ProcessSection />
+      <ProcessSection
+        heading={content.process.heading}
+        steps={content.process.steps}
+      />
 
       <ProjectGrid projects={content.featuredProjects} />
 
