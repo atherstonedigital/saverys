@@ -1,6 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Text } from "@/components/ui/Text";
+// SEO launch prep — 2026-04-27
+import { TrackedLink } from "@/components/ui/TrackedLink";
+
+const PHONE_LOCATION_LOOKUP: Record<string, "broadway" | "ludlow" | "chelsea"> = {
+  Broadway: "broadway",
+  Ludlow: "ludlow",
+  Chelsea: "chelsea",
+};
 
 interface FooterLocation {
   name: string;
@@ -57,12 +65,14 @@ export function Footer({ data }: FooterProps) {
             <Text variant="small" className="mt-4 max-w-xs text-cream/50">
               {data.tagline}
             </Text>
-            <a
+            <TrackedLink
               href={`mailto:${data.email}`}
+              event="email_click"
+              eventParams={{ location: "general" }}
               className="mt-3 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/60 transition-colors duration-300 hover:text-cream"
             >
               {data.email}
-            </a>
+            </TrackedLink>
             <a
               href={data.instagram}
               target="_blank"
@@ -99,12 +109,16 @@ export function Footer({ data }: FooterProps) {
                 <Text variant="small" className="mt-2 max-w-[11rem] text-cream/60">
                   {location.address}
                 </Text>
-                <a
+                <TrackedLink
                   href={`tel:${location.phoneTel}`}
+                  event="phone_click"
+                  eventParams={{
+                    location: PHONE_LOCATION_LOOKUP[location.name] || "general",
+                  }}
                   className="mt-1 block font-body text-sm font-light leading-[1.7] tracking-[0.03em] text-cream/50 transition-colors duration-300 hover:text-cream"
                 >
                   {location.phone}
-                </a>
+                </TrackedLink>
               </div>
             ))}
           </div>

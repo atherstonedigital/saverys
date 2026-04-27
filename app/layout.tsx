@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
+import { GoogleAnalytics } from "@/components/Analytics";
 import { getSettings } from "@/lib/content";
 import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
@@ -21,14 +22,32 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   manifest: "/site.webmanifest",
+  // SEO launch prep — 2026-04-27: explicit OG/Twitter defaults so any page
+  // without overrides still produces a rich link card (WhatsApp, iMessage,
+  // Slack, LinkedIn, Pinterest, Twitter/X).
   openGraph: {
-    siteName: siteConfig.name,
-    images: [{ url: "/og-image.webp", width: 1200, height: 630, alt: "Savery's of Broadway interior design studio" }],
     type: "website",
     locale: "en_GB",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    title:
+      "Savery's of Broadway — Luxury Interior Design Cotswolds, Ludlow & Chelsea",
+    description:
+      "Luxury interior design studio established 1942. Showrooms in Broadway, Ludlow, and Chelsea. Bespoke fabrics, hand upholstery, and timeless interiors.",
+    images: [
+      {
+        url: "/og-image.webp",
+        width: 1200,
+        height: 630,
+        alt: "Savery's of Broadway interior design studio",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
+    title: "Savery's of Broadway — Luxury Interior Design",
+    description:
+      "Luxury interior design studio established 1942. Showrooms in Broadway, Ludlow, and Chelsea.",
     images: ["/og-image.webp"],
   },
   alternates: {
@@ -78,23 +97,10 @@ export default function RootLayout({
             __html: generateSchema({ pageType: "page" }),
           }}
         />
-        {process.env.NEXT_PUBLIC_GA_ID && process.env.NODE_ENV === "production" && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}');
-                `,
-              }}
-            />
-          </>
-        )}
       </head>
       <body>
+        {/* SEO launch prep — 2026-04-27: GA4 gated on live hostname only */}
+        <GoogleAnalytics />
         <Nav items={navData.items} />
         <main>{children}</main>
         <Footer data={footerData} />

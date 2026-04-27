@@ -57,11 +57,42 @@ export default async function ProjectPage({ params }: Props) {
     ],
   });
 
+  // SEO launch prep — 2026-04-27
+  // CreativeWork (per-project) sits alongside the existing Organization /
+  // LocalBusiness graph from the layout — better signal for image search and
+  // AI Overviews on "examples of luxury Cotswold interiors" queries.
+  const creativeWorkSchema = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: `${project.name}${project.location ? `, ${project.location}` : ""}`,
+    description:
+      project.description ||
+      project.body?.slice(0, 200) ||
+      `Interior design project by ${siteConfig.name}.`,
+    image: project.heroImage
+      ? `${siteConfig.url}${project.heroImage}`
+      : undefined,
+    url: `${siteConfig.url}/projects/${slug}`,
+    creator: {
+      "@type": "Organization",
+      name: siteConfig.name,
+      url: siteConfig.url,
+    },
+    locationCreated: project.location
+      ? { "@type": "Place", name: project.location }
+      : undefined,
+    dateCreated: project.year || undefined,
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: schemaJson }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(creativeWorkSchema) }}
       />
       <Hero
         heading={project.name}

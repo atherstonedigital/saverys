@@ -7,6 +7,8 @@ import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
 import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+// SEO launch prep — 2026-04-27
+import { TrackedLink } from "@/components/ui/TrackedLink";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("showroom-broadway");
@@ -222,12 +224,14 @@ export default function WorkshopPage() {
                   <Text variant="caption" className="text-charcoal">
                     Telephone
                   </Text>
-                  <a
+                  <TrackedLink
                     href={`tel:+44${content.visitUs.phone.replace(/^0/, "").replace(/\s/g, "")}`}
+                    event="phone_click"
+                    eventParams={{ location: "broadway" }}
                     className="mt-1 block font-body text-base font-light leading-[1.7] tracking-[0.02em] text-stone transition-colors duration-[var(--duration-fast)] hover:text-clay"
                   >
                     {content.visitUs.phone}
-                  </a>
+                  </TrackedLink>
                 </div>
                 <div>
                   <Text variant="caption" className="text-charcoal">
