@@ -30,8 +30,9 @@ export function Footer({ data }: FooterProps) {
   const defaultLinks: FooterLink[] = [
     { label: "About", href: "/about" },
     { label: "Projects", href: "/projects" },
-    { label: "Broadway Workshop", href: "/workshop-stores/broadway" },
-    { label: "Ludlow Store", href: "/workshop-stores/ludlow" },
+    { label: "Workshop", href: "/workshop" },
+    { label: "Broadway Showroom", href: "/showroom/broadway" },
+    { label: "Ludlow Showroom", href: "/showroom/ludlow" },
     { label: "Services", href: "/services" },
     { label: "Journal", href: "/journal" },
     { label: "Contact", href: "/contact" },

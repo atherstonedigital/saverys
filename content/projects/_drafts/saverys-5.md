@@ -1,7 +1,7 @@
 ---
-title: "The Grantly Collection"
+title: "Saverys 5"
 location: "Broadway, Worcestershire"
-slug: "the-grantly-collection"
+slug: "saverys-5"
 heroImage: "/images/projects/grantly-sofa.webp"
 description: "Bold pattern meets timeless form. A celebration of fabric and colour."
 featured: false

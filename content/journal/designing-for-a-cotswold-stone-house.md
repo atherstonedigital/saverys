@@ -15,7 +15,7 @@ seoDescription: "How to approach interior design in a Cotswold stone house. Ligh
 
 Cotswold stone has a way of setting the terms. Its warmth — that particular honeyed tone that shifts from pale cream to deep amber depending on the quarry and the light — is not a neutral backdrop. It's a presence in the room. Any interior scheme for a Cotswold stone house needs to acknowledge this from the outset, working with the stone's character rather than attempting to override it.
 
-We've been designing for these properties since 1991, and the buildings themselves have taught us more than any design manual. Each house has its own light, its own proportions, and its own quirks. A seventeenth-century cottage on the high street in Broadway behaves entirely differently from a Georgian rectory on the edge of Chipping Campden. What they share is an architectural honesty that responds best to interiors of equal sincerity.
+We've been designing for these properties since 1942, and the buildings themselves have taught us more than any design manual. Each house has its own light, its own proportions, and its own quirks. A seventeenth-century cottage on the high street in Broadway behaves entirely differently from a Georgian rectory on the edge of Chipping Campden. What they share is an architectural honesty that responds best to interiors of equal sincerity.
 
 ## Light comes first
 
@@ -45,7 +45,7 @@ Original features — stone fireplaces, oak beams, flagstone floors, mullioned w
 
 The key is coherence. A contemporary sofa can sit beautifully in a beamed cottage if the fabric, the scale, and the colour are right. An antique piece can look extraordinary in a room with clean, modern walls. What breaks a scheme is inconsistency — when the different elements feel as though they've arrived from different houses and different centuries without any conversation between them.
 
-Stone floors deserve particular attention. They're beautiful but cold, and in the Cotswolds the temperature underfoot is a real consideration for much of the year. Well-chosen rugs — properly sized, properly placed — transform the comfort of a stone-floored room without hiding the floor entirely. We keep a considered selection of handknotted rugs in our [Broadway showroom](/workshop-stores/broadway), and we're happy to bring pieces to a client's home so they can see them in context.
+Stone floors deserve particular attention. They're beautiful but cold, and in the Cotswolds the temperature underfoot is a real consideration for much of the year. Well-chosen rugs — properly sized, properly placed — transform the comfort of a stone-floored room without hiding the floor entirely. We keep a considered selection of handknotted rugs in our [Broadway showroom](/showroom/broadway), and we're happy to bring pieces to a client's home so they can see them in context.
 
 ## The Cotswold interior, honestly
 

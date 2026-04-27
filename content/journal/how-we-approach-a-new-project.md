@@ -34,7 +34,7 @@ We always work with physical samples rather than digital swatches. Colour on a s
 
 ## Sourcing and making
 
-Once the scheme is agreed, we begin sourcing and commissioning. Some elements we make ourselves in the [Broadway workshop](/workshop-stores/broadway) — bespoke upholstered furniture, curtains, cushions, and soft furnishings. Others we source from makers and suppliers we've worked with for years: cabinetmakers, lighting specialists, rug dealers, antique houses.
+Once the scheme is agreed, we begin sourcing and commissioning. Some elements we make ourselves in the [Broadway workshop](/workshop) — bespoke upholstered furniture, curtains, cushions, and soft furnishings. Others we source from makers and suppliers we've worked with for years: cabinetmakers, lighting specialists, rug dealers, antique houses.
 
 We manage every element of the procurement process. Clients don't need to chase deliveries, coordinate tradespeople, or troubleshoot problems — that's our responsibility. We keep a detailed schedule and communicate progress regularly, but we try to spare clients the operational detail unless they want to be closely involved.
 

@@ -10,7 +10,7 @@ This is the single reference for the entire Saverys website build on Next.js / N
 
 ## The business
 
-**Saverys** (also written Savery's) is a luxury interior design studio established in 1991 by Lyndsey Savery. The practice specialises in hand upholstery, bespoke furniture, premium fabric sourcing, rugs, and full interior design services for private residences, country houses, and luxury hotels.
+**Saverys** (also written Savery's) is a luxury interior design studio established in 1942 by Lyndsey Savery. The practice specialises in hand upholstery, bespoke furniture, premium fabric sourcing, rugs, and full interior design services for private residences, country houses, and luxury hotels.
 
 The brand identity is refined, understated British luxury. Think country house, not corporate. Confident but never loud. Editorial, not advertorial. The Cotswolds is not just a location — it's embedded in the aesthetic.
 
@@ -25,7 +25,7 @@ The brand identity is refined, understated British luxury. Think country house, 
 ### Key facts
 
 - Legal name: Lyndsey Savery Interior Design Ltd
-- Founded: 1991
+- Founded: 1942
 - Instagram: https://www.instagram.com/saverysofbroadway/
 - Production domain: `saverys.co.uk`
 - Staging domain: `saverys.netlify.app`

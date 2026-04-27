@@ -65,7 +65,7 @@ export default async function ProjectPage({ params }: Props) {
       />
       <Hero
         heading={project.name}
-        subtitle={project.location}
+        subtitle={project.year ? `${project.location} — ${project.year}` : project.location}
         image={project.heroImage}
       />
       <Breadcrumbs

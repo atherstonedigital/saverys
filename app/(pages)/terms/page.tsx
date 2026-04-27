@@ -48,7 +48,7 @@ export default function TermsPage() {
             <h2>Contact</h2>
             <p>
               For any questions about these terms, please contact us at{" "}
-              <a href="mailto:studio@saverys.co.uk">studio@saverys.co.uk</a>.
+              <a href="mailto:studio@lindsaysavery.co.uk">studio@lindsaysavery.co.uk</a>.
             </p>
           </div>
         </SectionReveal>

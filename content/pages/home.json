@@ -1,11 +1,11 @@
 {
   "seo": {
     "title": "Luxury Interior Design — Cotswolds, Ludlow & Chelsea",
-    "description": "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1991. Studios in Broadway, Ludlow and Chelsea."
+    "description": "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1942. Studios in Broadway, Ludlow and Chelsea."
   },
   "hero": {
     "heading": "Luxury Interior Design Services",
-    "subtitle": "A luxury interior design studio rooted in the Cotswolds, crafting considered spaces since 1991.",
+    "subtitle": "A luxury interior design studio rooted in the Cotswolds, crafting considered spaces since 1942.",
     "image": "/images/hero/home.webp"
   },
   "studioIntro": {
@@ -32,13 +32,13 @@
   },
   "featuredProjects": [
     {
-      "name": "The Old Mill, Broadway",
-      "slug": "the-old-mill-broadway",
+      "name": "Saverys 1, Broadway",
+      "slug": "saverys-1",
       "image": "/images/projects/old-mill-bedroom.webp"
     },
     {
-      "name": "Newtown Cottage",
-      "slug": "newtown-cottage",
+      "name": "Saverys 2",
+      "slug": "saverys-2",
       "image": "/images/projects/jams-house-living.webp"
     }
   ],
