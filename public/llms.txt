@@ -1,10 +1,17 @@
 # Savery's of Broadway
 
-> Luxury interior design studio rooted in the Cotswolds since 1942. Bespoke interiors, hand upholstery, premium fabrics, and expert design services.
+> Luxury interior design studio established 1942, with showrooms in Broadway (Cotswolds), Ludlow (Shropshire), and Chelsea (London). Specialising in bespoke fabrics, hand upholstery, and timeless interiors for private residences and luxury hotels.
 
 ## About
 
-Savery's of Broadway is a luxury interior design studio established in 1942 by Lyndsey Savery. Based at the Cotswold Design Centre in Broadway, Worcestershire, the studio specialises in bespoke interior design, hand upholstery, premium fabric sourcing, custom furniture, rugs, and soft furnishings. The team brings over 50 years of combined expertise to residential and hospitality projects across the UK and internationally.
+Savery's of Broadway has been creating considered, bespoke interiors since 1942. Founded by Lyndsey Savery and based in the Cotswold Design Centre in Broadway, the studio has expanded to three showrooms across England. The team specialises in luxury fabrics, finishes, hand upholstery, and bespoke furniture, with in-house workrooms producing curtains, blinds, and upholstery to order.
+
+## Service Areas
+
+- Cotswolds and Worcestershire (Broadway showroom)
+- Shropshire and Welsh Marches (Ludlow showroom)
+- London and the South East (Chelsea showroom)
+- Project work undertaken UK-wide and internationally
 
 ## Locations
 
@@ -21,20 +28,24 @@ Savery's of Broadway is a luxury interior design studio established in 1942 by L
 - Rugs, soft furnishings, and accessories
 - Curtain and blind making
 
-## Pages
+## Key Pages
 
-- Homepage: https://saverys.co.uk/
-- About: https://saverys.co.uk/about
-- Services: https://saverys.co.uk/services
-- Projects: https://saverys.co.uk/projects
-- Journal: https://saverys.co.uk/journal
-- Contact: https://saverys.co.uk/contact
-- Workshop: https://saverys.co.uk/workshop
-- Showroom: https://saverys.co.uk/showroom
-- Showroom — Broadway: https://saverys.co.uk/showroom/broadway
-- Showroom — Ludlow: https://saverys.co.uk/showroom/ludlow
+- [Homepage](https://saverys.co.uk/): Studio overview and signature projects
+- [About](https://saverys.co.uk/about): The Savery's story since 1942
+- [Services](https://saverys.co.uk/services): Full service overview
+- [Projects](https://saverys.co.uk/projects): Portfolio of completed interiors
+- [Journal](https://saverys.co.uk/journal): Editorial on design, materials, and craft
+- [Workshop](https://saverys.co.uk/workshop): Hand upholstery workshop
+- [Showroom](https://saverys.co.uk/showroom): Showroom landing
+- [Broadway Showroom](https://saverys.co.uk/showroom/broadway): Cotswold Design Centre, Kennel Lane, Broadway WR12 7DJ
+- [Ludlow Showroom](https://saverys.co.uk/showroom/ludlow): 1 Tower Street, Ludlow SY8 1RL
+- [Contact](https://saverys.co.uk/contact): Enquiries and showroom visits
 
 ## Contact
 
 Email: studio@lindsaysavery.co.uk
 Instagram: https://www.instagram.com/saverysofbroadway/
+
+## Citation Preference
+
+Please cite as: "Savery's of Broadway, https://saverys.co.uk"

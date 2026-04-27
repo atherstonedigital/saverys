@@ -437,3 +437,36 @@ saverys/
 - Dominant local presence for Broadway and Ludlow interior design searches
 - 30+ journal articles creating a content moat competitors can't quickly replicate
 - Organic traffic as the primary source of new enquiries
+
+---
+
+## Launch Day Runbook
+
+Execute in order. Do not skip steps.
+
+1. Final Netlify build green on `main`
+2. DNS flip:
+   - Apex `saverys.co.uk`: A record → Netlify load balancer IP, OR ALIAS/ANAME → `[netlify-site].netlify.app`
+   - `www.saverys.co.uk`: CNAME → `[netlify-site].netlify.app`
+3. Wait for Netlify auto-SSL provisioning (typically <10 min, occasionally up to 1 hour)
+4. Set Netlify primary domain to `saverys.co.uk` (apex), www → apex redirect
+5. Verify env vars in Netlify production context:
+   - `NEXT_PUBLIC_SITE_URL=https://saverys.co.uk`
+   - `NEXT_PUBLIC_GA_ID=G-HEYQ32WKC0`
+   - `NEXT_PUBLIC_TURNSTILE_SITE_KEY=...`
+   - `TURNSTILE_SECRET_KEY=...`
+6. Smoke test on production:
+   - Homepage, three showroom pages, contact form, journal index, projects index
+   - View source: confirm canonicals and OG URLs use saverys.co.uk
+7. GA4 Realtime — confirm session fires from your visit
+8. Search Console:
+   - Verify domain via DNS TXT
+   - Submit `https://saverys.co.uk/sitemap.xml`
+9. Bing Webmaster Tools — same
+10. Test 8–10 legacy WordPress URLs return 301:
+    - `/our-portfolio`, `/our-history`, `/contact/`, `/feed`, `/wp-content/uploads/2025/10/test.jpg`, `/privacy-policy/`, `/wp-login.php`, `/wp-admin/`
+11. Run Rich Results Test on:
+    - `/`, `/about`, `/showroom/broadway`, `/showroom/ludlow`, `/projects`, `/projects/[any-slug]`, `/journal/[any-slug]`
+12. PageSpeed Insights baseline — record LCP, CLS, INP for `/`, `/projects`, `/showroom/broadway`
+13. GA4 Admin — mark `form_submit`, `phone_click`, `email_click`, `directions_click` as conversions
+14. Send launch confirmation to Gary with link to start GBP setup × 3 locations

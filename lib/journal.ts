@@ -50,12 +50,26 @@ export function getAllJournalPosts(): JournalPost[] {
 
     const processedContent = remark().use(html, { allowDangerousHtml: true }).processSync(content);
 
+    // SEO launch prep — 2026-04-27: accept either flat or object featuredImage
+    // ("/path.jpg" or { src, alt }) so the lib stays compatible with both
+    // historical content and any future migration to bundled image widgets.
+    let featuredImage: string | undefined;
+    let featuredImageAlt: string | undefined =
+      typeof data.featuredImageAlt === "string" ? data.featuredImageAlt : undefined;
+    if (typeof data.featuredImage === "string") {
+      featuredImage = data.featuredImage;
+    } else if (data.featuredImage && typeof data.featuredImage === "object") {
+      const fi = data.featuredImage as { src?: string; alt?: string };
+      featuredImage = fi.src;
+      featuredImageAlt = fi.alt || featuredImageAlt;
+    }
+
     return {
       slug: getSlugFromFilename(filename),
       title: data.title || "Untitled",
       date: data.date ? new Date(data.date).toISOString() : new Date().toISOString(),
-      featuredImage: data.featuredImage || undefined,
-      featuredImageAlt: data.featuredImageAlt || undefined,
+      featuredImage,
+      featuredImageAlt,
       summary: data.summary || undefined,
       body: processedContent.toString(),
       pillar: data.pillar || undefined,

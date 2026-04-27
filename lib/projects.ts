@@ -16,6 +16,8 @@ export interface Project {
   description: string;
   body: string;
   heroImage: string;
+  // SEO launch prep — 2026-04-27
+  heroImageAlt?: string;
   images: ProjectImage[];
   featured: boolean;
   order: number;
@@ -28,7 +30,9 @@ interface ProjectFrontmatter {
   location?: string;
   year?: string;
   description?: string;
-  heroImage?: string;
+  // SEO launch prep — 2026-04-27: accept either string or {src, alt}
+  heroImage?: string | { src?: string; alt?: string };
+  heroImageAlt?: string;
   gallery?: Array<{
     image?: string;
     src?: string;
@@ -69,6 +73,17 @@ function readProjects(): Project[] {
       ];
     });
 
+    // SEO launch prep — 2026-04-27: accept flat or object hero image
+    let heroImage = "";
+    let heroImageAlt: string | undefined =
+      typeof fm.heroImageAlt === "string" ? fm.heroImageAlt : undefined;
+    if (typeof fm.heroImage === "string") {
+      heroImage = fm.heroImage;
+    } else if (fm.heroImage && typeof fm.heroImage === "object") {
+      heroImage = fm.heroImage.src || "";
+      heroImageAlt = fm.heroImage.alt || heroImageAlt;
+    }
+
     return {
       slug,
       name: fm.title || slug,
@@ -76,7 +91,8 @@ function readProjects(): Project[] {
       year: fm.year || undefined,
       description: fm.description || "",
       body: content.trim(),
-      heroImage: fm.heroImage || "",
+      heroImage,
+      heroImageAlt,
       images,
       featured: Boolean(fm.featured),
       order: typeof fm.order === "number" ? fm.order : 999,

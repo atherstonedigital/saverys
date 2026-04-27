@@ -7,9 +7,11 @@
     "optimize-images": "node scripts/optimize-images.js && node scripts/update-image-refs.js",
     "build": "npm run optimize-images && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "audit:alt": "node scripts/audit-alt-text.mjs"
   },
   "dependencies": {
+    "@marsidev/react-turnstile": "^1.5.1",
     "clsx": "^2.1.1",
     "framer-motion": "^11.15.0",
     "gray-matter": "^4.0.3",
