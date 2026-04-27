@@ -178,9 +178,3 @@
   from = "/ludlow"
   to = "/workshop-stores/ludlow"
   status = 301
-
-# Catch-all trailing slash removal
-[[redirects]]
-  from = "/*/"
-  to = "/:splat"
-  status = 301
