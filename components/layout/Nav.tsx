@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
 export interface NavItem {
@@ -15,7 +16,19 @@ interface NavProps {
   items: NavItem[];
 }
 
+function isHrefActive(pathname: string, href: string): boolean {
+  if (!href) return false;
+  if (href === "/") return pathname === "/";
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
+
+function isItemActive(pathname: string, link: NavItem): boolean {
+  if (isHrefActive(pathname, link.href)) return true;
+  return Boolean(link.children?.some((child) => isHrefActive(pathname, child.href)));
+}
+
 export function Nav({ items }: NavProps) {
+  const pathname = usePathname() || "/";
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -47,17 +60,32 @@ export function Nav({ items }: NavProps) {
     dropdownTimeout.current = setTimeout(() => setOpenDropdown(null), 150);
   }
 
-  const linkClass = cn(
-    "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)] hover:underline hover:underline-offset-4 hover:decoration-saverys-green",
-    isScrolled
-      ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
-      : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]"
-  );
+  // Persistent green underline for the active link, plus the same effect on hover.
+  const activeUnderline =
+    "underline underline-offset-4 decoration-saverys-green decoration-2";
+
+  function getLinkClass(active: boolean) {
+    return cn(
+      "font-body text-xs font-normal uppercase tracking-[0.06em] transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)] hover:underline hover:underline-offset-4 hover:decoration-saverys-green",
+      isScrolled
+        ? "text-charcoal/70 hover:text-charcoal [text-shadow:none]"
+        : "text-cream hover:text-cream [text-shadow:0_1px_3px_rgba(0,0,0,0.4)]",
+      active && activeUnderline,
+      active && (isScrolled ? "text-charcoal" : "text-cream")
+    );
+  }
 
   function renderDesktopLink(link: NavItem) {
+    const active = isItemActive(pathname, link);
+
     if (!link.children || link.children.length === 0) {
       return (
-        <Link key={link.href} href={link.href} className={linkClass}>
+        <Link
+          key={link.href}
+          href={link.href}
+          aria-current={active ? "page" : undefined}
+          className={getLinkClass(active)}
+        >
           {link.label}
         </Link>
       );
@@ -70,9 +98,13 @@ export function Nav({ items }: NavProps) {
         onMouseEnter={() => handleMouseEnter(link.label)}
         onMouseLeave={handleMouseLeave}
       >
-        <button className={cn(linkClass, "cursor-pointer")}>
+        <Link
+          href={link.href}
+          aria-current={active ? "page" : undefined}
+          className={cn(getLinkClass(active), "cursor-pointer")}
+        >
           {link.label}
-        </button>
+        </Link>
         <div
           className={cn(
             "absolute left-1/2 top-full z-50 -translate-x-1/2 pt-3 transition-all duration-200 ease-[var(--ease-saverys)]",
@@ -89,21 +121,30 @@ export function Nav({ items }: NavProps) {
                 : "border-cream/10 bg-ink/90 backdrop-blur-xl"
             )}
           >
-            {link.children.map((child) => (
-              <Link
-                key={child.href}
-                href={child.href}
-                className={cn(
-                  "whitespace-nowrap py-1.5 font-body text-xs font-normal uppercase tracking-[0.06em] transition-colors duration-200",
-                  isScrolled
-                    ? "text-charcoal/60 hover:text-charcoal"
-                    : "text-cream/70 hover:text-cream"
-                )}
-                onClick={() => setOpenDropdown(null)}
-              >
-                {child.label}
-              </Link>
-            ))}
+            {link.children.map((child) => {
+              const childActive = isHrefActive(pathname, child.href);
+              return (
+                <Link
+                  key={child.href}
+                  href={child.href}
+                  aria-current={childActive ? "page" : undefined}
+                  className={cn(
+                    "whitespace-nowrap py-1.5 font-body text-xs font-normal uppercase tracking-[0.06em] transition-colors duration-200",
+                    isScrolled
+                      ? "text-charcoal/60 hover:text-charcoal"
+                      : "text-cream/70 hover:text-cream",
+                    childActive &&
+                      cn(
+                        activeUnderline,
+                        isScrolled ? "text-charcoal" : "text-cream"
+                      )
+                  )}
+                  onClick={() => setOpenDropdown(null)}
+                >
+                  {child.label}
+                </Link>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -111,13 +152,19 @@ export function Nav({ items }: NavProps) {
   }
 
   function renderMobileLink(link: NavItem) {
+    const active = isItemActive(pathname, link);
+
     if (!link.children || link.children.length === 0) {
       return (
         <Link
           key={link.href}
           href={link.href}
           onClick={() => setIsMobileOpen(false)}
-          className="font-display text-2xl font-light tracking-[0.06em] text-cream"
+          aria-current={active ? "page" : undefined}
+          className={cn(
+            "font-display text-2xl font-light tracking-[0.06em] text-cream",
+            active && activeUnderline
+          )}
         >
           {link.label}
         </Link>
@@ -126,19 +173,34 @@ export function Nav({ items }: NavProps) {
 
     return (
       <div key={link.label} className="flex flex-col items-center gap-3">
-        <span className="font-display text-2xl font-light tracking-[0.06em] text-cream/50">
+        <Link
+          href={link.href}
+          onClick={() => setIsMobileOpen(false)}
+          aria-current={active ? "page" : undefined}
+          className={cn(
+            "font-display text-2xl font-light tracking-[0.06em]",
+            active ? cn("text-cream", activeUnderline) : "text-cream/50"
+          )}
+        >
           {link.label}
-        </span>
-        {link.children.map((child) => (
-          <Link
-            key={child.href}
-            href={child.href}
-            onClick={() => setIsMobileOpen(false)}
-            className="font-body text-sm font-light tracking-[0.04em] text-cream/80"
-          >
-            {child.label}
-          </Link>
-        ))}
+        </Link>
+        {link.children.map((child) => {
+          const childActive = isHrefActive(pathname, child.href);
+          return (
+            <Link
+              key={child.href}
+              href={child.href}
+              onClick={() => setIsMobileOpen(false)}
+              aria-current={childActive ? "page" : undefined}
+              className={cn(
+                "font-body text-sm font-light tracking-[0.04em] text-cream/80",
+                childActive && activeUnderline
+              )}
+            >
+              {child.label}
+            </Link>
+          );
+        })}
       </div>
     );
   }
