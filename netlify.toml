@@ -14,14 +14,13 @@
 [[plugins]]
   package = "@netlify/plugin-nextjs"
 
-# CMS draft branches and PR previews must NOT trigger production-style
-# builds — they cost build minutes and can confuse the deploy state.
-# Only the production branch (claude/saverys-studio-setup-ILvNL) builds.
+# Editorial-workflow strategy:
+# - Random branch pushes don't build (saves minutes)
+# - PR / draft branches DO build a deploy preview, so CMS editors can review
+#   their drafts at deploy-preview-N--saverys.netlify.app before publishing.
+# - Production only rebuilds when a draft PR is merged via the CMS "Publish"
+#   action.
 [context.branch-deploy]
-  command = "exit 0"
-  ignore = "/bin/true"
-
-[context.deploy-preview]
   command = "exit 0"
   ignore = "/bin/true"
 
