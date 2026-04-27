@@ -30,17 +30,29 @@
     ]
   },
   "imageBreak": {
-    "image": "/images/workshop hero 2.webp",
+    "image": "/images/saverys-of-broadway-workshop.jpg",
     "alt": "Inside the Savery's hand upholstery workshop, Broadway"
   },
   "process": {
     "heading": "The process",
     "intro": "From the first conversation to the moment a room is finished, every stage is handled in-house by people who know the work intimately.",
     "steps": [
-      { "title": "Consultation", "body": "We listen first. A visit to the property, a careful look at the room, the light, and how the space is lived in." },
-      { "title": "Design", "body": "Schemes developed with physical samples and considered drawings, refined in conversation until every detail is right." },
-      { "title": "Make", "body": "Pieces built by hand in our Broadway workrooms — frames, springs, fabric, every stage on the same site." },
-      { "title": "Install", "body": "We're present on the day. Furniture positioned, curtains hung, cushions dressed — the room finished as drawn." }
+      {
+        "title": "Consultation",
+        "body": "We listen first. A visit to the property, a careful look at the room, the light, and how the space is lived in."
+      },
+      {
+        "title": "Design",
+        "body": "Schemes developed with physical samples and considered drawings, refined in conversation until every detail is right."
+      },
+      {
+        "title": "Make",
+        "body": "Pieces built by hand in our Broadway workrooms — frames, springs, fabric, every stage on the same site."
+      },
+      {
+        "title": "Install",
+        "body": "We're present on the day. Furniture positioned, curtains hung, cushions dressed — the room finished as drawn."
+      }
     ]
   },
   "cta": {
