@@ -9,7 +9,7 @@ import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
-  const { seo } = getPageContent<{ seo?: PageSeo }>("workshop");
+  const { seo } = getPageContent<{ seo?: PageSeo }>("showroom-broadway");
   return buildMetadata(
     seo,
     "/showroom/broadway",
@@ -37,7 +37,7 @@ interface WorkshopContent {
 }
 
 export default function WorkshopPage() {
-  const content = getPageContent<WorkshopContent>("workshop");
+  const content = getPageContent<WorkshopContent>("showroom-broadway");
 
   const schemaJson = generateSchema({
     pageType: "page",

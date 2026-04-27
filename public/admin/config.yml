@@ -3,6 +3,11 @@ backend:
   repo: atherstonedigital/saverys
   branch: claude/saverys-studio-setup-ILvNL
 
+# Drafts saved in the CMS land on cms/<collection>/<slug> branches as
+# pull requests. They do not deploy to production until the entry is
+# moved to "Ready" and the user clicks Publish (which merges the PR).
+publish_mode: editorial_workflow
+
 media_folder: "public/images"
 public_folder: "/images"
 
@@ -54,7 +59,7 @@ collections:
             widget: "list"
             fields:
               - { label: "Name", name: "name", widget: "string" }
-              - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly name, e.g. the-old-mill-broadway" }
+              - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly name. Must match a project slug — e.g. saverys-1." }
               - { label: "Image", name: "image", widget: "image" }
           - label: "Services Section"
             name: "services"
@@ -120,9 +125,108 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
-      - name: "workshop-broadway"
-        label: "Broadway Workshop & Store"
+      - name: "workshop"
+        label: "Workshop"
         file: "content/pages/workshop.json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "ogImage", widget: "image", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "What we make (three pillars)"
+            name: "pillars"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Pillars"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+          - label: "Image break"
+            name: "imageBreak"
+            widget: "object"
+            required: false
+            fields:
+              - { label: "Image", name: "image", widget: "image", required: false }
+              - { label: "Alt text", name: "alt", widget: "string", required: false }
+          - label: "Process"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text", required: false }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body", name: "body", widget: "text" }
+          - label: "CTA"
+            name: "cta"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+
+      - name: "showroom"
+        label: "Showroom (landing)"
+        file: "content/pages/showroom.json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page Title", name: "title", widget: "string" }
+              - { label: "Meta Description", name: "description", widget: "text" }
+              - { label: "Social Image", name: "ogImage", widget: "image", required: false }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+          - label: "Intro"
+            name: "intro"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text" }
+          - label: "Showroom cards"
+            name: "showrooms"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "href", widget: "string", hint: "e.g. /showroom/broadway" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Address", name: "address", widget: "string" }
+
+      - name: "showroom-broadway"
+        label: "Broadway Showroom"
+        file: "content/pages/showroom-broadway.json"
         fields:
           - label: "SEO"
             name: "seo"
@@ -186,9 +290,9 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
-      - name: "workshop-ludlow"
-        label: "Ludlow Store"
-        file: "content/pages/ludlow.json"
+      - name: "showroom-ludlow"
+        label: "Ludlow Showroom"
+        file: "content/pages/showroom-ludlow.json"
         fields:
           - label: "SEO"
             name: "seo"
@@ -368,6 +472,13 @@ collections:
                   - { label: "Label", name: "label", widget: "string" }
                   - { label: "Link", name: "href", widget: "string" }
 
+      - name: "sourcing"
+        label: "Sourcing block"
+        file: "content/settings/sourcing.json"
+        fields:
+          - { label: "Heading", name: "heading", widget: "string" }
+          - { label: "Body", name: "body", widget: "text", hint: "Editable body of the Sourcing block. Used on the Workshop page and anywhere else the block is placed." }
+
       - name: "footer"
         label: "Footer"
         file: "content/settings/footer.json"
@@ -427,12 +538,29 @@ collections:
     folder: "content/projects"
     create: true
     slug: "{{slug}}"
+    summary: "{{title}} — {{location}}"
     fields:
-      - { label: "Project Name", name: "title", widget: "string" }
-      - { label: "Location", name: "location", widget: "string", required: false, hint: "e.g. Broadway, Cotswolds" }
-      - { label: "Year", name: "year", widget: "string", required: false }
+      - { label: "Project Name", name: "title", widget: "string", hint: "Anonymised — e.g. Saverys 1, Saverys 2…" }
+      - { label: "Slug", name: "slug", widget: "string", hint: "URL-friendly. Use saverys-N (the next number after the highest existing one)." }
+      - { label: "Location", name: "location", widget: "string", required: false, hint: "Shown on cards and detail pages. e.g. Broadway, Worcestershire" }
+      - { label: "Year", name: "year", widget: "string", required: false, hint: "Optional. Shown on the detail page next to location." }
+      - { label: "Description", name: "description", widget: "text", hint: "Short tagline for project cards (1–2 sentences)." }
       - { label: "Hero Image", name: "heroImage", widget: "image" }
-      - { label: "Gallery", name: "gallery", widget: "list", field: { label: "Image", name: "image", widget: "image" }, required: false }
-      - { label: "Description", name: "body", widget: "markdown" }
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Image", name: "image", widget: "image" }
+          - { label: "Alt text", name: "alt", widget: "string", required: false, hint: "Describe the image for accessibility and SEO." }
+          - label: "Orientation"
+            name: "orientation"
+            widget: "select"
+            options:
+              - { label: "Landscape", value: "landscape" }
+              - { label: "Portrait", value: "portrait" }
+            default: "landscape"
+      - { label: "Body", name: "body", widget: "markdown", hint: "Full case study text (shown on the detail page)." }
       - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: "Show on homepage" }
-      - { label: "Order", name: "order", widget: "number", default: 0, hint: "Lower numbers appear first" }
+      - { label: "Order", name: "order", widget: "number", default: 999, hint: "Lower numbers appear first. Use Date as a tiebreaker." }
+      - { label: "Date", name: "date", widget: "datetime", required: false, hint: "Tiebreaker when two projects share the same Order." }
