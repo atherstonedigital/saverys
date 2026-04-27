@@ -38,6 +38,17 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body", name: "body", widget: "text" }
               - { label: "Image", name: "image", widget: "image" }
+          - label: "Process"
+            name: "process"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - label: "Steps"
+                name: "steps"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
           - label: "Featured Projects"
             name: "featuredProjects"
             widget: "list"
