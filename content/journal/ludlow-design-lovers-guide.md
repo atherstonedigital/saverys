@@ -18,7 +18,7 @@ seoDescription: Ludlow, Shropshire — a design lover's guide to the architectur
 
 Ludlow doesn't shout. It never has. While the Cotswolds draws coaches of visitors and the Lake District fills Instagram feeds, this small market town in south Shropshire goes about its business with a quiet assurance that suits it perfectly. The medieval street plan is largely intact. The castle stands on its promontory above the River Teme. The timber-framed buildings along Broad Street are among the finest in England. And the food — Ludlow's reputation as a food town is thoroughly deserved and shows no sign of diminishing.
 
-What's less widely known is that Ludlow has become, in its understated way, a genuine destination for anyone interested in design, architecture, and the making of beautiful things. We opened our [Ludlow studio](/workshop-stores/ludlow) at 1 Tower Street because we recognised what many of our clients already knew: this town has a particular quality that rewards attention.
+What's less widely known is that Ludlow has become, in its understated way, a genuine destination for anyone interested in design, architecture, and the making of beautiful things. We opened our [Ludlow studio](/showroom/ludlow) at 1 Tower Street because we recognised what many of our clients already knew: this town has a particular quality that rewards attention.
 
 ## The architecture
 
@@ -38,7 +38,7 @@ For our clients in Shropshire and the Marches, Ludlow serves as both inspiration
 
 ## Our Tower Street studio
 
-The Savery's studio at [1 Tower Street](/workshop-stores/ludlow) is a short walk from the castle, on one of Ludlow's most characterful streets. It serves clients across Shropshire, Herefordshire, and the Welsh Marches — a region rich in beautiful properties that deserve interiors of equal quality.
+The Savery's studio at [1 Tower Street](/showroom/ludlow) is a short walk from the castle, on one of Ludlow's most characterful streets. It serves clients across Shropshire, Herefordshire, and the Welsh Marches — a region rich in beautiful properties that deserve interiors of equal quality.
 
 The studio operates as an extension of our Broadway practice. Clients in the Ludlow area have access to the same fabric libraries, the same design expertise, and the same workshop. Pieces commissioned through the Ludlow studio are built in Broadway by the same team, using the same methods and materials. The standard is identical; only the geography differs.
 
@@ -50,4 +50,4 @@ People occasionally ask why we chose Ludlow for a second studio rather than a la
 
 Ludlow also shares something fundamental with Broadway: it's a town that values craft, quality, and independence. That alignment matters to us. We feel at home here, and our clients tell us they feel the same when they visit the studio.
 
-If you're in Ludlow or the surrounding area and you'd like to discuss a project, the studio is at [1 Tower Street, Ludlow, SY8 1RL](/workshop-stores/ludlow). Call us on 01584 708381, or simply drop in.
+If you're in Ludlow or the surrounding area and you'd like to discuss a project, the studio is at [1 Tower Street, Ludlow, SY8 1RL](/showroom/ludlow). Call us on 01584 708381, or simply drop in.

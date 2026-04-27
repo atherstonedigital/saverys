@@ -12,9 +12,9 @@ export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("workshop");
   return buildMetadata(
     seo,
-    "/workshop-stores/broadway",
-    "Workshop & Showroom — Hand Upholstery & Luxury Fabrics, Broadway",
-    "Visit the Savery's hand upholstery workshop and luxury fabrics showroom in Broadway, Cotswolds. Expert craftspeople and bespoke furniture.",
+    "/showroom/broadway",
+    "Broadway Showroom — Luxury Fabrics & Interior Design | Saverys",
+    "Visit the Savery's showroom in Broadway, Cotswolds. Premium fabrics, rugs, and curated interiors at the Cotswold Design Centre.",
   );
 }
 
@@ -43,7 +43,8 @@ export default function WorkshopPage() {
     pageType: "page",
     localBusiness: "broadway",
     breadcrumbs: [
-      { name: "Workshop & Stores", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/workshop-stores/broadway` },
+      { name: "Showroom", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom` },
+      { name: "Broadway", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom/broadway` },
     ],
   });
 
@@ -59,7 +60,12 @@ export default function WorkshopPage() {
         image={content.hero.image}
         imageAlt="Hand upholstery workshop at Savery's, Broadway, Cotswolds"
       />
-      <Breadcrumbs items={[{ name: "Workshop & Stores", href: "/workshop-stores/broadway" }]} />
+      <Breadcrumbs
+        items={[
+          { name: "Showroom", href: "/showroom" },
+          { name: "Broadway", href: "/showroom/broadway" },
+        ]}
+      />
 
       {/* Introduction */}
       <section className="px-6 py-12 md:px-12 md:py-20">

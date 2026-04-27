@@ -16,7 +16,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/",
     "Luxury Interior Design — Cotswolds, Ludlow & Chelsea",
-    "Luxury interior design studio in the Cotswolds since 1991. Bespoke interiors, hand upholstery, premium fabrics. Showrooms in Broadway, Ludlow, and Chelsea.",
+    "Luxury interior design studio in the Cotswolds since 1942. Bespoke interiors, hand upholstery, premium fabrics. Showrooms in Broadway, Ludlow, and Chelsea.",
   );
 }
 

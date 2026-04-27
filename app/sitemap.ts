@@ -46,13 +46,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${baseUrl}/workshop-stores/broadway`,
+      url: `${baseUrl}/workshop`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/showroom`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/workshop-stores/ludlow`,
+      url: `${baseUrl}/showroom/broadway`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/showroom/ludlow`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.7,

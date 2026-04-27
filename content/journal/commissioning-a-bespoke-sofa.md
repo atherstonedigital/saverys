@@ -15,7 +15,7 @@ seoDescription: "What actually happens when you commission a bespoke sofa? From 
 
 There's a moment, early in most projects, when a client asks about a sofa. Sometimes they know exactly what they want — a Howard, a Knole, a deep-seated chesterfield. More often, they know how they want it to feel: generous, inviting, something the family will gravitate toward. The specifics — dimensions, depth, arm height, cushion fill — come later, through conversation.
 
-Commissioning a bespoke sofa is not the same as buying one from a showroom. It's a collaborative process that typically takes eight to twelve weeks from first discussion to delivery, and the result is a piece of furniture made specifically for your room, your needs, and your taste. Here's how it works in our [Broadway workshop](/workshop-stores/broadway).
+Commissioning a bespoke sofa is not the same as buying one from a showroom. It's a collaborative process that typically takes eight to twelve weeks from first discussion to delivery, and the result is a piece of furniture made specifically for your room, your needs, and your taste. Here's how it works in our [Broadway workshop](/workshop).
 
 ## The conversation
 
@@ -53,4 +53,4 @@ We deliver within the Cotswolds and across the UK. For larger pieces, we always 
 
 A well-made bespoke sofa should last decades. When the fabric eventually tires — and all fabric does, given enough time — the piece can be re-upholstered on the same frame. Several of our clients have had sofas re-covered after fifteen or twenty years, and the frame underneath is as sound as the day it was built. That's the point of commissioning something made properly in the first place.
 
-If you'd like to discuss a commission, we're at the [Cotswold Design Centre in Broadway](/workshop-stores/broadway). Come and see the workshop — it's the best way to understand what we do.
+If you'd like to discuss a commission, we're at the [Cotswold Design Centre in Broadway](/showroom/broadway). Come and see the workshop — it's the best way to understand what we do.

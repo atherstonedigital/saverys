@@ -104,24 +104,75 @@
   to = "/contact"
   status = 301
 
+# Workshop & showroom restructure (Gary feedback round 1)
 [[redirects]]
-  from = "/workshop/"
-  to = "/workshop-stores/broadway"
+  from = "/workshop-and-stores"
+  to = "/workshop"
   status = 301
 
 [[redirects]]
-  from = "/workshop"
-  to = "/workshop-stores/broadway"
+  from = "/workshop-and-stores/"
+  to = "/workshop"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-and-stores/broadway"
+  to = "/showroom/broadway"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-and-stores/broadway/"
+  to = "/showroom/broadway"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-and-stores/ludlow"
+  to = "/showroom/ludlow"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-and-stores/ludlow/"
+  to = "/showroom/ludlow"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores"
+  to = "/workshop"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores/"
+  to = "/workshop"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores/broadway"
+  to = "/showroom/broadway"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores/broadway/"
+  to = "/showroom/broadway"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores/ludlow"
+  to = "/showroom/ludlow"
+  status = 301
+
+[[redirects]]
+  from = "/workshop-stores/ludlow/"
+  to = "/showroom/ludlow"
   status = 301
 
 [[redirects]]
   from = "/workshop-store/"
-  to = "/workshop-stores/broadway"
+  to = "/workshop"
   status = 301
 
 [[redirects]]
   from = "/workshop-store"
-  to = "/workshop-stores/broadway"
+  to = "/workshop"
   status = 301
 
 [[redirects]]
@@ -156,27 +207,73 @@
 
 [[redirects]]
   from = "/the-workshop/"
-  to = "/workshop-stores/broadway"
+  to = "/workshop"
+  status = 301
+
+[[redirects]]
+  from = "/the-workshop"
+  to = "/workshop"
   status = 301
 
 [[redirects]]
   from = "/the-showroom/"
-  to = "/workshop-stores/broadway"
+  to = "/showroom"
   status = 301
 
 [[redirects]]
-  from = "/showroom/"
-  to = "/workshop-stores/broadway"
+  from = "/the-showroom"
+  to = "/showroom"
   status = 301
 
 [[redirects]]
   from = "/ludlow/"
-  to = "/workshop-stores/ludlow"
+  to = "/showroom/ludlow"
   status = 301
 
 [[redirects]]
   from = "/ludlow"
-  to = "/workshop-stores/ludlow"
+  to = "/showroom/ludlow"
+  status = 301
+
+# Anonymised project slugs (Gary feedback round 1)
+[[redirects]]
+  from = "/projects/the-old-mill-broadway"
+  to = "/projects/saverys-1"
+  status = 301
+
+[[redirects]]
+  from = "/projects/the-old-mill-broadway/"
+  to = "/projects/saverys-1"
+  status = 301
+
+[[redirects]]
+  from = "/projects/newtown-cottage"
+  to = "/projects/saverys-2"
+  status = 301
+
+[[redirects]]
+  from = "/projects/newtown-cottage/"
+  to = "/projects/saverys-2"
+  status = 301
+
+[[redirects]]
+  from = "/projects/manor-farm-chipping-campden"
+  to = "/projects/saverys-3"
+  status = 301
+
+[[redirects]]
+  from = "/projects/manor-farm-chipping-campden/"
+  to = "/projects/saverys-3"
+  status = 301
+
+[[redirects]]
+  from = "/projects/the-dower-house"
+  to = "/projects/saverys-4"
+  status = 301
+
+[[redirects]]
+  from = "/projects/the-dower-house/"
+  to = "/projects/saverys-4"
   status = 301
 
 # Catch-all trailing slash removal

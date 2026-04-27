@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     template: `%s | Savery's of Broadway`,
   },
   description:
-    "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1991. Studios in Broadway, Ludlow and Chelsea.",
+    "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1942. Studios in Broadway, Ludlow and Chelsea.",
   icons: {
     icon: "/favicon.png",
     apple: "/favicon.png",

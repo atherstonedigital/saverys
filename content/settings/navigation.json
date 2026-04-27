@@ -2,12 +2,13 @@
   "items": [
     { "label": "About", "href": "/about" },
     { "label": "Projects", "href": "/projects" },
+    { "label": "Workshop", "href": "/workshop" },
     {
-      "label": "Workshop & Stores",
-      "href": "/workshop-stores/broadway",
+      "label": "Showroom",
+      "href": "/showroom",
       "children": [
-        { "label": "Broadway", "href": "/workshop-stores/broadway" },
-        { "label": "Ludlow", "href": "/workshop-stores/ludlow" }
+        { "label": "Broadway", "href": "/showroom/broadway" },
+        { "label": "Ludlow", "href": "/showroom/ludlow" }
       ]
     },
     { "label": "Services", "href": "/services" },

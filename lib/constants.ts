@@ -1,6 +1,6 @@
 export const SITE_NAME = "Savery's of Broadway";
 export const SITE_DESCRIPTION =
-  "Savery's of Broadway — a luxury interior design studio rooted in the Cotswolds, composing rooms with care and craftsmanship since 1991.";
+  "Savery's of Broadway — a luxury interior design studio rooted in the Cotswolds, composing rooms with care and craftsmanship since 1942.";
 
 export interface NavLink {
   label: string;
@@ -11,12 +11,13 @@ export interface NavLink {
 export const NAV_LINKS: NavLink[] = [
   { label: "About", href: "/about" },
   { label: "Projects", href: "/projects" },
+  { label: "Workshop", href: "/workshop" },
   {
-    label: "Workshop & Stores",
-    href: "/workshop-stores/broadway",
+    label: "Showroom",
+    href: "/showroom",
     children: [
-      { label: "Broadway", href: "/workshop-stores/broadway" },
-      { label: "Ludlow", href: "/workshop-stores/ludlow" },
+      { label: "Broadway", href: "/showroom/broadway" },
+      { label: "Ludlow", href: "/showroom/ludlow" },
     ],
   },
   { label: "Services", href: "/services" },

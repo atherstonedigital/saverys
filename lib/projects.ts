@@ -8,6 +8,7 @@ export interface Project {
   slug: string;
   name: string;
   location: string;
+  year?: string;
   description: string;
   body: string;
   heroImage: string;
@@ -16,8 +17,8 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    slug: "the-old-mill-broadway",
-    name: "The Old Mill",
+    slug: "saverys-1",
+    name: "Saverys 1",
     location: "Broadway, Worcestershire",
     description:
       "A considered restoration of a Cotswold mill, marrying original stone with hand-finished English linen.",
@@ -57,8 +58,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "newtown-cottage",
-    name: "Newtown Cottage",
+    slug: "saverys-2",
+    name: "Saverys 2",
     location: "The Cotswolds",
     description:
       "A country house layered with character. Exposed beams, rich velvets, and golden drapes.",
@@ -78,8 +79,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "manor-farm-chipping-campden",
-    name: "Manor Farm",
+    slug: "saverys-3",
+    name: "Saverys 3",
     location: "Chipping Campden, Gloucestershire",
     description:
       "A quiet farmhouse brought to life with antique finds and artisan fabrics.",
@@ -99,8 +100,8 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "the-dower-house",
-    name: "The Dower House",
+    slug: "saverys-4",
+    name: "Saverys 4",
     location: "Moreton-in-Marsh, Gloucestershire",
     description:
       "Elegant restraint in a Georgian dower house. Light, linen, and quietness throughout.",

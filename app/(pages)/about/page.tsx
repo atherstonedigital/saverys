@@ -12,8 +12,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/about",
-    "Our History — Interior Design Since 1991",
-    "Savery's of Broadway: luxury interior design since 1991. Three decades crafting bespoke Cotswolds interiors with care, quality, and timeless style.",
+    "Our History — Interior Design Since 1942",
+    "Savery's of Broadway: luxury interior design since 1942. Three decades crafting bespoke Cotswolds interiors with care, quality, and timeless style.",
   );
 }
 

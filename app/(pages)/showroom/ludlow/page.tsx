@@ -11,9 +11,9 @@ export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("ludlow");
   return buildMetadata(
     seo,
-    "/workshop-stores/ludlow",
-    "Our Ludlow Store — Luxury Interior Design, Shropshire",
-    "Visit Savery's in Ludlow — our curated interior design store at 1 Tower Street, Shropshire. Premium fabrics, furnishings, and consultations.",
+    "/showroom/ludlow",
+    "Our Ludlow Showroom — Luxury Interior Design, Shropshire",
+    "Visit Savery's in Ludlow — our curated showroom at 1 Tower Street, Shropshire. Premium fabrics, furnishings, and consultations.",
   );
 }
 
@@ -61,7 +61,8 @@ export default function LudlowPage() {
     pageType: "page",
     localBusiness: "ludlow",
     breadcrumbs: [
-      { name: "Ludlow Store", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/workshop-stores/ludlow` },
+      { name: "Showroom", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom` },
+      { name: "Ludlow", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom/ludlow` },
     ],
   });
 
@@ -87,7 +88,7 @@ export default function LudlowPage() {
             <div className="absolute inset-0 bg-gradient-to-br from-stone/30 to-linen" />
             <div className="absolute inset-0 flex items-center justify-center">
               <span className="font-body text-sm uppercase tracking-[0.1em] text-stone/40">
-                Ludlow store hero image
+                Ludlow showroom hero image
               </span>
             </div>
           </>
@@ -108,8 +109,8 @@ export default function LudlowPage() {
       </section>
       <Breadcrumbs
         items={[
-          { name: "Workshop & Stores", href: "/workshop-stores/broadway" },
-          { name: "Ludlow", href: "/workshop-stores/ludlow" },
+          { name: "Showroom", href: "/showroom" },
+          { name: "Ludlow", href: "/showroom/ludlow" },
         ]}
       />
 
@@ -130,7 +131,7 @@ export default function LudlowPage() {
               <div className="relative aspect-[3/4] w-full overflow-hidden">
                 <Image
                   src={content.intro.image}
-                  alt="Inside the Savery's Ludlow interior design store"
+                  alt="Inside the Savery's Ludlow interior design showroom"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -182,7 +183,7 @@ export default function LudlowPage() {
                     >
                       <Image
                         src={img}
-                        alt="Inside the Savery's Ludlow interior design store"
+                        alt="Inside the Savery's Ludlow interior design showroom"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -200,7 +201,7 @@ export default function LudlowPage() {
                     >
                       <Image
                         src={img}
-                        alt="Inside the Savery's Ludlow interior design store"
+                        alt="Inside the Savery's Ludlow interior design showroom"
                         fill
                         className="object-cover"
                         sizes="(max-width: 768px) 100vw, 50vw"
@@ -212,13 +213,13 @@ export default function LudlowPage() {
           ) : (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-8">
               <div className="flex flex-col gap-6 md:gap-8">
-                <Placeholder label="Ludlow store — fabric display" aspect="4/3" />
-                <Placeholder label="Ludlow store — furniture vignette" aspect="3/4" />
+                <Placeholder label="Ludlow showroom —fabric display" aspect="4/3" />
+                <Placeholder label="Ludlow showroom —furniture vignette" aspect="3/4" />
               </div>
               <div className="flex flex-col gap-6 md:mt-16 md:gap-8">
-                <Placeholder label="Ludlow store — wallpaper samples" aspect="3/4" />
-                <Placeholder label="Ludlow store — gifts & homeware" aspect="4/3" />
-                <Placeholder label="Ludlow store — consultation area" aspect="4/3" />
+                <Placeholder label="Ludlow showroom —wallpaper samples" aspect="3/4" />
+                <Placeholder label="Ludlow showroom —gifts & homeware" aspect="4/3" />
+                <Placeholder label="Ludlow showroom —consultation area" aspect="4/3" />
               </div>
             </div>
           )}

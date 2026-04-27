@@ -1,10 +1,10 @@
 # Savery's of Broadway
 
-> Luxury interior design studio rooted in the Cotswolds since 1991. Bespoke interiors, hand upholstery, premium fabrics, and expert design services.
+> Luxury interior design studio rooted in the Cotswolds since 1942. Bespoke interiors, hand upholstery, premium fabrics, and expert design services.
 
 ## About
 
-Savery's of Broadway is a luxury interior design studio established in 1991 by Lyndsey Savery. Based at the Cotswold Design Centre in Broadway, Worcestershire, the studio specialises in bespoke interior design, hand upholstery, premium fabric sourcing, custom furniture, rugs, and soft furnishings. The team brings over 50 years of combined expertise to residential and hospitality projects across the UK and internationally.
+Savery's of Broadway is a luxury interior design studio established in 1942 by Lyndsey Savery. Based at the Cotswold Design Centre in Broadway, Worcestershire, the studio specialises in bespoke interior design, hand upholstery, premium fabric sourcing, custom furniture, rugs, and soft furnishings. The team brings over 50 years of combined expertise to residential and hospitality projects across the UK and internationally.
 
 ## Locations
 
@@ -29,10 +29,12 @@ Savery's of Broadway is a luxury interior design studio established in 1991 by L
 - Projects: https://saverys.co.uk/projects
 - Journal: https://saverys.co.uk/journal
 - Contact: https://saverys.co.uk/contact
-- Workshop — Broadway: https://saverys.co.uk/workshop-stores/broadway
-- Store — Ludlow: https://saverys.co.uk/workshop-stores/ludlow
+- Workshop: https://saverys.co.uk/workshop
+- Showroom: https://saverys.co.uk/showroom
+- Showroom — Broadway: https://saverys.co.uk/showroom/broadway
+- Showroom — Ludlow: https://saverys.co.uk/showroom/ludlow
 
 ## Contact
 
-Email: studio@saverys.co.uk
+Email: studio@lindsaysavery.co.uk
 Instagram: https://www.instagram.com/saverysofbroadway/

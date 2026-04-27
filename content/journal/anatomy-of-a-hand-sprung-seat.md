@@ -17,7 +17,7 @@ Sit on a well-made sofa — one with a hand-sprung seat — and something regist
 
 Now sit on something built with a serpentine spring unit or a foam slab on a webbing base. The difference is not subtle. One feels engineered for comfort; the other feels engineered for price.
 
-In our [Broadway workshop](/workshop-stores/broadway), we still build seats the way they were built a century ago — with individual coil springs, hand-lashed in an eight-way tie pattern. It takes longer. It costs more. And it produces a seat that no modern shortcut has managed to replicate.
+In our [Broadway workshop](/workshop), we still build seats the way they were built a century ago — with individual coil springs, hand-lashed in an eight-way tie pattern. It takes longer. It costs more. And it produces a seat that no modern shortcut has managed to replicate.
 
 ## The layers, from the bottom up
 
