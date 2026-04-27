@@ -8,7 +8,7 @@ import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 
 export function generateMetadata(): Metadata {
-  const { seo } = getPageContent<{ seo?: PageSeo }>("ludlow");
+  const { seo } = getPageContent<{ seo?: PageSeo }>("showroom-ludlow");
   return buildMetadata(
     seo,
     "/showroom/ludlow",
@@ -55,7 +55,7 @@ function Placeholder({
 }
 
 export default function LudlowPage() {
-  const content = getPageContent<LudlowContent>("ludlow");
+  const content = getPageContent<LudlowContent>("showroom-ludlow");
 
   const schemaJson = generateSchema({
     pageType: "page",

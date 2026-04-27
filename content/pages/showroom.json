@@ -1,0 +1,31 @@
+{
+  "seo": {
+    "title": "Showrooms — Broadway & Ludlow | Saverys",
+    "description": "Visit a Saverys showroom in Broadway or Ludlow. Premium fabrics, curated furniture, and considered interiors at the heart of the Cotswolds and the Welsh Marches."
+  },
+  "hero": {
+    "heading": "Our showrooms",
+    "subtitle": "Visit Saverys in Broadway or Ludlow — places to see fabric, feel weight, and begin a conversation.",
+    "image": "/images/saverys broadway shop 1.webp"
+  },
+  "intro": {
+    "heading": "Two showrooms, one library",
+    "body": "Both showrooms hold the same fabric library, the same standards, and the same team. Choose whichever is closer to you, or visit both — the rooms are different, the materials are the same."
+  },
+  "showrooms": [
+    {
+      "name": "Broadway",
+      "href": "/showroom/broadway",
+      "image": "/images/saverys broadway shop 1.webp",
+      "description": "Our Cotswolds home — set within the Cotswold Design Centre on Kennel Lane. Premium fabrics, curated furniture, and considered interiors.",
+      "address": "Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ"
+    },
+    {
+      "name": "Ludlow",
+      "href": "/showroom/ludlow",
+      "image": "/images/ludlow-store-hero.webp",
+      "description": "On Tower Street in the heart of Ludlow, serving Shropshire, Herefordshire and the Welsh Marches with the same care, library, and team.",
+      "address": "1 Tower Street, Ludlow, Shropshire, SY8 1RL"
+    }
+  ]
+}
