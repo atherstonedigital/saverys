@@ -1,40 +1,28 @@
-# Alt text backfill guide — placeholders to replace
+# Alt text backfill guide
 
-_Last updated: 2026-04-27_
+_Last updated: 2026-04-28 — backfill complete._
 
 ## Status
 
-`npm run audit:alt` reports **0 issues** because every image now has alt text.
-However, four project hero images carry **temporary placeholder alt text**
-that should be replaced with descriptive copy before launch / once Gary
-provides photography context.
+`npm run audit:alt` reports **0 issues**. The placeholder `heroImageAlt`
+values previously applied to `saverys-1`..`4` have been replaced with
+descriptive copy derived from each project's body and gallery context.
 
-## Files with placeholders pending Gary backfill
+## Final hero alts on the four legacy projects
 
-| File | Placeholder applied | Status |
-|------|---------------------|--------|
-| `content/projects/saverys-1.md` (`heroImageAlt`) | `Saverys 1 project — interior photography` | placeholder applied — pending Gary backfill |
-| `content/projects/saverys-2.md` (`heroImageAlt`) | `Saverys 2 project — interior photography` | placeholder applied — pending Gary backfill |
-| `content/projects/saverys-3.md` (`heroImageAlt`) | `Saverys 3 project — interior photography` | placeholder applied — pending Gary backfill |
-| `content/projects/saverys-4.md` (`heroImageAlt`) | `Saverys 4 project — interior photography` | placeholder applied — pending Gary backfill |
+| File | `heroImageAlt` |
+|------|----------------|
+| `content/projects/saverys-1.md` | Saverys 1 interior — restored Cotswold mill in Broadway with hand-finished English linen and original stone |
+| `content/projects/saverys-2.md` | Saverys 2 interior — drawing room with green velvet sofa and golden botanical drapes in a Cotswolds country house |
+| `content/projects/saverys-3.md` | Saverys 3 interior — entrance hall with blue chair and painted chest in a Chipping Campden farmhouse, Gloucestershire |
+| `content/projects/saverys-4.md` | Saverys 4 interior — drawing room with pale sofa, botanical cushions, and a garden view in a Georgian dower house, Moreton-in-Marsh |
 
-## Suggested format
-
-```
-"[Project name] interior — [room type] in [location]"
-```
-
-Example:
+Each follows the suggested format:
 
 ```
-"Saverys 1 interior — drawing room in a Cotswold country house"
+"[Project name] interior — [room type / subject] in [location / setting]"
 ```
 
-## How to backfill
-
-1. Open Decap CMS at `/admin`
-2. **Projects** → choose the project (e.g. _Saverys 1_)
-3. Replace the **Hero Image Alt Text** field with the descriptive version
-4. **Publish**
-
-The change is committed via the editorial workflow PR and deploys on merge.
+If Gary wants to tighten any of these against the actual photograph,
+edit via Decap CMS at `/admin` → Projects → choose project → Hero Image
+Alt Text → Publish. The change ships via the editorial workflow.
