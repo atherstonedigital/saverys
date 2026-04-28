@@ -9,7 +9,7 @@ tags:
   - Upholstery
   - Craft
   - Broadway
-seoTitle: "Hand-Sprung Upholstery Explained | Traditional Techniques | Savery's"
+seoTitle: "Hand-Sprung Upholstery Explained | Traditional Techniques | Savery's of Broadway"
 seoDescription: "What makes a hand-sprung seat different? The traditional upholstery techniques still used at Savery's Broadway workshop — coil springs, eight-way ties, and why it matters."
 ---
 

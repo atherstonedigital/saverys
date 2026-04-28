@@ -32,7 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   const titleText =
-    post.seoTitle || `${post.title} | Savery's Journal`;
+    post.seoTitle || `${post.title} | Savery's of Broadway`;
   const description =
     post.seoDescription || post.summary || post.title;
   const url = `${siteConfig.url}/journal/${slug}`;

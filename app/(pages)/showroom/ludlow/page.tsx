@@ -15,7 +15,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/showroom/ludlow",
     "Our Ludlow Showroom — Luxury Interior Design, Shropshire",
-    "Visit Savery's in Ludlow — our curated showroom at 1 Tower Street, Shropshire. Premium fabrics, furnishings, and consultations.",
+    "Visit Savery's of Broadway in Ludlow — our curated showroom at 1 Tower Street, Shropshire. Premium fabrics, furnishings, and consultations.",
   );
 }
 

@@ -13,7 +13,7 @@ tags:
   - Upholstery
   - Country House
   - Cotswolds
-seoTitle: How to Choose Upholstery Fabric for a Country House | Savery's Journal
+seoTitle: How to Choose Upholstery Fabric for a Country House | Savery's of Broadway
 seoDescription: Expert guidance on choosing upholstery fabric from Savery's of
   Broadway. The Martindale test, natural vs performance fabrics, and what 30
   years of making has taught us.

@@ -51,14 +51,14 @@ function getOrganizationSchema() {
       name: "Lyndsey Savery",
     },
     sameAs: [siteConfig.instagram],
-    address: Object.values(siteConfig.locations).map((loc) => ({
+    address: {
       "@type": "PostalAddress",
-      streetAddress: loc.street,
-      addressLocality: loc.locality,
-      addressRegion: loc.region,
-      postalCode: loc.postcode,
-      addressCountry: loc.country,
-    })),
+      streetAddress: siteConfig.locations.broadway.street,
+      addressLocality: siteConfig.locations.broadway.locality,
+      addressRegion: siteConfig.locations.broadway.region,
+      postalCode: siteConfig.locations.broadway.postcode,
+      addressCountry: siteConfig.locations.broadway.country,
+    },
   };
 }
 
@@ -92,11 +92,10 @@ export function generateSchema(options: SchemaOptions): string {
   const graph: Record<string, unknown>[] = [getOrganizationSchema()];
 
   if (options.pageType === "home") {
-    // Include all LocalBusiness entries on home page
+    // Two physical showrooms only — Broadway and Ludlow.
     graph.push(
       getLocalBusinessSchema("broadway"),
       getLocalBusinessSchema("ludlow"),
-      getLocalBusinessSchema("chelsea"),
     );
     graph.push({
       "@type": "WebSite",
