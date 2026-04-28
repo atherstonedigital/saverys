@@ -487,18 +487,10 @@ Execute in order. Do not skip steps.
 
 ## Outstanding (non-code)
 
-- **OG JPG asset**: Replace `/og-image.webp` reference in `app/layout.tsx`
-  (search for the `TODO: replace with /og-default.jpg` comment) with
-  `/og-default.jpg` once Gary supplies the 1200×630 JPG. Improves LinkedIn
-  share rendering specifically.
-
-- **Alt text backfill** for `saverys-1` through `saverys-4` project hero
-  images. Suggested format for Gary:
-  > "[Project name] interior — [room type] in [location]"
-  > Example: "Saverys 1 interior — drawing room in a Cotswold country house"
-
-  Edit via Decap CMS at `/admin` → Projects. See
-  `audit-reports/alt-text-backfill-guide.md` for the placeholder list.
+- **Alt text backfill** ✅ done 2026-04-28 — see
+  `audit-reports/alt-text-backfill-guide.md` for the final strings.
+  Gary can refine via Decap CMS at `/admin` → Projects if any don't
+  match the actual photograph.
 
 - **Turnstile**: create a Cloudflare Turnstile site for `saverys.co.uk` (and
   `localhost` for dev) and set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and

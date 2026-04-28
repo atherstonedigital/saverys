@@ -22,13 +22,12 @@ export const metadata: Metadata = {
     apple: "/favicon.png",
   },
   manifest: "/site.webmanifest",
-  // SEO launch prep — 2026-04-27 / polish — 2026-04-27
-  // Explicit OG/Twitter defaults so any page without overrides still
-  // produces a rich link card (WhatsApp, iMessage, Slack, LinkedIn,
-  // Pinterest, Twitter/X). LinkedIn in particular is patchy on WebP, so
-  // we expose a JPEG entry alongside the WebP. Both URLs currently point
-  // at /og-image.webp until Gary supplies the 1200×630 JPG — when the
-  // asset arrives, swap the JPEG entry to /og-default.jpg.
+  // SEO launch prep — 2026-04-27 / OG swap — 2026-04-28
+  // Brand-card OG image (Savery's wordmark + tower mark, "EST. 1942",
+  // Broadway · London · Ludlow, on saverys-green ground). JPG is
+  // universally accepted by all social platforms (LinkedIn especially
+  // is patchy on WebP), so we use a single JPG entry rather than the
+  // earlier WebP+JPG fallback pair.
   openGraph: {
     type: "website",
     locale: "en_GB",
@@ -40,19 +39,10 @@ export const metadata: Metadata = {
       "Luxury interior design studio established 1942. Showrooms in Broadway, Ludlow, and Chelsea. Bespoke fabrics, hand upholstery, and timeless interiors.",
     images: [
       {
-        url: "/og-image.webp",
+        url: "/og-default.jpg",
         width: 1200,
         height: 630,
-        alt: "Savery's of Broadway interior design studio",
-        type: "image/webp",
-      },
-      {
-        // TODO: replace with /og-default.jpg when Gary supplies the
-        // 1200×630 JPG. Improves LinkedIn share rendering specifically.
-        url: "/og-image.webp",
-        width: 1200,
-        height: 630,
-        alt: "Savery's of Broadway interior design studio",
+        alt: "Savery's of Broadway — established 1942. Showrooms in Broadway, London, and Ludlow.",
         type: "image/jpeg",
       },
     ],
@@ -62,8 +52,7 @@ export const metadata: Metadata = {
     title: "Savery's of Broadway — Luxury Interior Design",
     description:
       "Luxury interior design studio established 1942. Showrooms in Broadway, Ludlow, and Chelsea.",
-    // Twitter strongly prefers JPG/PNG — placeholder until /og-default.jpg arrives.
-    images: ["/og-image.webp"],
+    images: ["/og-default.jpg"],
   },
   alternates: {
     canonical: siteConfig.url,
