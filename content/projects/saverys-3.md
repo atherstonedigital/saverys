@@ -5,6 +5,7 @@ location: "Chipping Campden, Gloucestershire"
 year: ""
 description: "A quiet farmhouse brought to life with antique finds and artisan fabrics."
 heroImage: "/images/projects/hallway-chair.webp"
+heroImageAlt: "Saverys 3 interior — entrance hall with blue chair and painted chest in a Chipping Campden farmhouse, Gloucestershire"
 gallery:
   - image: "/images/projects/hallway-chair.webp"
     alt: "Blue chair with botanical cushion beside painted chest"

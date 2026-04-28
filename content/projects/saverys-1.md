@@ -6,6 +6,7 @@ year: ""
 description: A considered restoration of a Cotswold mill, marrying original
   stone with hand-finished English linen.
 heroImage: /images/The-Old-Mill-Broadway-057-scaled-1.webp
+heroImageAlt: Saverys 1 interior — restored Cotswold mill in Broadway with hand-finished English linen and original stone
 gallery:
   - image: /images/projects/old-mill-kitchen.webp
     alt: AGA kitchen with hand-painted tiles
