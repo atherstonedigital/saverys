@@ -56,13 +56,13 @@ export default function PrivacyPage() {
             <p>
               Under GDPR, you have the right to access, correct, or delete your
               personal data. To exercise these rights, please contact us at{" "}
-              <a href="mailto:studio@lindsaysavery.co.uk">studio@lindsaysavery.co.uk</a>.
+              <a href="mailto:studio@lyndseysavery.co.uk">studio@lyndseysavery.co.uk</a>.
             </p>
 
             <h2>Contact</h2>
             <p>
               For any questions about this privacy policy, please contact us at{" "}
-              <a href="mailto:studio@lindsaysavery.co.uk">studio@lindsaysavery.co.uk</a> or
+              <a href="mailto:studio@lyndseysavery.co.uk">studio@lyndseysavery.co.uk</a> or
               call 01386 858941.
             </p>
           </div>

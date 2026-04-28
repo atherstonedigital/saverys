@@ -96,12 +96,12 @@ export function ContactSection() {
         setToken(null);
       } else {
         setSubmitError(
-          "Sorry, something went wrong. Please try again or email us directly at studio@lindsaysavery.co.uk.",
+          "Sorry, something went wrong. Please try again or email us directly at studio@lyndseysavery.co.uk.",
         );
       }
     } catch {
       setSubmitError(
-        "We couldn't reach the server. Please check your connection and try again, or email studio@lindsaysavery.co.uk.",
+        "We couldn't reach the server. Please check your connection and try again, or email studio@lyndseysavery.co.uk.",
       );
     }
   }
@@ -134,11 +134,11 @@ export function ContactSection() {
                   Email
                 </Text>
                 <a
-                  href="mailto:studio@lindsaysavery.co.uk"
+                  href="mailto:studio@lyndseysavery.co.uk"
                   onClick={handleEventClick("email_click", { location: "general" })}
                   className="mt-1 block font-body text-base font-light leading-[1.7] tracking-[0.02em] text-charcoal transition-colors duration-[var(--duration-fast)] hover:text-clay"
                 >
-                  studio@lindsaysavery.co.uk
+                  studio@lyndseysavery.co.uk
                 </a>
               </div>
 
@@ -271,7 +271,7 @@ export function ContactSection() {
                       onError={() => {
                         setToken(null);
                         setSubmitError(
-                          "Spam protection failed to load. Please refresh the page, or email us at studio@lindsaysavery.co.uk.",
+                          "Spam protection failed to load. Please refresh the page, or email us at studio@lyndseysavery.co.uk.",
                         );
                       }}
                     />

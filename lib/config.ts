@@ -4,7 +4,7 @@ export const siteConfig = {
   description:
     'Luxury interior design studio rooted in the Cotswolds since 1942. Bespoke interiors, hand upholstery, premium fabrics, and expert design across Broadway, Ludlow, and Chelsea.',
   foundingDate: '1942',
-  email: 'studio@lindsaysavery.co.uk',
+  email: 'studio@lyndseysavery.co.uk',
   instagram: 'https://www.instagram.com/saverysofbroadway/',
   locations: {
     broadway: {
