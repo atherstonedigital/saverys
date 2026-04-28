@@ -2,6 +2,16 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  # NEXT_PUBLIC_* vars are inlined into client/server bundles by Next.js by
+  # design; the scanner must be told these specific keys are public.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_TURNSTILE_SITE_KEY,NEXT_PUBLIC_GA_ID,NEXT_PUBLIC_SITE_URL"
+  # Belt-and-braces: skip generated Next.js build output. These directories
+  # contain compiled framework code, never hand-written source, and Netlify
+  # rebuilds them from scratch each deploy. OMIT_KEYS alone has been
+  # unreliable when Netlify's pattern-based detection kicks in.
+  SECRETS_SCAN_OMIT_PATHS = ".next/**,.netlify/**"
+
 # Disable Netlify's HTML "Pretty URLs" so it doesn't fight Next.js's own
 # trailing-slash handling (Next defaults to trailingSlash: false). Without
 # this, the two engines can canonicalise the same URL in opposite directions

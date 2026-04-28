@@ -83,19 +83,26 @@ export function ContactSection() {
     });
     if (token) payload["cf-turnstile-response"] = token;
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
-    if (res.ok) {
-      // SEO launch prep — 2026-04-27: only fire on successful submit
-      trackEvent("form_submit", { form_name: "main_contact" });
-      setSubmitted(true);
-      form.reset();
-      setToken(null);
-    } else {
-      setSubmitError("Sorry, something went wrong. Please try again or email us directly.");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      if (res.ok) {
+        trackEvent("form_submit", { form_name: "main_contact" });
+        setSubmitted(true);
+        form.reset();
+        setToken(null);
+      } else {
+        setSubmitError(
+          "Sorry, something went wrong. Please try again or email us directly at studio@lindsaysavery.co.uk.",
+        );
+      }
+    } catch {
+      setSubmitError(
+        "We couldn't reach the server. Please check your connection and try again, or email studio@lindsaysavery.co.uk.",
+      );
     }
   }
 
@@ -215,6 +222,7 @@ export function ContactSection() {
                     type="text"
                     id="name"
                     name="name"
+                    required
                     className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                   />
                 </div>
@@ -229,6 +237,7 @@ export function ContactSection() {
                     type="email"
                     id="email"
                     name="email"
+                    required
                     className="mt-2 w-full border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                   />
                 </div>
@@ -243,6 +252,7 @@ export function ContactSection() {
                     id="message"
                     name="message"
                     rows={4}
+                    required
                     className="mt-2 w-full resize-none border-b border-charcoal/40 bg-transparent pb-2 font-body text-base font-light text-charcoal outline-none transition-colors duration-[var(--duration-fast)] focus:border-clay"
                   />
                 </div>
@@ -253,19 +263,22 @@ export function ContactSection() {
                   <div>
                     <Turnstile
                       siteKey={TURNSTILE_SITE_KEY}
-                      onSuccess={(t) => setToken(t)}
+                      onSuccess={(t) => {
+                        setToken(t);
+                        setSubmitError(null);
+                      }}
                       onExpire={() => setToken(null)}
-                      onError={() => setToken(null)}
+                      onError={() => {
+                        setToken(null);
+                        setSubmitError(
+                          "Spam protection failed to load. Please refresh the page, or email us at studio@lindsaysavery.co.uk.",
+                        );
+                      }}
                     />
                   </div>
                 )}
                 <div>
-                  <Button
-                    type="submit"
-                    disabled={Boolean(TURNSTILE_SITE_KEY) && !token}
-                  >
-                    Send message
-                  </Button>
+                  <Button type="submit">Send message</Button>
                   {submitted && (
                     <p className="mt-4 font-body text-sm text-charcoal">
                       Thank you for your enquiry. We will be in touch shortly.
