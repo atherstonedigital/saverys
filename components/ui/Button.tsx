@@ -24,7 +24,7 @@ type ButtonAsAnchor = ButtonBaseProps &
 type ButtonProps = ButtonAsButton | ButtonAsAnchor;
 
 const baseStyles =
-  "inline-block uppercase tracking-[0.06em] text-xs font-normal transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)]";
+  "inline-block uppercase tracking-[0.06em] text-xs font-normal transition-all duration-[var(--duration-fast)] ease-[var(--ease-saverys)] disabled:cursor-not-allowed disabled:opacity-50";
 
 const variantStyles: Record<ButtonVariant, string> = {
   ghost:
