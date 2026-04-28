@@ -9,7 +9,7 @@ tags:
   - Upholstery
   - Craft
   - Bespoke
-seoTitle: "Commissioning a Bespoke Sofa | Hand-Built in the Cotswolds | Savery's"
+seoTitle: "Commissioning a Bespoke Sofa | Hand-Built in the Cotswolds | Savery's of Broadway"
 seoDescription: "What actually happens when you commission a bespoke sofa? From frame to fabric, the full process of handmade furniture at Savery's Broadway workshop."
 ---
 

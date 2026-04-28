@@ -29,8 +29,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/showroom",
-    "Showrooms — Broadway & Ludlow | Saverys",
-    "Visit a Saverys showroom in Broadway or Ludlow. Premium fabrics, curated furniture, and considered interiors at the heart of the Cotswolds and the Welsh Marches.",
+    "Showrooms — Broadway & Ludlow | Savery's of Broadway",
+    "Visit a Savery's of Broadway showroom in Broadway or Ludlow. Premium fabrics, curated furniture, and considered interiors at the heart of the Cotswolds and the Welsh Marches.",
   );
 }
 

@@ -45,7 +45,7 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/workshop",
-    "Workshop — Bespoke Curtains, Blinds & Reupholstery | Saverys",
+    "Workshop — Bespoke Curtains, Blinds & Reupholstery | Savery's of Broadway",
     "British craft at its finest, made in our Cotswolds workrooms. Bespoke curtains and blinds, exquisite reupholstery, and bespoke furniture.",
   );
 }

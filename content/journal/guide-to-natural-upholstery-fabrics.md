@@ -9,7 +9,7 @@ tags:
   - Fabrics
   - Upholstery
   - Craft
-seoTitle: "Natural Upholstery Fabrics Guide — Linen, Velvet & Wool | Savery's"
+seoTitle: "Natural Upholstery Fabrics Guide — Linen, Velvet & Wool | Savery's of Broadway"
 seoDescription: "A maker's guide to natural upholstery fabrics: linen, velvet, wool, cotton, and silk. How they wear, where they work best, and what we recommend from 30 years in the workshop."
 ---
 

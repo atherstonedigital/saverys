@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/projects",
     "Interior Design Portfolio — Cotswolds & Beyond",
-    "Explore our luxury interior design portfolio. Country houses, restorations, and bespoke schemes across the Cotswolds and beyond by Savery's.",
+    "Explore our luxury interior design portfolio. Country houses, restorations, and bespoke schemes across the Cotswolds and beyond by Savery's of Broadway.",
   );
 }
 

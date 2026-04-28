@@ -1,4 +1,4 @@
-# Saverys — Complete Site Build: Master Reference
+# Savery's of Broadway — Complete Site Build: Master Reference
 
 ## What this document is
 
@@ -10,7 +10,7 @@ This is the single reference for the entire Saverys website build on Next.js / N
 
 ## The business
 
-**Saverys** (also written Savery's) is a luxury interior design studio established in 1942 by Lyndsey Savery. The practice specialises in hand upholstery, bespoke furniture, premium fabric sourcing, rugs, and full interior design services for private residences, country houses, and luxury hotels.
+**Savery's of Broadway** (canonical brand name; "Saverys" is acceptable as a casual inline form in body copy only) is a luxury interior design studio established in 1942 by Lyndsey Savery. The practice specialises in hand upholstery, bespoke furniture, premium fabric sourcing, rugs, and full interior design services for private residences, country houses, and luxury hotels.
 
 The brand identity is refined, understated British luxury. Think country house, not corporate. Confident but never loud. Editorial, not advertorial. The Cotswolds is not just a location — it's embedded in the aesthetic.
 

@@ -24,7 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
   const url = `${siteConfig.url}/projects/${slug}`;
   return {
-    title: { absolute: `${project.name} — ${project.location} | Savery's Portfolio` },
+    title: { absolute: `${project.name} — ${project.location} | Savery's of Broadway` },
     description: `Interior design project by Savery's of Broadway: ${project.name} in ${project.location}. View the full gallery.`,
     alternates: { canonical: `/projects/${slug}` },
     openGraph: {

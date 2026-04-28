@@ -9,7 +9,7 @@ tags:
   - Broadway
   - Cotswolds
   - Showroom
-seoTitle: "The Cotswold Design Centre, Broadway | Interior Design Showroom | Savery's"
+seoTitle: "The Cotswold Design Centre, Broadway | Interior Design Showroom | Savery's of Broadway"
 seoDescription: "Visit the Cotswold Design Centre in Broadway — home to Savery's showroom of premium fabrics, rugs, and interior design services. Open to visitors."
 ---
 
