@@ -2,6 +2,12 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  # Whitelist values that are intentionally public. NEXT_PUBLIC_* vars are
+  # inlined into the client JS bundle by design, so the secrets scanner will
+  # always find them in the build output.
+  SECRETS_SCAN_OMIT_KEYS = "NEXT_PUBLIC_TURNSTILE_SITE_KEY,NEXT_PUBLIC_GA_ID,NEXT_PUBLIC_SITE_URL"
+
 # Disable Netlify's HTML "Pretty URLs" so it doesn't fight Next.js's own
 # trailing-slash handling (Next defaults to trailingSlash: false). Without
 # this, the two engines can canonicalise the same URL in opposite directions
