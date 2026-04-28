@@ -31,6 +31,37 @@ const nextConfig: NextConfig = {
       // Old RSS feeds
       { source: "/feed", destination: "/journal", statusCode: 301 },
       { source: "/feed/", destination: "/journal", statusCode: 301 },
+
+      // SEO polish pass — 2026-04-27
+      // Defensive: external references (emails, business cards, the legacy
+      // WordPress nav, future handoffs) may still target /stores. The live
+      // app uses /showroom/*. Explicit paths first so they win over the
+      // catch-all :slug match.
+      {
+        source: "/stores",
+        destination: "/showroom/broadway",
+        statusCode: 301,
+      },
+      {
+        source: "/stores/broadway",
+        destination: "/showroom/broadway",
+        statusCode: 301,
+      },
+      {
+        source: "/stores/ludlow",
+        destination: "/showroom/ludlow",
+        statusCode: 301,
+      },
+      {
+        source: "/stores/chelsea",
+        destination: "/showroom/chelsea",
+        statusCode: 301,
+      },
+      {
+        source: "/stores/:slug",
+        destination: "/showroom/:slug",
+        statusCode: 301,
+      },
       // www → apex is handled by Netlify primary-domain settings.
     ];
   },

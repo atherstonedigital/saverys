@@ -5,6 +5,7 @@ location: "Moreton-in-Marsh, Gloucestershire"
 year: ""
 description: "Elegant restraint in a Georgian dower house. Light, linen, and quietness throughout."
 heroImage: "/images/hero/home.webp"
+heroImageAlt: "Saverys 4 project — interior photography"
 gallery:
   - image: "/images/hero/home.webp"
     alt: "Pale sofa with botanical cushions and garden view"

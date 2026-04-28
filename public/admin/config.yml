@@ -512,11 +512,12 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      # SEO launch prep — 2026-04-27: alt text enforced for new entries.
-      # Existing flat featuredImage/featuredImageAlt structure retained for
-      # backward compatibility with content/journal/*.md frontmatter.
+      # SEO launch prep — 2026-04-27 / polish — 2026-04-27
+      # Alt text required for every new entry. Existing flat
+      # featuredImage/featuredImageAlt structure retained for backward
+      # compatibility with content/journal/*.md frontmatter.
       - { label: "Featured Image", name: "featuredImage", widget: "image", required: false }
-      - { label: "Featured Image Alt Text", name: "featuredImageAlt", widget: "string", required: true, pattern: ['.{4,}', "Please describe the image (4+ characters) — required for accessibility and SEO"], hint: "Describe the image for screen readers and search engines (required when an image is set)" }
+      - { label: "Featured Image Alt Text", name: "featuredImageAlt", widget: "string", required: true, pattern: ['.{4,}', "Required. Describe the image (4+ characters) for screen readers and search engines."], hint: "Required. Describe the image for screen readers and search engines (e.g., 'Drawing room in a Cotswold country house')." }
       - { label: "Summary", name: "summary", widget: "text", required: false, hint: "Short description for listings, social cards, and SEO (max 155 characters)" }
       - { label: "Body", name: "body", widget: "markdown" }
       - label: "Pillar"
@@ -549,17 +550,19 @@ collections:
       - { label: "Year", name: "year", widget: "string", required: false, hint: "Optional. Shown on the detail page next to location." }
       - { label: "Description", name: "description", widget: "text", hint: "Short tagline for project cards (1–2 sentences)." }
       - { label: "Hero Image", name: "heroImage", widget: "image" }
-      # SEO launch prep — 2026-04-27: explicit alt for hero so screen readers
-      # and image search have a description for the project's lead photo.
-      - { label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false, hint: "Describe the hero image for accessibility and SEO." }
+      # SEO launch prep — 2026-04-27 / polish — 2026-04-27
+      # Hero alt now required. Existing saverys-1..4 carry placeholder alt
+      # ("Saverys N project — interior photography") pending Gary backfill —
+      # see audit-reports/missing-alt-text.md.
+      - { label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: true, pattern: ['.{4,}', "Required. Describe the hero image (4+ characters) for screen readers and search engines."], hint: "Required. Describe the image for screen readers and search engines (e.g., 'Drawing room in a Cotswold country house')." }
       - label: "Gallery"
         name: "gallery"
         widget: "list"
         required: false
         fields:
           - { label: "Image", name: "image", widget: "image" }
-          # SEO launch prep — 2026-04-27: alt now required for every gallery item.
-          - { label: "Alt text", name: "alt", widget: "string", required: true, pattern: ['.{4,}', "Please describe the image (4+ characters) — required for accessibility and SEO"], hint: "Describe the image for accessibility and SEO." }
+          # SEO launch prep — 2026-04-27 / polish — 2026-04-27
+          - { label: "Alt text", name: "alt", widget: "string", required: true, pattern: ['.{4,}', "Required. Describe the image (4+ characters) for screen readers and search engines."], hint: "Required. Describe the image for screen readers and search engines (e.g., 'Drawing room in a Cotswold country house')." }
           - label: "Orientation"
             name: "orientation"
             widget: "select"

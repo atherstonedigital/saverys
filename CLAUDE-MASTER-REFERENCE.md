@@ -455,9 +455,23 @@ Execute in order. Do not skip steps.
    - `NEXT_PUBLIC_GA_ID=G-HEYQ32WKC0`
    - `NEXT_PUBLIC_TURNSTILE_SITE_KEY=...`
    - `TURNSTILE_SECRET_KEY=...`
+5a. Run smoke test against deploy preview (canonical pre-merge gate):
+    ```
+    npm run smoke -- https://[preview-url]
+    ```
+    All checks must pass before promoting to production.
+5b. Manual contact form test on deploy preview:
+    - Submit with Turnstile completed → confirm receipt in Netlify Forms inbox
+    - Submit via curl/Postman without token → confirm 400 response
+    - Confirm GA4 `form_submit` event fires (Realtime view)
 6. Smoke test on production:
    - Homepage, three showroom pages, contact form, journal index, projects index
    - View source: confirm canonicals and OG URLs use saverys.co.uk
+6a. Run automated production smoke test:
+    ```
+    npm run smoke:prod
+    ```
+    All checks must pass.
 7. GA4 Realtime — confirm session fires from your visit
 8. Search Console:
    - Verify domain via DNS TXT
@@ -470,3 +484,27 @@ Execute in order. Do not skip steps.
 12. PageSpeed Insights baseline — record LCP, CLS, INP for `/`, `/projects`, `/showroom/broadway`
 13. GA4 Admin — mark `form_submit`, `phone_click`, `email_click`, `directions_click` as conversions
 14. Send launch confirmation to Gary with link to start GBP setup × 3 locations
+
+## Outstanding (non-code)
+
+- **OG JPG asset**: Replace `/og-image.webp` reference in `app/layout.tsx`
+  (search for the `TODO: replace with /og-default.jpg` comment) with
+  `/og-default.jpg` once Gary supplies the 1200×630 JPG. Improves LinkedIn
+  share rendering specifically.
+
+- **Alt text backfill** for `saverys-1` through `saverys-4` project hero
+  images. Suggested format for Gary:
+  > "[Project name] interior — [room type] in [location]"
+  > Example: "Saverys 1 interior — drawing room in a Cotswold country house"
+
+  Edit via Decap CMS at `/admin` → Projects. See
+  `audit-reports/alt-text-backfill-guide.md` for the placeholder list.
+
+- **Turnstile**: create a Cloudflare Turnstile site for `saverys.co.uk` (and
+  `localhost` for dev) and set `NEXT_PUBLIC_TURNSTILE_SITE_KEY` and
+  `TURNSTILE_SECRET_KEY` in Netlify production env vars.
+
+- **Search Console + Bing Webmaster**: verify domain and submit sitemap
+  post-DNS-flip.
+
+- **Google Business Profile**: × 3 locations (Broadway HQ, Ludlow, Chelsea).
