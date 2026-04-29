@@ -1,31 +1,38 @@
 {
   "seo": {
-    "title": "Showrooms — Broadway & Ludlow | Savery's of Broadway",
-    "description": "Visit a Savery's of Broadway showroom in Broadway or Ludlow. Premium fabrics, curated furniture, and considered interiors at the heart of the Cotswolds and the Welsh Marches."
+    "title": "Showrooms & Studios — Broadway, Ludlow & Chelsea | Savery's of Broadway",
+    "description": "Visit a Savery's showroom in Broadway or Ludlow, or our Chelsea studio in London. Premium fabrics, curated furniture, and considered interiors across the Cotswolds, Welsh Marches, and SW10."
   },
   "hero": {
     "heading": "Our showrooms",
-    "subtitle": "Visit Saverys in Broadway or Ludlow — places to see fabric, feel weight, and begin a conversation.",
+    "subtitle": "Visit Saverys in Broadway, Ludlow, or our London studio in Chelsea — places to see fabric, feel weight, and begin a conversation.",
     "image": "/images/saverys-of-broadway-hero-1.webp"
   },
   "intro": {
-    "heading": "Two showrooms, one library",
-    "body": "Both showrooms hold the same fabric library, the same standards, and the same team. Choose whichever is closer to you, or visit both — the rooms are different, the materials are the same."
+    "heading": "Three locations, one library",
+    "body": "Both Cotswolds showrooms hold the same fabric library, the same standards, and the same team. Our Chelsea studio in London is where city clients meet, plan, and review — backed by the same makers in Broadway and Ludlow."
   },
   "showrooms": [
     {
       "name": "Broadway",
       "href": "/showroom/broadway",
       "image": "/images/saverys-of-broadway-hero-2.webp",
-      "description": "Our Cotswolds home — set within the Cotswold Design Centre on Kennel Lane. Premium fabrics, curated furniture, and considered interiors.",
+      "description": "Our Cotswolds home — set within the Cotswold Design Centre on Kennel Lane. Premium fabrics, curated furniture, and the hand upholstery workshop.",
       "address": "Cotswold Design Centre, Kennel Lane, Broadway, WR12 7DJ"
     },
     {
       "name": "Ludlow",
       "href": "/showroom/ludlow",
       "image": "/images/ludlow-store-hero.webp",
-      "description": "On Tower Street in the heart of Ludlow, serving Shropshire, Herefordshire and the Welsh Marches with the same care, library, and team.",
+      "description": "On Tower Street in the heart of Ludlow, serving Shropshire, Herefordshire and the Welsh Marches. Home to our curtain and soft furnishings workroom.",
       "address": "1 Tower Street, Ludlow, Shropshire, SY8 1RL"
+    },
+    {
+      "name": "Chelsea",
+      "href": "/showroom/chelsea",
+      "image": "/images/saverys-of-broadway-hero-1.webp",
+      "description": "A London studio for considered design — consultations, fabric reviews, and project meetings on Kings Road, by appointment.",
+      "address": "Suite 9, 405 Kings Road, Chelsea, London, SW10 0BB"
     }
   ]
 }

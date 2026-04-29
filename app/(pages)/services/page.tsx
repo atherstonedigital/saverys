@@ -13,8 +13,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/services",
-    "Interior Design Services — Bespoke Interiors & Upholstery",
-    "Full interior design, bespoke upholstery, premium fabric sourcing, and furniture curation from Savery's of Broadway. Concept to completion.",
+    "Interior Design Services — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
+    "Full interior design, hand upholstery, bespoke furniture, curtains and soft furnishings, fabric sourcing, antiques, and project management. Made on-site in the Cotswolds since 1942.",
   );
 }
 

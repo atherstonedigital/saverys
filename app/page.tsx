@@ -99,7 +99,7 @@ export default function HomePage() {
 
       <section className="bg-linen px-6 py-16 md:px-12 md:py-32">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-start md:gap-16">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-12 md:items-center md:gap-16">
             <div className="md:col-span-4">
               <SectionReveal>
                 <div className="relative aspect-[3/4] w-full overflow-hidden">
@@ -118,28 +118,24 @@ export default function HomePage() {
               <SectionReveal>
                 <Text as="h2">{content.services.heading}</Text>
               </SectionReveal>
-              <div className="mt-10 flex flex-col">
-                {content.services.items.map((service, i) => (
-                  <SectionReveal key={service.title} delay={i * 0.1}>
-                    <div
-                      className={`py-6 ${
-                        i > 0 ? "border-t border-clay/30" : ""
-                      }`}
-                    >
-                      <Text as="h3">{service.title}</Text>
-                      <Text variant="body" className="mt-2 max-w-xl text-stone">
-                        {service.description}
-                      </Text>
-                    </div>
-                  </SectionReveal>
-                ))}
-              </div>
-              <div className="mt-8">
-                <SectionReveal delay={0.3}>
-                  <Button href="/services">View all services</Button>
-                </SectionReveal>
-              </div>
             </div>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-x-12 gap-y-10 md:mt-16 md:grid-cols-3">
+            {content.services.items.map((service, i) => (
+              <SectionReveal key={service.title} delay={(i % 3) * 0.1}>
+                <Text as="h3">{service.title}</Text>
+                <Text variant="body" className="mt-2 text-stone">
+                  {service.description}
+                </Text>
+              </SectionReveal>
+            ))}
+          </div>
+
+          <div className="mt-12 text-center md:mt-16">
+            <SectionReveal delay={0.3}>
+              <Button href="/services">View all services</Button>
+            </SectionReveal>
           </div>
         </div>
       </section>

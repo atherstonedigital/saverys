@@ -1,0 +1,44 @@
+{
+  "seo": {
+    "title": "Chelsea Studio — Interior Design in London | Savery's of Broadway",
+    "description": "Saverys' London studio at Suite 9, 405 Kings Road, Chelsea. Consultations, fabric reviews, and design support for clients with London homes."
+  },
+  "hero": {
+    "heading": "Interior Design Studio — Chelsea, London",
+    "locationLabel": "Suite 9, 405 Kings Road",
+    "image": "/images/saverys-of-broadway-hero-1.webp"
+  },
+  "intro": {
+    "heading": "A London studio for considered design",
+    "paragraphs": [
+      "Our Chelsea studio is a quiet base for the London side of Saverys' work. Many of our Cotswolds clients keep a London home — a flat off Kings Road, a townhouse in Knightsbridge, a mews behind the Brompton Road — and need an interior designer in Chelsea who can sit down with them between visits to Broadway. The Chelsea studio is where that happens.",
+      "It is a working studio rather than a retail floor. Consultations, fabric reviews, scheme presentations, and project meetings take place here, by appointment, in a calm room within Suite 9. Material samples, mood boards, and design proposals can be brought up from the Broadway workshop ahead of a meeting; finished pieces from our upholstery and curtain-making teams can be inspected before installation.",
+      "London interior design at Saverys remains rooted in the same craftsmanship that shapes everything we do in the Cotswolds. Hardwood frames are still made in Broadway. Curtains and soft furnishings are still hand-finished in Ludlow. Chelsea is where city clients meet, plan, and review — without leaving SW10."
+    ]
+  },
+  "features": [
+    {
+      "title": "Design consultations",
+      "description": "Sit down with our team in central London to discuss a project, from a single room to a full property scheme. Working drawings, schedules, and finishes are all developed from here."
+    },
+    {
+      "title": "Fabric & sample reviews",
+      "description": "Material samples, schemes, and finishes brought up from the Broadway library and presented in natural light at Kings Road, so you can compare and decide in person."
+    },
+    {
+      "title": "Workshop liaison",
+      "description": "A direct line to our upholstery, bespoke furniture, and curtain-making teams in the Cotswolds and the Welsh Marches — without the trip out of London."
+    }
+  ],
+  "visitUs": {
+    "heading": "Visit us in Chelsea",
+    "address": "Suite 9, 405 Kings Road\nChelsea, London\nSW10 0BB",
+    "phone": "020 3668 1000",
+    "hours": "By appointment"
+  },
+  "cta": {
+    "heading": "Start a conversation",
+    "buttonText": "Book a Chelsea consultation",
+    "buttonLink": "/contact"
+  }
+}
