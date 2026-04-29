@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Cormorant_Garamond, Jost, Courier_Prime } from "next/font/google";
 import { Nav } from "@/components/layout/Nav";
 import { Footer } from "@/components/layout/Footer";
 import { GoogleAnalytics } from "@/components/Analytics";
@@ -7,6 +8,27 @@ import { getSettings } from "@/lib/content";
 import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
 import "./globals.css";
+
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const jost = Jost({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+const courierPrime = Courier_Prime({
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-caption",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -83,18 +105,11 @@ export default function RootLayout({
   const footerData = getSettings<FooterData>("footer");
 
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${cormorant.variable} ${jost.variable} ${courierPrime.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Courier+Prime&family=Jost:wght@300;400&display=swap"
-          rel="stylesheet"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -108,11 +123,13 @@ export default function RootLayout({
         <Nav items={navData.items} />
         <main>{children}</main>
         <Footer data={footerData} />
+        {/* Netlify Identity widget powers the /admin login redirect.
+            lazyOnload defers it past LCP/INP — public pages never trigger it. */}
         <Script
           src="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          strategy="beforeInteractive"
+          strategy="lazyOnload"
         />
-        <Script id="netlify-identity-redirect" strategy="afterInteractive">
+        <Script id="netlify-identity-redirect" strategy="lazyOnload">
           {`
             if (window.netlifyIdentity) {
               window.netlifyIdentity.on("init", user => {
