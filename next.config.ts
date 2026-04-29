@@ -7,7 +7,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   trailingSlash: false,
   images: {
-    formats: ["image/webp"],
+    formats: ["image/avif", "image/webp"],
   },
 
   async redirects() {
