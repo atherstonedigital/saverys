@@ -29,8 +29,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/showroom",
-    "Showrooms — Broadway & Ludlow | Savery's of Broadway",
-    "Visit a Savery's of Broadway showroom in Broadway or Ludlow. Premium fabrics, curated furniture, and considered interiors at the heart of the Cotswolds and the Welsh Marches.",
+    "Showrooms & Studios — Broadway, Ludlow & Chelsea | Savery's of Broadway",
+    "Visit a Savery's showroom in Broadway or Ludlow, or our Chelsea studio in London. Premium fabrics, curated furniture, and considered interiors across the Cotswolds, Welsh Marches, and SW10.",
   );
 }
 
@@ -68,7 +68,7 @@ export default function ShowroomLandingPage() {
 
       <section className="bg-linen px-6 pb-16 md:px-12 md:pb-32">
         <div className="mx-auto max-w-7xl">
-          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16">
+          <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-12 lg:grid-cols-3 lg:gap-10">
             {content.showrooms.map((showroom, i) => (
               <SectionReveal key={showroom.name} delay={i * 0.1}>
                 <Link href={showroom.href} className="group block">

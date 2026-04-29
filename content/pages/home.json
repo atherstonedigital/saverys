@@ -4,7 +4,7 @@
     "description": "Savery's of Broadway creates luxurious, timeless interiors for private residences and luxury hotels. Hand upholstery workshop, premium fabrics showroom, and expert design service. Established 1942. Studios in Broadway, Ludlow and Chelsea."
   },
   "hero": {
-    "heading": "Luxury Interior Design Services",
+    "heading": "Cotswolds Interior Design — Since 1942",
     "subtitle": "A luxury interior design studio rooted in the Cotswolds, crafting considered spaces since 1942.",
     "image": "/images/hero/home.webp"
   },
@@ -51,12 +51,24 @@
         "description": "Complete room and property schemes, from concept through to final styling."
       },
       {
-        "title": "Fabric and material sourcing",
-        "description": "Access to the finest mills and makers — linens, wools, silks and beyond."
+        "title": "Hand upholstery & reupholstery",
+        "description": "Hand-tied springs, seasoned hardwood frames, and fabrics finished by hand at our Broadway workshop."
       },
       {
-        "title": "Furniture curation",
-        "description": "Handpicked antiques and contemporary pieces, chosen for character and quality."
+        "title": "Bespoke furniture",
+        "description": "Sofas, chairs, and one-off commissions designed and bench-built from the frame up in the Cotswolds."
+      },
+      {
+        "title": "Curtains & soft furnishings",
+        "description": "Bespoke curtains, blinds, cushions, and headboards made in-house at our Ludlow workroom."
+      },
+      {
+        "title": "Fabric and material sourcing",
+        "description": "Access to the finest mills and makers — linens, wools, silks, velvets, and beyond."
+      },
+      {
+        "title": "Furniture sourcing & antiques",
+        "description": "A considered mix of antiques and contemporary pieces, chosen for character and craftsmanship."
       }
     ]
   },

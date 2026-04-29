@@ -1,10 +1,10 @@
 {
   "seo": {
-    "title": "Interior Design Services — Cotswolds, Ludlow & Chelsea",
-    "description": "Full interior design, fabric and material sourcing, furniture curation, colour consultation, and project management. Luxury design service from Broadway, Cotswolds."
+    "title": "Interior Design Services — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
+    "description": "Full interior design, hand upholstery, bespoke furniture, curtains and soft furnishings, fabric sourcing, antiques, and project management. Made on-site in the Cotswolds since 1942."
   },
   "hero": {
-    "heading": "What we do",
+    "heading": "Interior Design Services — Cotswolds, Ludlow & Chelsea",
     "image": "/images/saverys34_517997405_18047721029445693_6608649295026703971_n.webp"
   },
   "intro": "We begin every project by listening. Before a single fabric is chosen or a colour considered, we take time to understand the architecture, the light, and the lives that will unfold within the space.",
@@ -15,12 +15,27 @@
       "image": "/images/hero/home.webp"
     },
     {
+      "title": "Hand upholstery & reupholstery",
+      "description": "Hand upholstery is a vanishing craft — and one we are determined to keep alive. At our Broadway workshop, frames are still built from seasoned hardwoods, springs are still hand-tied with eight-way ties, and every fabric is cut, stretched, and finished by hands trained over decades. Whether reupholstering a Georgian wing chair or building a new sofa from the frame up, the work happens on-site in the Cotswolds — never outsourced, never rushed. The result is furniture that sits properly, lasts a generation, and bears the quiet evidence of skilled work in every line and seam.",
+      "image": "/images/upholstery work shop 1.webp"
+    },
+    {
+      "title": "Bespoke furniture",
+      "description": "Some pieces cannot be sourced — they have to be made. Our bench-built furniture is designed and constructed from the frame up at the Broadway workshop, working alongside our upholstery team. Sofas, chairs, ottomans, headboards, and one-off commissions are drawn for the room they will inhabit, the proportions of the architecture, and the way the light falls across them. Hardwood frames are jointed by hand. Cushions are filled to specification. Clients work directly with our makers from sketch to final fitting, choosing every detail — frame shape, cushion fill, fabric, trim, leg, stain. Furniture as it should be: considered, original, made to last.",
+      "image": "/images/Grantly-Sofa-crop-Final-New-Lamp-scaled-1 (1).webp"
+    },
+    {
+      "title": "Curtains & soft furnishings",
+      "description": "Every curtain, blind, cushion, and headboard is made in-house at our Ludlow workroom — never sub-contracted, never made-to-fit from a stock pattern. Curtains are hand-finished with weighted hems, leading edges, and traditional pleating styles selected for the architecture they hang in. Roman blinds are cut to the millimetre. Cushions are filled with feather and down to the right scale and weight. Headboards are upholstered in matched fabric over hardwood frames built to the bed. The fittings, the linings, the interlinings — all are chosen for longevity. Soft furnishings are where a room earns its quiet sense of completeness, and we treat them accordingly.",
+      "image": "/images/saverys-ludlow3.webp"
+    },
+    {
       "title": "Fabric and material sourcing",
       "description": "Access to the finest mills and makers across Britain and Europe. Linens, wools, silks, velvets — each chosen for quality, character, and how they feel beneath the hand.",
       "image": "/images/projects/old-mill-chair.webp"
     },
     {
-      "title": "Furniture curation",
+      "title": "Furniture sourcing & antiques",
       "description": "A considered mix of antique and contemporary pieces, handpicked for their craftsmanship and character. We source from trusted dealers, estates, and artisan makers.",
       "image": "/images/projects/old-mill-bedroom.webp"
     },

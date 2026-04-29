@@ -8,7 +8,8 @@
       "href": "/showroom",
       "children": [
         { "label": "Broadway", "href": "/showroom/broadway" },
-        { "label": "Ludlow", "href": "/showroom/ludlow" }
+        { "label": "Ludlow", "href": "/showroom/ludlow" },
+        { "label": "Chelsea", "href": "/showroom/chelsea" }
       ]
     },
     { "label": "Services", "href": "/services" },

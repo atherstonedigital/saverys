@@ -49,12 +49,38 @@
 [[headers]]
   for = "/images/*"
   [headers.values]
-    Cache-Control = "public, max-age=86400"
+    # Image filenames in /public/images are stable and never edited in place
+    # (the optimize-images script writes new files alongside originals).
+    # 1-year immutable matches /_next/static/* and resolves the PageSpeed
+    # "Use efficient cache lifetimes" diagnostic (~134 KiB savings).
+    Cache-Control = "public, max-age=31536000, immutable"
 
 [[headers]]
   for = "/_next/static/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+
+# Long-cache the static brand assets at the public root so repeat visits
+# (and crawlers fetching OG/favicon previews) don't re-download them.
+[[headers]]
+  for = "/og-default.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/og-image.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/favicon.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+[[headers]]
+  for = "/logo-black.png"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
 
 # WordPress to Next.js redirects (for domain migration)
 
