@@ -65,7 +65,7 @@ export default function HomePage() {
               </Text>
               <div className="mt-10">
                 <Button href="/about" variant="text">
-                  Learn more
+                  Learn more about our studio
                 </Button>
               </div>
             </SectionReveal>
