@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 // SEO launch prep — 2026-04-27
@@ -64,8 +65,8 @@ export default function LudlowPage() {
     pageType: "page",
     localBusiness: "ludlow",
     breadcrumbs: [
-      { name: "Showroom", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom` },
-      { name: "Ludlow", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom/ludlow` },
+      { name: "Showroom", url: `${siteConfig.url}/showroom` },
+      { name: "Ludlow", url: `${siteConfig.url}/showroom/ludlow` },
     ],
   });
 

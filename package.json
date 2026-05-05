@@ -10,7 +10,7 @@
     "lint": "next lint",
     "audit:alt": "node scripts/audit-alt-text.mjs",
     "smoke": "node scripts/smoke-test.mjs",
-    "smoke:prod": "node scripts/smoke-test.mjs https://saverys.co.uk"
+    "smoke:prod": "node scripts/smoke-test.mjs https://www.saverys.co.uk"
   },
   "dependencies": {
     "@marsidev/react-turnstile": "^1.5.1",

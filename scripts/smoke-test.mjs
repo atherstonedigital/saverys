@@ -4,7 +4,7 @@
 //   Usage:
 //     node scripts/smoke-test.mjs [base-url]
 //   Default base-url:  https://saverys.netlify.app  (deploy preview / staging)
-//   Production:        node scripts/smoke-test.mjs https://saverys.co.uk
+//   Production:        node scripts/smoke-test.mjs https://www.saverys.co.uk
 //
 // Exit code: 0 on full pass, 1 if any assertion fails.
 

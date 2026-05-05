@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Savery's of Broadway",
-  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://saverys.co.uk',
+  url: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.saverys.co.uk',
   description:
     'Luxury interior design studio rooted in the Cotswolds since 1942. Bespoke interiors, hand upholstery, premium fabrics, and expert design across Broadway, Ludlow, and Chelsea.',
   foundingDate: '1942',

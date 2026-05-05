@@ -27,7 +27,7 @@ The brand identity is refined, understated British luxury. Think country house, 
 - Legal name: Lyndsey Savery Interior Design Ltd
 - Founded: 1942
 - Instagram: https://www.instagram.com/saverysofbroadway/
-- Production domain: `saverys.co.uk`
+- Production domain: `www.saverys.co.uk` (apex `saverys.co.uk` 301s to www at the Netlify edge)
 - Staging domain: `saverys.netlify.app`
 - GA4 Property: `G-HEYQ32WKC0`
 - Previous WordPress site: GoDaddy managed hosting (being replaced by this build)
@@ -228,7 +228,7 @@ Run through this after all five code prompts have been executed, before switchin
 - [ ] Every page has a unique `<title>` tag (check page source)
 - [ ] Every page has a unique `<meta name="description">` (check page source)
 - [ ] Every page has `og:title`, `og:description`, `og:image` (check page source)
-- [ ] Every page has `<link rel="canonical">` with `https://saverys.co.uk` base
+- [ ] Every page has `<link rel="canonical">` with `https://www.saverys.co.uk` base
 - [ ] Homepage has Organisation + LocalBusiness ×3 + WebSite structured data
 - [ ] Inner pages have BreadcrumbList structured data
 - [ ] Journal posts have Article structured data
@@ -298,17 +298,17 @@ When you're ready to point `saverys.co.uk` to Netlify:
 - [ ] Add `saverys.co.uk` as a custom domain in Netlify dashboard
 - [ ] Enable HTTPS / SSL certificate in Netlify (automatic via Let's Encrypt)
 - [ ] Wait for DNS propagation (can take up to 48 hours, usually much faster)
-- [ ] Confirm `https://saverys.co.uk` loads the new Next.js site
+- [ ] Confirm `https://www.saverys.co.uk` loads the new Next.js site (apex `https://saverys.co.uk` should 301 to www)
 
 ### Environment variables
 
 - [ ] Set `NEXT_PUBLIC_GA_ID=G-HEYQ32WKC0` in Netlify environment variables (production context)
-- [ ] Set `NEXT_PUBLIC_SITE_URL=https://saverys.co.uk` in Netlify environment variables
+- [ ] Set `NEXT_PUBLIC_SITE_URL=https://www.saverys.co.uk` in Netlify environment variables
 - [ ] Trigger a production redeploy after setting variables
 
 ### GA4 verification
 
-- [ ] Visit `https://saverys.co.uk` in a browser
+- [ ] Visit `https://www.saverys.co.uk` in a browser
 - [ ] Open Google Analytics → Reports → Realtime
 - [ ] Confirm you appear as an active user within 30 seconds
 - [ ] Check that only `G-HEYQ32WKC0` is firing (no old tags)
@@ -319,26 +319,26 @@ When you're ready to point `saverys.co.uk` to Netlify:
 - [ ] Confirm ownership verification is still active for `saverys.co.uk`
 - [ ] If verification dropped, re-verify using the HTML meta tag method
 - [ ] Go to Sitemaps → delete old WordPress sitemap if listed
-- [ ] Submit new sitemap: `https://saverys.co.uk/sitemap.xml`
+- [ ] Submit new sitemap: `https://www.saverys.co.uk/sitemap.xml`
 - [ ] Wait for confirmation — should show "Success" with page count
 
 ### Request indexing
 
 - [ ] In Search Console → URL Inspection, submit each key page:
-  - `https://saverys.co.uk/`
-  - `https://saverys.co.uk/history`
-  - `https://saverys.co.uk/portfolio`
-  - `https://saverys.co.uk/workshop`
-  - `https://saverys.co.uk/journal`
-  - `https://saverys.co.uk/contact`
-  - `https://saverys.co.uk/journal/choosing-upholstery-fabric-country-house`
+  - `https://www.saverys.co.uk/`
+  - `https://www.saverys.co.uk/history`
+  - `https://www.saverys.co.uk/portfolio`
+  - `https://www.saverys.co.uk/workshop`
+  - `https://www.saverys.co.uk/journal`
+  - `https://www.saverys.co.uk/contact`
+  - `https://www.saverys.co.uk/journal/choosing-upholstery-fabric-country-house`
 
 ### Smoke test
 
 - [ ] Visit every page on the live domain — no 404s, no broken images, no console errors
 - [ ] Test redirects on the live domain (`/our-history` → `/history` etc.)
-- [ ] Test the CMS at `https://saverys.co.uk/admin`
-- [ ] Submit a test rich results check at Google: `https://search.google.com/test/rich-results?url=https://saverys.co.uk`
+- [ ] Test the CMS at `https://www.saverys.co.uk/admin`
+- [ ] Submit a test rich results check at Google: `https://search.google.com/test/rich-results?url=https://www.saverys.co.uk`
 
 ### WordPress decommission
 
@@ -449,9 +449,9 @@ Execute in order. Do not skip steps.
    - Apex `saverys.co.uk`: A record → Netlify load balancer IP, OR ALIAS/ANAME → `[netlify-site].netlify.app`
    - `www.saverys.co.uk`: CNAME → `[netlify-site].netlify.app`
 3. Wait for Netlify auto-SSL provisioning (typically <10 min, occasionally up to 1 hour)
-4. Set Netlify primary domain to `saverys.co.uk` (apex), www → apex redirect
+4. Set Netlify primary domain to `www.saverys.co.uk`, with apex `saverys.co.uk` → www redirect (also enforced explicitly in `netlify.toml`)
 5. Verify env vars in Netlify production context:
-   - `NEXT_PUBLIC_SITE_URL=https://saverys.co.uk`
+   - `NEXT_PUBLIC_SITE_URL=https://www.saverys.co.uk`
    - `NEXT_PUBLIC_GA_ID=G-HEYQ32WKC0`
    - `NEXT_PUBLIC_TURNSTILE_SITE_KEY=...`
    - `TURNSTILE_SECRET_KEY=...`
@@ -466,7 +466,7 @@ Execute in order. Do not skip steps.
     - Confirm GA4 `form_submit` event fires (Realtime view)
 6. Smoke test on production:
    - Homepage, three showroom pages, contact form, journal index, projects index
-   - View source: confirm canonicals and OG URLs use saverys.co.uk
+   - View source: confirm canonicals and OG URLs use `https://www.saverys.co.uk`
 6a. Run automated production smoke test:
     ```
     npm run smoke:prod
@@ -475,7 +475,7 @@ Execute in order. Do not skip steps.
 7. GA4 Realtime — confirm session fires from your visit
 8. Search Console:
    - Verify domain via DNS TXT
-   - Submit `https://saverys.co.uk/sitemap.xml`
+   - Submit `https://www.saverys.co.uk/sitemap.xml`
 9. Bing Webmaster Tools — same
 10. Test 8–10 legacy WordPress URLs return 301:
     - `/our-portfolio`, `/our-history`, `/contact/`, `/feed`, `/wp-content/uploads/2025/10/test.jpg`, `/privacy-policy/`, `/wp-login.php`, `/wp-admin/`
@@ -484,6 +484,32 @@ Execute in order. Do not skip steps.
 12. PageSpeed Insights baseline — record LCP, CLS, INP for `/`, `/projects`, `/showroom/broadway`
 13. GA4 Admin — mark `form_submit`, `phone_click`, `email_click`, `directions_click` as conversions
 14. Send launch confirmation to Gary with link to start GBP setup × 3 locations
+
+## Key Learnings & Principles
+
+- **Canonical host: www, not apex.** The site canonical is
+  `https://www.saverys.co.uk`. Apex `saverys.co.uk` 301s to www at the
+  Netlify edge (rule in `netlify.toml`). The single source of truth is
+  `lib/config.ts` exporting `siteConfig.url` (re-exported as `SITE_URL` from
+  `lib/site-config.ts`). All sitemap entries, JSON-LD `.url`/`@id` fields,
+  OG URLs, robots `Host:` and `Sitemap:` directives, and canonical link tags
+  must use the www version. Mixing the two cost crawl budget and triggered
+  the 28 April 2026 GSC "Blocked by robots.txt" alert because Googlebot
+  kept chasing a 301 chain on what we'd told it was the canonical URL.
+
+- **robots.txt: don't block static assets.** Removed
+  `Disallow: /_next/static/` from `app/robots.ts` — Google needs CSS/JS
+  access to render pages and score Core Web Vitals correctly. Only
+  `/admin/` (Decap) and `/api/` are disallowed.
+
+- **robots.txt hostname gating: use Netlify's `CONTEXT` env var.** Not
+  `NEXT_PUBLIC_SITE_URL`. Internal env vars set by Netlify are more
+  reliable than client-side ones for distinguishing production from
+  preview/branch deploys, mirroring the GA4 gating pattern.
+
+- **Schema types are fixed.** Only `LocalBusiness` × 3 and `Organization`
+  are valid for this project. Do not introduce `InteriorDesignStore` or
+  `InteriorDesigner` — Google's structured-data tooling rejects them.
 
 ## Outstanding (non-code)
 

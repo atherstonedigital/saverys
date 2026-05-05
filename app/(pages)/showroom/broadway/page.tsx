@@ -5,6 +5,7 @@ import { Hero } from "@/components/sections/Hero";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 // SEO launch prep — 2026-04-27
@@ -46,8 +47,8 @@ export default function WorkshopPage() {
     pageType: "page",
     localBusiness: "broadway",
     breadcrumbs: [
-      { name: "Showroom", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom` },
-      { name: "Broadway", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom/broadway` },
+      { name: "Showroom", url: `${siteConfig.url}/showroom` },
+      { name: "Broadway", url: `${siteConfig.url}/showroom/broadway` },
     ],
   });
 
