@@ -21,7 +21,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/admin/", "/api/", "/_next/static/"],
+        // /_next/static/ deliberately NOT disallowed — Google needs CSS/JS
+        // access to render the page and score Core Web Vitals correctly.
+        disallow: ["/admin/", "/api/"],
       },
       // Explicit allow for AI retrieval and training bots
       { userAgent: "ChatGPT-User", allow: "/" },

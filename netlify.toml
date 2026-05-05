@@ -82,6 +82,17 @@
   [headers.values]
     Cache-Control = "public, max-age=2592000"
 
+# Apex -> www canonicalisation. Site canonical is https://www.saverys.co.uk;
+# every internal URL render (sitemap, JSON-LD, OG, canonical link tags,
+# robots Host/Sitemap) uses www. This redirect handles any direct apex hit
+# at the Netlify CDN edge, before it reaches the Next.js app, so crawlers
+# don't waste budget chasing a 301 chain.
+[[redirects]]
+  from = "https://saverys.co.uk/*"
+  to = "https://www.saverys.co.uk/:splat"
+  status = 301
+  force = true
+
 # WordPress to Next.js redirects (for domain migration)
 
 [[redirects]]

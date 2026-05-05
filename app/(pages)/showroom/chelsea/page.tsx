@@ -4,6 +4,7 @@ import Link from "next/link";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import { getPageContent, buildMetadata, type PageSeo } from "@/lib/content";
+import { siteConfig } from "@/lib/config";
 import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { TrackedLink } from "@/components/ui/TrackedLink";
@@ -38,8 +39,8 @@ export default function ChelseaPage() {
     pageType: "page",
     localBusiness: "chelsea",
     breadcrumbs: [
-      { name: "Showroom", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom` },
-      { name: "Chelsea", url: `${process.env.NEXT_PUBLIC_SITE_URL || "https://saverys.co.uk"}/showroom/chelsea` },
+      { name: "Showroom", url: `${siteConfig.url}/showroom` },
+      { name: "Chelsea", url: `${siteConfig.url}/showroom/chelsea` },
     ],
   });
 
