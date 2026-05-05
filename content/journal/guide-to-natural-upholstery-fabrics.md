@@ -23,7 +23,7 @@ Here's what we know about the fabrics we use most.
 
 Linen is the fabric we recommend more than any other for upholstery. It has qualities that make it almost uniquely suited to the task: it's strong, it's breathable, it softens with age, and it takes dye in a way that produces colours of remarkable subtlety — those chalky, muted tones that feel inherently Cotswold.
 
-The natural creasing of linen is part of its appeal. A linen-covered sofa looks lived in from the first day, in the best possible sense. It doesn't pretend to be something it's not. This relaxed quality makes it the natural choice for country houses, informal sitting rooms, and any space where comfort matters more than formality.
+The natural creasing of linen is part of its appeal. A linen-covered sofa looks lived in from the first day, in the best possible sense. It doesn't pretend to be something it's not. This relaxed quality makes it the natural choice for [country houses](/journal/choosing-upholstery-fabric-country-house), informal sitting rooms, and any space where comfort matters more than formality.
 
 For upholstery, we generally recommend linen-cotton blends rather than pure linen. The cotton adds structure and improves the Martindale rub count — a pure linen at 15,000 rubs becomes a linen-cotton blend at 25,000 or above. The feel remains distinctly linen; the performance improves meaningfully.
 

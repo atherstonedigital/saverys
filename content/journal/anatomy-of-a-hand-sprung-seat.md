@@ -33,11 +33,11 @@ Tying springs is skilled, physical work. Each knot must be secure, each cord ten
 
 **The hessian.** A layer of heavy hessian is stretched over the tied springs and stitched down. This creates a stable surface for the layers above and prevents the filling from working down into the springs.
 
-**The filling.** Traditionally, this is horsehair — teased and layered to create an even surface. Horsehair is naturally resilient: it compresses under weight and springs back when the weight is removed, and it doesn't flatten permanently the way synthetic fillings can. We still use horsehair on commissions where the client wants the firmest, most traditional seat. For a softer feel, we layer combinations of hair, cotton felt, and wadding.
+**The filling.** Traditionally, this is horsehair — teased and layered to create an even surface. Horsehair is naturally resilient: it compresses under weight and springs back when the weight is removed, and it doesn't flatten permanently the way synthetic fillings can. We still use horsehair on [commissions](/journal/commissioning-a-bespoke-sofa) where the client wants the firmest, most traditional seat. For a softer feel, we layer combinations of hair, cotton felt, and wadding.
 
 **The calico.** A layer of unbleached calico is stretched over the filling, pulled tight, and tacked to the frame. This shapes the seat — pulling in the edges, creating a smooth, even surface. The calico stage is where the upholsterer's eye matters most. Small adjustments here determine whether the finished seat looks crisp and intentional or lumpy and approximate.
 
-**The top cover.** Finally, the chosen fabric is applied over the calico. On a hand-sprung seat, the fabric sits on a surface that has been meticulously shaped and tensioned. It lies flat, it doesn't pull, and it ages evenly because the structure underneath is sound.
+**The top cover.** Finally, the [chosen fabric](/journal/guide-to-natural-upholstery-fabrics) is applied over the calico. On a hand-sprung seat, the fabric sits on a surface that has been meticulously shaped and tensioned. It lies flat, it doesn't pull, and it ages evenly because the structure underneath is sound.
 
 ![Upholsterer hand-working fabric at the cutting table in the Savery's workshop](/images/upholstery work shop 1.webp)
 

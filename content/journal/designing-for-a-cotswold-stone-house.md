@@ -35,7 +35,7 @@ We find that the most successful schemes draw their palette from the immediate s
 
 Many Cotswold properties have rooms with lower ceilings than their Georgian or Victorian counterparts. Ceiling heights of seven feet are common in older cottages, and even in larger houses the rooms are often more intimate than their footprint might suggest. This has implications for everything from curtain headings to furniture scale.
 
-In a low-ceilinged room, a full gathered curtain heading can feel oppressive. A simpler heading — a wave, a pencil pleat, or a neat hand-sewn pinch — allows the fabric to hang without crowding the top of the window. Similarly, furniture needs to respect the room's vertical proportions. A tall wing chair that looks perfectly at home in a Georgian drawing room with ten-foot ceilings can feel overbearing in a cottage sitting room.
+In a low-ceilinged room, a full gathered curtain heading can feel oppressive. A simpler heading — a wave, a pencil pleat, or a neat hand-sewn pinch — allows [the fabric to hang](/journal/guide-to-natural-upholstery-fabrics) without crowding the top of the window. Similarly, furniture needs to respect the room's vertical proportions. A tall wing chair that looks perfectly at home in a Georgian drawing room with ten-foot ceilings can feel overbearing in a cottage sitting room.
 
 We always measure and assess rooms in person before specifying any furniture. Photographs are misleading — they flatten the space and mask the relationship between ceiling height, window size, and floor area. There's no substitute for standing in the room.
 
@@ -43,7 +43,7 @@ We always measure and assess rooms in person before specifying any furniture. Ph
 
 Original features — stone fireplaces, oak beams, flagstone floors, mullioned windows — are the architectural inheritance of a Cotswold house and should be treated with respect. This doesn't mean the interior must be a period recreation. Some of the most successful schemes we've worked on combine original features with contemporary furniture and modern comfort, creating rooms that feel both rooted and alive.
 
-The key is coherence. A contemporary sofa can sit beautifully in a beamed cottage if the fabric, the scale, and the colour are right. An antique piece can look extraordinary in a room with clean, modern walls. What breaks a scheme is inconsistency — when the different elements feel as though they've arrived from different houses and different centuries without any conversation between them.
+The key is coherence. A contemporary sofa can sit beautifully in a beamed cottage if [the fabric](/journal/choosing-upholstery-fabric-country-house), the scale, and the colour are right. An antique piece can look extraordinary in a room with clean, modern walls. What breaks a scheme is inconsistency — when the different elements feel as though they've arrived from different houses and different centuries without any conversation between them.
 
 Stone floors deserve particular attention. They're beautiful but cold, and in the Cotswolds the temperature underfoot is a real consideration for much of the year. Well-chosen rugs — properly sized, properly placed — transform the comfort of a stone-floored room without hiding the floor entirely. We keep a considered selection of handknotted rugs in our [Broadway showroom](/showroom/broadway), and we're happy to bring pieces to a client's home so they can see them in context.
 

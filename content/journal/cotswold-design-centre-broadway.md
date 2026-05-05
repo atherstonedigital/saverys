@@ -13,7 +13,7 @@ seoTitle: "The Cotswold Design Centre, Broadway | Interior Design Showroom | Sav
 seoDescription: "Visit the Cotswold Design Centre in Broadway — home to Savery's showroom of premium fabrics, rugs, and interior design services. Open to visitors."
 ---
 
-Broadway has long been one of the Cotswolds' most visited villages. People come for the honey-coloured stone, the wide high street, the walking, and the general sense that things here move at a pace more suited to the thinking mind. What fewer visitors realise is that tucked just off the high street, along Kennel Lane, sits one of the most comprehensive interior design destinations in the region.
+Broadway has long been one of the Cotswolds' most visited villages. People come for the [honey-coloured stone](/journal/designing-for-a-cotswold-stone-house), the wide high street, the walking, and the general sense that things here move at a pace more suited to the thinking mind. What fewer visitors realise is that tucked just off the high street, along Kennel Lane, sits one of the most comprehensive interior design destinations in the region.
 
 The Cotswold Design Centre is where Savery's has been based since the early days of the practice. It's not a shop in the conventional sense — though you can certainly buy here. It's a working environment where design happens: fabrics are selected, schemes are developed, and furniture is made in the workshop that sits behind the showroom. The two activities — making and advising — happen in close proximity, and that proximity shapes everything about how we work.
 

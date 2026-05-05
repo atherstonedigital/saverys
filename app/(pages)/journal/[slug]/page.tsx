@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Hero } from "@/components/sections/Hero";
+import { RelatedArticles } from "@/components/RelatedArticles";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
 import {
   getAllJournalPosts,
   getJournalPostBySlug,
-  getRelatedPosts,
   formatDate,
   getPillarLabel,
 } from "@/lib/journal";
@@ -60,8 +59,6 @@ export default async function JournalPostPage({ params }: Props) {
   const { slug } = await params;
   const post = getJournalPostBySlug(slug);
   if (!post) notFound();
-
-  const related = getRelatedPosts(slug, 3);
 
   const schemaJson = generateSchema({
     pageType: "article",
@@ -152,54 +149,7 @@ export default async function JournalPostPage({ params }: Props) {
         </section>
       )}
 
-      {related.length > 0 && (
-        <section className="bg-linen px-6 py-16 md:px-12 md:py-24">
-          <div className="mx-auto max-w-7xl">
-            <SectionReveal>
-              <Text as="h2" className="mb-10">
-                Further reading
-              </Text>
-            </SectionReveal>
-            <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-12">
-              {related.map((relPost, i) => (
-                <SectionReveal key={relPost.slug} delay={i * 0.1}>
-                  <Link
-                    href={`/journal/${relPost.slug}`}
-                    className="group block"
-                  >
-                    <div className="relative aspect-[4/3] w-full overflow-hidden bg-cream">
-                      {relPost.featuredImage ? (
-                        <Image
-                          src={relPost.featuredImage}
-                          alt={
-                            relPost.featuredImageAlt ||
-                            `${relPost.title} — Savery's Journal`
-                          }
-                          fill
-                          className="object-cover transition-transform duration-[600ms] ease-[var(--ease-saverys)] group-hover:scale-105"
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                        />
-                      ) : (
-                        <div className="flex h-full items-center justify-center">
-                          <Text variant="caption" className="text-stone/40">
-                            Savery&apos;s Journal
-                          </Text>
-                        </div>
-                      )}
-                    </div>
-                    <div className="mt-4">
-                      <Text as="h3">{relPost.title}</Text>
-                      <Text variant="small" className="mt-1 text-stone/60">
-                        {formatDate(relPost.date)}
-                      </Text>
-                    </div>
-                  </Link>
-                </SectionReveal>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
+      <RelatedArticles currentSlug={slug} tags={post.tags} />
 
       <section className="border-t border-stone/10 px-6 py-12 text-center md:px-12">
         <Link

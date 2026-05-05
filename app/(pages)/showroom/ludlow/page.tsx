@@ -8,6 +8,7 @@ import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 // SEO launch prep — 2026-04-27
 import { TrackedLink } from "@/components/ui/TrackedLink";
+import { renderInlineLinks } from "@/lib/inline-md";
 
 export function generateMetadata(): Metadata {
   const { seo } = getPageContent<{ seo?: PageSeo }>("showroom-ludlow");
@@ -124,7 +125,7 @@ export default function LudlowPage() {
               <Text as="h2">{content.intro.heading}</Text>
               {content.intro.paragraphs.map((p, i) => (
                 <Text key={i} variant="body" className="mt-6 text-stone">
-                  {p}
+                  {renderInlineLinks(p)}
                 </Text>
               ))}
             </SectionReveal>

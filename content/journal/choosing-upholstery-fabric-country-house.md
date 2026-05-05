@@ -19,7 +19,7 @@ seoDescription: Expert guidance on choosing upholstery fabric from Savery's of
   years of making has taught us.
 ---
 
-Choosing upholstery fabric is one of the most consequential decisions in any interior scheme. The fabric you select will determine how a room feels to sit in, how it ages, how light plays across its surfaces, and — practically — how it holds up against the realities of daily life. A poorly chosen fabric on a beautifully made sofa is a waste of good craftsmanship. A well-chosen one becomes more beautiful with time.
+Choosing upholstery fabric is one of the most consequential decisions in any interior scheme. The fabric you select will determine how a room feels to sit in, how it ages, how light plays across its surfaces, and — practically — how it holds up against the realities of daily life. A poorly chosen fabric on a [beautifully made sofa](/journal/anatomy-of-a-hand-sprung-seat) is a waste of good craftsmanship. A well-chosen one becomes more beautiful with time.
 
 In our [Broadway workshop](/workshop), we've been upholstering furniture by hand for over thirty years. We've seen what lasts, what fades, what pills after a season, and what still looks impeccable after a decade. This guide draws on that experience — not theory, but the accumulated knowledge of working with fabric every day.
 
@@ -51,7 +51,7 @@ A number alone doesn't tell the whole story — weave structure, fibre content, 
 
 ## Natural fabrics: the options
 
-In a country house setting, natural fabrics are almost always our first instinct. They age with character, they feel good to the touch, and they sit comfortably within interiors that lean on texture and warmth rather than high-gloss finishes.
+In a country house setting, [natural fabrics](/journal/guide-to-natural-upholstery-fabrics) are almost always our first instinct. They age with character, they feel good to the touch, and they sit comfortably within interiors that lean on texture and warmth rather than high-gloss finishes.
 
 **Linen** is the fabric we reach for most often. It has a beautiful dry hand, it softens with use, and it takes dye in a way that produces the most wonderful muted, chalky tones. The natural creasing is part of its appeal — a linen-covered sofa looks relaxed and inviting rather than rigid. We typically recommend linen-cotton blends for upholstery, as pure linen alone can be too soft for structured seating. Look for a Martindale rating above 20,000.
 

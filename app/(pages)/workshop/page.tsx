@@ -14,6 +14,7 @@ import {
   buildMetadata,
   type PageSeo,
 } from "@/lib/content";
+import { renderInlineLinks } from "@/lib/inline-md";
 
 interface Pillar {
   title: string;
@@ -79,7 +80,7 @@ export default function WorkshopPage() {
           <SectionReveal>
             <Text as="h2">{content.intro.heading}</Text>
             <Text variant="body" className="mt-8 text-stone">
-              {content.intro.body}
+              {renderInlineLinks(content.intro.body)}
             </Text>
           </SectionReveal>
         </div>
@@ -98,7 +99,7 @@ export default function WorkshopPage() {
               <SectionReveal key={pillar.title} delay={i * 0.1}>
                 <Text as="h3">{pillar.title}</Text>
                 <Text variant="body" className="mt-4 text-stone">
-                  {pillar.body}
+                  {renderInlineLinks(pillar.body)}
                 </Text>
               </SectionReveal>
             ))}
