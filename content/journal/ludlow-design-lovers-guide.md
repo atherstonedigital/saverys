@@ -40,7 +40,7 @@ For our clients in Shropshire and the Marches, Ludlow serves as both inspiration
 
 The Savery's studio at [1 Tower Street](/showroom/ludlow) is a short walk from the castle, on one of Ludlow's most characterful streets. It serves clients across Shropshire, Herefordshire, and the Welsh Marches — a region rich in beautiful properties that deserve interiors of equal quality.
 
-The studio operates as an extension of our Broadway practice. Clients in the Ludlow area have access to the same fabric libraries, the same design expertise, and the same workshop. Pieces commissioned through the Ludlow studio are built in Broadway by the same team, using the same methods and materials. The standard is identical; only the geography differs.
+The studio operates as an extension of our [Broadway practice](/journal/cotswold-design-centre-broadway). Clients in the Ludlow area have access to the same fabric libraries, the same design expertise, and the same workshop. Pieces commissioned through the Ludlow studio are built in Broadway by the same team, using the same methods and materials. The standard is identical; only the geography differs.
 
 We find that many of our Shropshire clients are working with properties that share characteristics with Cotswold houses — stone construction, period features, rooms that have evolved over centuries — but with their own distinct regional character. The stone here is different: greyer, sometimes red sandstone, with a quality of light that shifts from the Cotswold warmth toward something cooler and more dramatic. The interiors we design for these houses respond to that difference.
 

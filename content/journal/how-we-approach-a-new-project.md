@@ -38,7 +38,7 @@ Once the scheme is agreed, we begin sourcing and commissioning. Some elements we
 
 We manage every element of the procurement process. Clients don't need to chase deliveries, coordinate tradespeople, or troubleshoot problems — that's our responsibility. We keep a detailed schedule and communicate progress regularly, but we try to spare clients the operational detail unless they want to be closely involved.
 
-For commissions made in our workshop, clients are welcome to visit and see the work in progress. There's something satisfying about watching your sofa being built — seeing the frame, the springs, the layers of filling take shape under skilled hands. It connects you to the piece in a way that unwrapping a delivery box never quite manages.
+For commissions made in our workshop, clients are welcome to visit and see the work in progress. There's something satisfying about [watching your sofa being built](/journal/commissioning-a-bespoke-sofa) — seeing the frame, the springs, the layers of filling take shape under skilled hands. It connects you to the piece in a way that unwrapping a delivery box never quite manages.
 
 ## Installation
 

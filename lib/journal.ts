@@ -89,29 +89,23 @@ export function getJournalPostBySlug(slug: string): JournalPost | undefined {
   return posts.find((p) => p.slug === slug);
 }
 
-export function getRelatedPosts(
+export function getRelatedByTags(
   currentSlug: string,
-  limit: number = 3
+  tags: string[] | undefined,
+  limit: number = 3,
 ): JournalPost[] {
-  const posts = getAllJournalPosts();
-  const current = posts.find((p) => p.slug === currentSlug);
-  if (!current) return posts.filter((p) => p.slug !== currentSlug).slice(0, limit);
+  const others = getAllJournalPosts().filter((p) => p.slug !== currentSlug);
 
-  const others = posts.filter((p) => p.slug !== currentSlug);
+  const tagged =
+    tags && tags.length > 0
+      ? others.filter((p) => p.tags?.some((t) => tags.includes(t)))
+      : [];
 
-  // Score by shared pillar and tags
-  const scored = others.map((post) => {
-    let score = 0;
-    if (current.pillar && post.pillar === current.pillar) score += 3;
-    if (current.tags && post.tags) {
-      const shared = post.tags.filter((t) => current.tags!.includes(t));
-      score += shared.length;
-    }
-    return { post, score };
-  });
+  if (tagged.length >= limit) return tagged.slice(0, limit);
 
-  scored.sort((a, b) => b.score - a.score);
-  return scored.slice(0, limit).map((s) => s.post);
+  const taggedSlugs = new Set(tagged.map((p) => p.slug));
+  const fillers = others.filter((p) => !taggedSlugs.has(p.slug));
+  return [...tagged, ...fillers].slice(0, limit);
 }
 
 export function formatDate(isoDate: string): string {

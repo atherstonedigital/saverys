@@ -15,7 +15,7 @@ seoDescription: "What actually happens when you commission a bespoke sofa? From 
 
 There's a moment, early in most projects, when a client asks about a sofa. Sometimes they know exactly what they want — a Howard, a Knole, a deep-seated chesterfield. More often, they know how they want it to feel: generous, inviting, something the family will gravitate toward. The specifics — dimensions, depth, arm height, cushion fill — come later, through conversation.
 
-Commissioning a bespoke sofa is not the same as buying one from a showroom. It's a collaborative process that typically takes eight to twelve weeks from first discussion to delivery, and the result is a piece of furniture made specifically for your room, your needs, and your taste. Here's how it works in our [Broadway workshop](/workshop).
+Commissioning a bespoke sofa is not the same as buying one from a showroom. It's a [collaborative process](/journal/how-we-approach-a-new-project) that typically takes eight to twelve weeks from first discussion to delivery, and the result is a piece of furniture made specifically for your room, your needs, and your taste. Here's how it works in our [Broadway workshop](/workshop).
 
 ## The conversation
 
@@ -35,7 +35,7 @@ We'll advise on practicality — the Martindale rub count, whether a fabric bene
 
 The frame is constructed by hand in our workshop. We don't use staple guns on structural joints — frames are dowelled, glued, and screwed. The corner blocks are reinforced. It sounds like a small thing, but these details determine whether a sofa frame lasts five years or fifty.
 
-The base is sprung using traditional coil springs, hand-tied with an eight-way pattern. This is the element that gives the seat its response — that gentle, supportive give when you sit down, without the bottoming-out that foam alone produces. Hand-springing takes significantly longer than modern drop-in spring units, but the difference in comfort is immediately apparent.
+The base is sprung using traditional coil springs, hand-tied with an eight-way pattern. This is the element that gives the seat its response — that gentle, supportive give when you sit down, without the bottoming-out that foam alone produces. [Hand-springing](/journal/anatomy-of-a-hand-sprung-seat) takes significantly longer than modern drop-in spring units, but the difference in comfort is immediately apparent.
 
 ![Upholsterer working on fabric at the Savery's workshop cutting table](/images/upholstery work shop 2.webp)
 
