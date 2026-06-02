@@ -9,8 +9,8 @@ tags:
   - Fabrics
   - Upholstery
   - Craft
-seoTitle: "Natural Upholstery Fabrics Guide — Linen, Velvet & Wool | Savery's of Broadway"
-seoDescription: "A maker's guide to natural upholstery fabrics: linen, velvet, wool, cotton, and silk. How they wear, where they work best, and what we recommend from 30 years in the workshop."
+seoTitle: "Natural Upholstery Fabrics: Wool, Linen & Fibres | Savery's of Broadway"
+seoDescription: "A guide to natural upholstery fabrics — wool, linen and natural fibres — how they wear, where they suit, and how to choose one for a sofa built to last."
 ---
 
 Walk into our [Broadway showroom](/showroom/broadway) and run your hand along the fabric drawers. You'll feel the difference between materials before you see it — the dry crispness of a Belgian linen, the dense pile of a cotton velvet, the springy warmth of a Scottish wool. Each fabric has its own character, and understanding that character is the starting point for choosing well.

@@ -17,8 +17,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/showroom/broadway",
-    "Broadway Showroom — Luxury Fabrics & Interior Design | Savery's of Broadway",
-    "Visit the Savery's of Broadway showroom in the Cotswolds. Premium fabrics, rugs, and curated interiors at the Cotswold Design Centre.",
+    "Broadway Showroom, Cotswold Design Centre",
+    "Our Broadway showroom and workshop at the Cotswold Design Centre. Designer fabrics, hand upholstery and interior design in the heart of the Cotswolds, since 1942.",
   );
 }
 

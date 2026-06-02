@@ -14,8 +14,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/showroom/chelsea",
-    "Chelsea Studio — Interior Design in London | Savery's of Broadway",
-    "Saverys' London studio at Suite 9, 405 Kings Road, Chelsea. Consultations, fabric reviews, and design support for clients with London homes.",
+    "Chelsea Showroom — Interior Design",
+    "Savery's of Broadway in Chelsea. Luxury interior design, designer fabrics and bespoke furniture for London homes, rooted in Cotswolds craftsmanship since 1942.",
   );
 }
 
