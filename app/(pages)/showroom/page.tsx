@@ -29,8 +29,8 @@ export function generateMetadata(): Metadata {
   return buildMetadata(
     seo,
     "/showroom",
-    "Showrooms & Studios — Broadway, Ludlow & Chelsea | Savery's of Broadway",
-    "Visit a Savery's showroom in Broadway or Ludlow, or our Chelsea studio in London. Premium fabrics, curated furniture, and considered interiors across the Cotswolds, Welsh Marches, and SW10.",
+    "Showrooms — Broadway, Ludlow & Chelsea",
+    "Visit a Savery's of Broadway showroom in Broadway, Ludlow or Chelsea. Designer fabrics, bespoke furniture and interior design, in the Cotswolds since 1942.",
   );
 }
 
