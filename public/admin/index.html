@@ -324,6 +324,15 @@
     </style>
   </head>
   <body>
+    <script>window.CMS_MANUAL_INIT = true;</script>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      fetch('/admin/config.json')
+        .then(function (r) { return r.json(); })
+        .then(function (config) {
+          config.load_config_file = false;
+          window.CMS.init({ config: config });
+        });
+    </script>
   </body>
 </html>
