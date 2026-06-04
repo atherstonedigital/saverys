@@ -1,11 +1,11 @@
 ---
-title: "Saverys 4"
+title: "Elmswood"
 slug: "saverys-4"
 location: "Moreton-in-Marsh, Gloucestershire"
 year: ""
 description: "Elegant restraint in a Georgian dower house. Light, linen, and quietness throughout."
 heroImage: "/images/hero/home.webp"
-heroImageAlt: "Saverys 4 interior — drawing room with pale sofa, botanical cushions, and a garden view in a Georgian dower house, Moreton-in-Marsh"
+heroImageAlt: "Elmswood interior — drawing room with pale sofa, botanical cushions, and a garden view in a Georgian dower house, Moreton-in-Marsh"
 gallery:
   - image: "/images/hero/home.webp"
     alt: "Pale sofa with botanical cushions and garden view"
