@@ -9,7 +9,8 @@
       "children": [
         { "label": "Broadway", "href": "/showroom/broadway" },
         { "label": "Ludlow", "href": "/showroom/ludlow" },
-        { "label": "Chelsea", "href": "/showroom/chelsea" }
+        { "label": "Chelsea", "href": "/showroom/chelsea" },
+        { "label": "Oriental Rugs", "href": "/oriental-rugs" }
       ]
     },
     { "label": "Services", "href": "/services" },
