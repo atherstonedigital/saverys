@@ -1,11 +1,11 @@
 ---
-title: "Saverys 2"
+title: "New Town Cottage"
 slug: "saverys-2"
 location: "The Cotswolds"
 year: ""
 description: "A country house layered with character. Exposed beams, rich velvets, and golden drapes."
 heroImage: "/images/projects/jams-house-living.webp"
-heroImageAlt: "Saverys 2 interior — drawing room with green velvet sofa and golden botanical drapes in a Cotswolds country house"
+heroImageAlt: "New Town Cottage interior — drawing room with green velvet sofa and golden botanical drapes in a Cotswolds country house"
 gallery:
   - image: "/images/projects/jams-house-living.webp"
     alt: "Green velvet sofa with golden botanical drapes"
