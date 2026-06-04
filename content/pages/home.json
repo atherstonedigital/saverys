@@ -32,14 +32,24 @@
   },
   "featuredProjects": [
     {
-      "name": "Saverys 1, Broadway",
+      "name": "Stanhope House, Broadway",
       "slug": "saverys-1",
       "image": "/images/projects/old-mill-bedroom.webp"
     },
     {
-      "name": "Saverys 2",
+      "name": "New Town Cottage",
       "slug": "saverys-2",
       "image": "/images/projects/jams-house-living.webp"
+    },
+    {
+      "name": "Saverys 3",
+      "slug": "saverys-3",
+      "image": "/images/projects/hallway-chair.webp"
+    },
+    {
+      "name": "Saverys 4",
+      "slug": "saverys-4",
+      "image": "/images/hero/home.webp"
     }
   ],
   "services": {
