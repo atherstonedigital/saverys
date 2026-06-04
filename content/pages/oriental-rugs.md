@@ -1,9 +1,11 @@
 ---
-title: "Oriental Rugs in Broadway"
-seoTitle: "Oriental Rugs in Broadway | Saverys"
-metaDescription: "A room of hand-knotted oriental rugs at the Saverys showroom in Broadway. Antique and vintage pieces, picked by hand. Come and see them in person."
-heroImage: "/images/uploads/placeholder-rug-room.jpg"
-heroImageAlt: "Hand-knotted oriental rugs displayed in the Saverys showroom in Broadway"
+title: Oriental Rugs in Broadway
+seoTitle: Oriental Rugs in Broadway | Saverys
+metaDescription: A room of hand-knotted oriental rugs at the Saverys showroom in
+  Broadway. Antique and vintage pieces, picked by hand. Come and see them in
+  person.
+heroImage: /images/oriental-rug-room-.jpg
+heroImageAlt: Hand-knotted oriental rugs displayed in the Saverys showroom in Broadway
 gallery: []
 ---
 
