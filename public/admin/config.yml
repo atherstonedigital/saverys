@@ -1,7 +1,7 @@
 backend:
   name: github
   repo: atherstonedigital/saverys
-  branch: claude/saverys-studio-setup-ILvNL
+  branch: main
 
 # Drafts saved in the CMS land on cms/<collection>/<slug> branches as
 # pull requests. They do not deploy to production until the entry is
