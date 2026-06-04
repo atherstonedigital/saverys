@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
 import type { Metadata } from "next";
+import matter from "gray-matter";
+import { remark } from "remark";
+import html from "remark-html";
 import { siteConfig } from "@/lib/config";
 
 export interface PageSeo {
@@ -19,6 +22,19 @@ export function getSettings<T>(file: string = "general"): T {
   const filePath = path.join(process.cwd(), "content", "settings", `${file}.json`);
   const raw = fs.readFileSync(filePath, "utf-8");
   return JSON.parse(raw) as T;
+}
+
+export interface MarkdownPage {
+  [key: string]: unknown;
+  body: string;
+}
+
+export function getPage(slug: string): MarkdownPage {
+  const filePath = path.join(process.cwd(), "content", "pages", `${slug}.md`);
+  const raw = fs.readFileSync(filePath, "utf-8");
+  const { data, content } = matter(raw);
+  const rendered = remark().use(html, { allowDangerousHtml: true }).processSync(content);
+  return { ...data, body: rendered.toString() };
 }
 
 export function buildMetadata(

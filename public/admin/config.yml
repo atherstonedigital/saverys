@@ -455,6 +455,27 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
+      # --- Oriental Rugs (markdown singleton) ---
+      - name: "oriental_rugs"
+        label: "Oriental Rugs"
+        file: "content/pages/oriental-rugs.md"
+        fields:
+          - { label: "Title (H1)", name: "title", widget: "string" }
+          - { label: "SEO Title", name: "seoTitle", widget: "string", hint: "Under 60 characters" }
+          - { label: "Meta Description", name: "metaDescription", widget: "text", hint: "140-160 characters" }
+          - label: "Hero Image"
+            name: "heroImage"
+            widget: "image"
+          - { label: "Hero Image Alt", name: "heroImageAlt", widget: "string", required: true, hint: "Describe the image for screen readers and SEO" }
+          - label: "Gallery"
+            name: "gallery"
+            widget: "list"
+            required: false
+            fields:
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Alt text", name: "alt", widget: "string", required: true }
+          - { label: "Body", name: "body", widget: "markdown" }
+
       - name: "contact"
         label: "Contact"
         file: "content/pages/contact.json"
