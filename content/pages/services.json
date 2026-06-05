@@ -1,7 +1,7 @@
 {
   "seo": {
     "title": "Interior Design Services — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
-    "description": "Full interior design, hand upholstery, bespoke furniture, curtains and soft furnishings, fabric sourcing, antiques, and project management. Made on-site in the Cotswolds since 1942."
+    "description": "Full home interior design, hand upholstery, bespoke furnishings, bespoke furniture, curtains and soft furnishings, fabric sourcing, antiques, colour consultation, home staging, and project management. Made on-site in the Cotswolds since 1942."
   },
   "hero": {
     "heading": "Interior Design Services — Cotswolds, Ludlow & Chelsea",
@@ -10,7 +10,7 @@
   "intro": "We begin every project by listening. Before a single fabric is chosen or a colour considered, we take time to understand the architecture, the light, and the lives that will unfold within the space.",
   "services": [
     {
-      "title": "Full interior design",
+      "title": "Full home interior design",
       "description": "Complete room and property schemes, from initial concept through to final styling. We manage every detail — spatial planning, colour palettes, furniture selection, soft furnishings, and finishing touches.",
       "image": "/images/hero/home.webp"
     },
@@ -18,6 +18,11 @@
       "title": "Hand upholstery & reupholstery",
       "description": "Hand upholstery is a vanishing craft — and one we are determined to keep alive. At our Broadway workshop, frames are still built from seasoned hardwoods, springs are still hand-tied with eight-way ties, and every fabric is cut, stretched, and finished by hands trained over decades. Whether reupholstering a Georgian wing chair or building a new sofa from the frame up, the work happens on-site in the Cotswolds — never outsourced, never rushed. The result is furniture that sits properly, lasts a generation, and bears the quiet evidence of skilled work in every line and seam.",
       "image": "/images/upholstery work shop 1.webp"
+    },
+    {
+      "title": "Bespoke furnishings",
+      "description": "From statement curtains and handmade blinds to one-off cushions, headboards, and upholstered panels — every piece is designed and made to order. We work with clients to select fabrics, trims, and finishes that suit the architecture and bring a room together with quiet, lasting elegance.",
+      "image": "/images/saverys-ludlow3.webp"
     },
     {
       "title": "Bespoke furniture",
@@ -40,9 +45,14 @@
       "image": "/images/projects/old-mill-bedroom.webp"
     },
     {
-      "title": "Colour and light consultation",
+      "title": "Colour consultation",
       "description": "Colour is the foundation of every room we compose. We consider how light moves through a space at every hour, selecting tones that feel natural and enduring.",
       "image": "/images/projects/old-mill-kitchen.webp"
+    },
+    {
+      "title": "Home staging",
+      "description": "Presenting a property at its finest for sale. We bring a designer's eye to every room — editing, styling, and dressing spaces so that prospective buyers see not just a house, but a home. From furniture placement and soft furnishings to lighting and finishing touches, we ensure each room tells a compelling, inviting story.",
+      "image": "/images/projects/old-mill-bedroom.webp"
     },
     {
       "title": "Project management",

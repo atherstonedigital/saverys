@@ -57,12 +57,16 @@
     "image": "/images/hero/services.webp",
     "items": [
       {
-        "title": "Full interior design",
+        "title": "Full home interior design",
         "description": "Complete room and property schemes, from concept through to final styling."
       },
       {
         "title": "Hand upholstery & reupholstery",
         "description": "Hand-tied springs, seasoned hardwood frames, and fabrics finished by hand at our Broadway workshop."
+      },
+      {
+        "title": "Bespoke furnishings",
+        "description": "Statement curtains, handmade blinds, cushions, and headboards — designed and made to order."
       },
       {
         "title": "Bespoke furniture",
@@ -79,6 +83,18 @@
       {
         "title": "Furniture sourcing & antiques",
         "description": "A considered mix of antiques and contemporary pieces, chosen for character and craftsmanship."
+      },
+      {
+        "title": "Colour consultation",
+        "description": "Considered palettes that feel natural and enduring, chosen for the way light moves through your space."
+      },
+      {
+        "title": "Home staging",
+        "description": "Presenting properties at their finest for sale — styling and dressing spaces so buyers see a home."
+      },
+      {
+        "title": "Project management",
+        "description": "From concept to installation, we oversee every detail so our clients can enjoy the process."
       }
     ]
   },
