@@ -14,7 +14,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/services",
     "Interior Design Services — Cotswolds, Ludlow & Chelsea | Savery's of Broadway",
-    "Full interior design, hand upholstery, bespoke furniture, curtains and soft furnishings, fabric sourcing, antiques, and project management. Made on-site in the Cotswolds since 1942.",
+    "Full home interior design, bespoke furnishings, bespoke furniture, colour consultation, and home staging for property sale. Made on-site in the Cotswolds since 1942.",
   );
 }
 

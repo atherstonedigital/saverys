@@ -57,28 +57,24 @@
     "image": "/images/hero/services.webp",
     "items": [
       {
-        "title": "Full interior design",
+        "title": "Full home interior design",
         "description": "Complete room and property schemes, from concept through to final styling."
       },
       {
-        "title": "Hand upholstery & reupholstery",
-        "description": "Hand-tied springs, seasoned hardwood frames, and fabrics finished by hand at our Broadway workshop."
+        "title": "Bespoke furnishings",
+        "description": "Curtains, blinds, cushions, and headboards made in-house at our Ludlow workroom."
       },
       {
         "title": "Bespoke furniture",
         "description": "Sofas, chairs, and one-off commissions designed and bench-built from the frame up in the Cotswolds."
       },
       {
-        "title": "Curtains & soft furnishings",
-        "description": "Bespoke curtains, blinds, cushions, and headboards made in-house at our Ludlow workroom."
+        "title": "Colour consultation",
+        "description": "Considered palettes that feel natural and enduring, chosen for the way light moves through your space."
       },
       {
-        "title": "Fabric and material sourcing",
-        "description": "Access to the finest mills and makers — linens, wools, silks, velvets, and beyond."
-      },
-      {
-        "title": "Furniture sourcing & antiques",
-        "description": "A considered mix of antiques and contemporary pieces, chosen for character and craftsmanship."
+        "title": "Home staging",
+        "description": "Presenting properties at their finest for sale — styling and dressing spaces so buyers see a home."
       }
     ]
   },
