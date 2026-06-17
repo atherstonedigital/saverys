@@ -16,8 +16,12 @@ interface NavProps {
   items: NavItem[];
 }
 
+function isExternalHref(href: string): boolean {
+  return /^https?:\/\//i.test(href);
+}
+
 function isHrefActive(pathname: string, href: string): boolean {
-  if (!href) return false;
+  if (!href || isExternalHref(href)) return false;
   if (href === "/") return pathname === "/";
   return pathname === href || pathname.startsWith(`${href}/`);
 }
@@ -79,6 +83,20 @@ export function Nav({ items }: NavProps) {
     const active = isItemActive(pathname, link);
 
     if (!link.children || link.children.length === 0) {
+      if (isExternalHref(link.href)) {
+        return (
+          <a
+            key={link.href}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={getLinkClass(active)}
+          >
+            {link.label}
+          </a>
+        );
+      }
+
       return (
         <Link
           key={link.href}
@@ -155,16 +173,33 @@ export function Nav({ items }: NavProps) {
     const active = isItemActive(pathname, link);
 
     if (!link.children || link.children.length === 0) {
+      const mobileLinkClass = cn(
+        "font-display text-2xl font-light tracking-[0.06em] text-cream",
+        active && activeUnderline
+      );
+
+      if (isExternalHref(link.href)) {
+        return (
+          <a
+            key={link.href}
+            href={link.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsMobileOpen(false)}
+            className={mobileLinkClass}
+          >
+            {link.label}
+          </a>
+        );
+      }
+
       return (
         <Link
           key={link.href}
           href={link.href}
           onClick={() => setIsMobileOpen(false)}
           aria-current={active ? "page" : undefined}
-          className={cn(
-            "font-display text-2xl font-light tracking-[0.06em] text-cream",
-            active && activeUnderline
-          )}
+          className={mobileLinkClass}
         >
           {link.label}
         </Link>

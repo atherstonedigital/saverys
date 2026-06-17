@@ -531,7 +531,7 @@ collections:
             widget: "list"
             fields:
               - { label: "Label", name: "label", widget: "string" }
-              - { label: "Link", name: "href", widget: "string" }
+              - { label: "Link", name: "href", widget: "string", hint: "Internal path (e.g. /about) or a full external URL (e.g. https://shop.saverys.co.uk/). External URLs open in a new tab." }
               - label: "Dropdown Items"
                 name: "children"
                 widget: "list"
