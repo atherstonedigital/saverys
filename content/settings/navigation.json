@@ -15,6 +15,7 @@
     },
     { "label": "Services", "href": "/services" },
     { "label": "Journal", "href": "/journal" },
-    { "label": "Contact", "href": "/contact" }
+    { "label": "Contact", "href": "/contact" },
+    { "label": "Shop", "href": "https://shop.saverys.co.uk/" }
   ]
 }
