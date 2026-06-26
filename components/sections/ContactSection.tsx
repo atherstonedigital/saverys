@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import { Text } from "@/components/ui/Text";
@@ -8,6 +8,12 @@ import { Button } from "@/components/ui/Button";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 // SEO launch prep — 2026-04-27
 import { trackEvent, type EventParams } from "@/lib/analytics";
+// Enquiry source capture — 2026-06-26
+import {
+  getAttribution,
+  getSubmittedPage,
+  type Attribution,
+} from "@/lib/attribution";
 
 const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
@@ -67,6 +73,13 @@ export function ContactSection() {
   // SEO launch prep — 2026-04-27: Turnstile spam gate
   const [token, setToken] = useState<string | null>(null);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  // Enquiry source capture — 2026-06-26: first-touch attribution. Populated
+  // on mount (client-only) so the hidden inputs carry the visitor's source.
+  const [attribution, setAttribution] = useState<Attribution | null>(null);
+
+  useEffect(() => {
+    setAttribution(getAttribution());
+  }, []);
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -81,6 +94,9 @@ export function ContactSection() {
     formData.forEach((value, key) => {
       payload[key] = typeof value === "string" ? value : "";
     });
+    // Refresh the live submit page — first-touch values are already in the
+    // hidden inputs, but submitted_page must reflect this actual submission.
+    payload["submitted_page"] = getSubmittedPage();
     if (token) payload["cf-turnstile-response"] = token;
 
     try {
@@ -191,6 +207,71 @@ export function ContactSection() {
               >
                 <input type="hidden" name="form-name" value="contact" />
                 <input type="hidden" name="bot-field" />
+                {/* Enquiry source capture — 2026-06-26: first-touch
+                    attribution. Real hidden inputs so the values post to
+                    Netlify Forms; populated from localStorage on mount. The
+                    matching field names live in public/__forms.html so Netlify
+                    registers and stores them. */}
+                <input
+                  type="hidden"
+                  name="utm_source"
+                  value={attribution?.utm_source ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="utm_medium"
+                  value={attribution?.utm_medium ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="utm_campaign"
+                  value={attribution?.utm_campaign ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="utm_term"
+                  value={attribution?.utm_term ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="utm_content"
+                  value={attribution?.utm_content ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="gclid"
+                  value={attribution?.gclid ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="fbclid"
+                  value={attribution?.fbclid ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="referrer"
+                  value={attribution?.referrer ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="landing_page"
+                  value={attribution?.landing_page ?? ""}
+                  readOnly
+                />
+                <input
+                  type="hidden"
+                  name="submitted_page"
+                  value={attribution?.submitted_page ?? ""}
+                  readOnly
+                />
                 <div>
                   <label
                     htmlFor="enquiry_type"
