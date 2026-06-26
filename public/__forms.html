@@ -9,6 +9,19 @@
       <input name="name" type="text" />
       <input name="email" type="email" />
       <textarea name="message"></textarea>
+      <!-- Enquiry source capture — 2026-06-26: first-touch attribution.
+           Field names must match the hidden inputs in ContactSection.tsx
+           character for character or Netlify drops them silently. -->
+      <input type="hidden" name="utm_source" />
+      <input type="hidden" name="utm_medium" />
+      <input type="hidden" name="utm_campaign" />
+      <input type="hidden" name="utm_term" />
+      <input type="hidden" name="utm_content" />
+      <input type="hidden" name="gclid" />
+      <input type="hidden" name="fbclid" />
+      <input type="hidden" name="referrer" />
+      <input type="hidden" name="landing_page" />
+      <input type="hidden" name="submitted_page" />
     </form>
   </body>
 </html>
