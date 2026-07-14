@@ -9,6 +9,8 @@ import { generateSchema } from "@/lib/schema";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 // SEO launch prep — 2026-04-27
 import { TrackedLink } from "@/components/ui/TrackedLink";
+// Ludlow enquiry form — 2026-07-14
+import { LudlowEnquiryForm } from "@/components/LudlowEnquiryForm";
 import { renderInlineLinks } from "@/lib/inline-md";
 
 export function generateMetadata(): Metadata {
@@ -229,6 +231,9 @@ export default function LudlowPage() {
           )}
         </div>
       </section>
+
+      {/* Enquiry form */}
+      <LudlowEnquiryForm />
 
       {/* Visit section */}
       <section className="bg-ink px-6 py-16 md:px-12 md:py-32">
