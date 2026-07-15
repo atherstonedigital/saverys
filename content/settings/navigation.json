@@ -13,7 +13,22 @@
         { "label": "Oriental Rugs", "href": "/oriental-rugs" }
       ]
     },
-    { "label": "Services", "href": "/services" },
+    {
+      "label": "Services",
+      "href": "/services",
+      "children": [
+        { "label": "Full home interior design", "href": "/services#full-home-interior-design" },
+        { "label": "Hand upholstery & reupholstery", "href": "/services#hand-upholstery-and-reupholstery" },
+        { "label": "Bespoke furnishings", "href": "/services#bespoke-furnishings" },
+        { "label": "Bespoke furniture", "href": "/services#bespoke-furniture" },
+        { "label": "Curtains & soft furnishings", "href": "/services#curtains-and-soft-furnishings" },
+        { "label": "Upholstery fabrics", "href": "/fabrics" },
+        { "label": "Furniture sourcing & antiques", "href": "/services#furniture-sourcing-and-antiques" },
+        { "label": "Colour consultation", "href": "/services#colour-consultation" },
+        { "label": "Home staging", "href": "/services#home-staging" },
+        { "label": "Project management", "href": "/services#project-management" }
+      ]
+    },
     { "label": "Journal", "href": "/journal" },
     { "label": "Contact", "href": "/contact" },
     { "label": "Shop", "href": "https://shop.saverys.co.uk/" }

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Text } from "@/components/ui/Text";
 import { SectionReveal } from "@/components/ui/SectionReveal";
+import { slugify } from "@/lib/utils";
 
 interface Service {
   title: string;
@@ -22,7 +23,10 @@ export function ServicesOverview({ services }: ServicesOverviewProps) {
           const isEven = i % 2 === 0;
           return (
             <SectionReveal key={service.title} delay={i * 0.1}>
-              <div className="border-t border-clay/30 py-12 md:py-20">
+              <div
+                id={slugify(service.title)}
+                className="scroll-mt-24 border-t border-clay/30 py-12 md:py-20"
+              >
                 <div className="grid grid-cols-1 items-center gap-10 md:grid-cols-2 md:gap-16">
                   {/* Text — alternates left/right */}
                   <div

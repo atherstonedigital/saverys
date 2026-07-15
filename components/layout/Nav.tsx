@@ -296,10 +296,10 @@ export function Nav({ items }: NavProps) {
         </div>
       </nav>
 
-      {/* Mobile overlay */}
+      {/* Mobile overlay, scrollable so longer dropdown groups stay reachable */}
       {isMobileOpen && (
-        <div className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-ink">
-          <div className="flex flex-col items-center gap-8">
+        <div className="fixed inset-0 z-40 overflow-y-auto bg-ink">
+          <div className="flex min-h-full flex-col items-center justify-center gap-8 px-6 py-28">
             {items.map(renderMobileLink)}
           </div>
         </div>
