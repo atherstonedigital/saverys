@@ -428,6 +428,80 @@ collections:
               - { label: "Button Text", name: "buttonText", widget: "string" }
               - { label: "Button Link", name: "buttonLink", widget: "string" }
 
+      - name: "fabrics"
+        label: "Fabrics"
+        file: "content/pages/fabrics.json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Full browser tab title including '| Savery's of Broadway'" }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "160 characters max. Shown in Google search results." }
+              - { label: "Social Image", name: "ogImage", widget: "image", required: false, hint: "1200x630px. Falls back to default if empty." }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: true, hint: "Describe the image for screen readers and SEO" }
+          - label: "How we choose fabric"
+            name: "howWeChoose"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, hint: "Inline links use [text](/path) or [text](https://...)" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: true }
+          - label: "Plains"
+            name: "plains"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Colours", name: "colours", widget: "list", field: { label: "Colour name", name: "colour", widget: "string" }, hint: "Colour names only. Never name fabric suppliers." }
+          - label: "Checks, stripes and tickings"
+            name: "patterns"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Designs", name: "designs", widget: "list", field: { label: "Design name", name: "design", widget: "string" }, hint: "Design names only. Never name fabric suppliers." }
+              - { label: "Colourways", name: "colourways", widget: "list", field: { label: "Colourway", name: "colourway", widget: "string" } }
+              - { label: "Note", name: "note", widget: "text", required: false, hint: "Optional closing line under the colourway list" }
+          - label: "Natural fibres"
+            name: "naturalFibres"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, hint: "Inline links use [text](/path)" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: true }
+          - label: "See the fabrics on furniture"
+            name: "shop"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - label: "Shop collections"
+                name: "collections"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Link", name: "href", widget: "string", hint: "e.g. https://shop.saverys.co.uk/collections/sofas" }
+              - { label: "Button Text", name: "buttonText", widget: "string" }
+              - { label: "Button Link", name: "buttonLink", widget: "string" }
+          - label: "Visit a showroom"
+            name: "showrooms"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body", name: "body", widget: "text", hint: "Inline links use [text](/path)" }
+
       - name: "projects-page"
         label: "Projects Page"
         file: "content/pages/projects.json"
