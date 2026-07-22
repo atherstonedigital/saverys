@@ -1,11 +1,18 @@
 ---
 title: "How to choose upholstery fabric: a workshop guide"
 date: 2026-07-22T09:00:00.000Z
-summary: "What actually matters when choosing upholstery fabric: martindale rub counts explained, natural versus synthetic fibres, pattern matching, and the checks our upholsterers run before a single staple goes in."
+featuredImage: /images/saverys broadway shop 1.webp
+featuredImageAlt: "FABRIC IMAGE "
+summary: "What actually matters when choosing upholstery fabric: martindale rub
+  counts explained, natural versus synthetic fibres, pattern matching, and the
+  checks our upholsterers run before a single staple goes in."
 tags:
   - fabrics
   - upholstery
   - buying guides
+seoTitle: "What actually matters when choosing upholstery fabric: martindale rub
+  counts explained, natural versus synthetic fibres, pattern matching, and the
+  checks our upholsterers run before a single staple goes in."
 ---
 
 Most upholstery projects that go wrong go wrong at the fabric stage. The frame is sound, the workmanship is fine, but the fabric was chosen on looks alone and starts pilling, fading or wearing through within two years. After eight decades of upholstering furniture in our workshop, we can usually predict which fabrics will still look right in ten years and which will not. The good news is that you can too, because it comes down to a handful of checks.
