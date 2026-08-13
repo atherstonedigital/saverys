@@ -1,7 +1,11 @@
 ---
-title: "How to choose an interior designer in the Cotswolds"
+title: How to choose an interior designer in the Cotswolds
 date: 2026-08-13T09:00:00.000Z
-summary: "What to look for, what to ask, and how fees actually work when you appoint an interior designer for a Cotswolds home. Practical guidance from a studio that has been doing this since 1942."
+featuredImage: /images/20260323_135019.jpg
+featuredImageAlt: "cotswald building in broadway "
+summary: What to look for, what to ask, and how fees actually work when you
+  appoint an interior designer for a Cotswolds home. Practical guidance from a
+  studio that has been doing this since 1942.
 tags:
   - Cotswolds
   - interior design
