@@ -19,7 +19,7 @@ The Cotswold Design Centre is where Savery's has been based since the early days
 
 ## What you'll find
 
-The showroom itself is arranged not as a retail display but as a working library. Thousands of fabric samples from the houses we've built relationships with over three decades line the walls and fill the drawers: linens from Belgium, silks from Italy, wools from the Scottish Borders, and cottons from English mills that have been weaving since the Victorian era. These aren't curated to look impressive on a shelf. They're here because we use them — because we've tested them, upholstered with them, and watched how they behave over years of use in our clients' homes.
+The showroom itself is arranged not as a retail display but as a working library. Thousands of fabric samples from the houses we've built relationships with over more than eighty years line the walls and fill the drawers: linens from Belgium, silks from Italy, wools from the Scottish Borders, and cottons from English mills that have been weaving since the Victorian era. These aren't curated to look impressive on a shelf. They're here because we use them — because we've tested them, upholstered with them, and watched how they behave over years of use in our clients' homes.
 
 Beyond fabrics, the showroom holds our rug collections — handknotted pieces sourced from workshops we trust — alongside wallpaper books, trimmings, and the smaller details that bring a scheme together. A passementerie that finishes a pelmet. A gimp braid that defines the edge of a chair seat. These are the details that most people never notice consciously but that register as quality when they enter a well-made room.
 

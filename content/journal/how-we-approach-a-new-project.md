@@ -9,7 +9,7 @@ tags:
   - Country House
   - Cotswolds
 seoTitle: "Our Interior Design Process | How We Work | Savery's of Broadway"
-seoDescription: "How Savery's of Broadway approaches interior design projects — from first consultation to finished room. Personal, consultative, and rooted in 30 years of experience."
+seoDescription: "How Savery's of Broadway approaches interior design projects — from first consultation to finished room. Personal, consultative, and rooted in more than eighty years of experience."
 ---
 
 Every project begins with a visit. Not a questionnaire, not a mood board exercise, not a video call — a visit. We come to the house, we walk through the rooms, we look at the light, we sit where the family sits. We want to understand the building before we start drawing.
