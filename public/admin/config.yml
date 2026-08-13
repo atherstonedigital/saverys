@@ -502,6 +502,36 @@ collections:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body", name: "body", widget: "text", hint: "Inline links use [text](/path)" }
 
+      - name: "cotswolds"
+        label: "Cotswolds"
+        file: "content/pages/cotswolds.json"
+        fields:
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page Title", name: "title", widget: "string", hint: "Full browser tab title including '| Savery's of Broadway'" }
+              - { label: "Meta Description", name: "description", widget: "text", hint: "160 characters max. Shown in Google search results." }
+              - { label: "Social Image", name: "ogImage", widget: "image", required: false, hint: "1200x630px. Falls back to default if empty." }
+          - label: "Hero"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "text", required: false }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: true, hint: "Describe the image for screen readers and SEO" }
+          - { label: "Intro", name: "intro", widget: "text" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Paragraphs", name: "paragraphs", widget: "list", field: { label: "Paragraph", name: "paragraph", widget: "text" }, hint: "Inline links use [text](/path)" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: true }
+
       - name: "projects-page"
         label: "Projects Page"
         file: "content/pages/projects.json"
