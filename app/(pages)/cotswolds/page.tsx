@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { Hero } from "@/components/sections/Hero";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { SectionReveal } from "@/components/ui/SectionReveal";
 import { Text } from "@/components/ui/Text";
@@ -8,9 +10,14 @@ import { renderInlineLinks } from "@/lib/inline-md";
 
 interface CotswoldsContent {
   seo: { title: string; description: string; ogImage?: string };
-  heading: string;
+  hero: { heading: string; subtitle?: string; image: string; imageAlt: string };
   intro: string;
-  sections: { heading: string; paragraphs: string[] }[];
+  sections: {
+    heading: string;
+    paragraphs: string[];
+    image: string;
+    imageAlt: string;
+  }[];
 }
 
 export function generateMetadata(): Metadata {
@@ -52,32 +59,66 @@ export default function CotswoldsPage() {
 
   return (
     <>
-      <section className="px-6 pt-32 pb-12 md:px-12 md:pt-40 md:pb-16">
-        <div className="mx-auto max-w-3xl">
-          <Text as="h1">{content.heading}</Text>
-          <Text variant="body" className="mt-6 text-stone">
-            {renderInlineLinks(content.intro)}
-          </Text>
-        </div>
-      </section>
+      <Hero
+        heading={content.hero.heading}
+        subtitle={content.hero.subtitle}
+        image={content.hero.image}
+        imageAlt={content.hero.imageAlt}
+      />
       <Breadcrumbs
         items={[{ name: "Interior design in the Cotswolds", href: "/cotswolds" }]}
       />
 
-      {content.sections.map((section) => (
-        <section key={section.heading} className="px-6 py-10 md:px-12 md:py-16">
-          <div className="mx-auto max-w-3xl">
-            <SectionReveal>
-              <Text as="h2">{section.heading}</Text>
-              {section.paragraphs.map((p, i) => (
-                <Text key={i} variant="body" className="mt-6 text-stone">
-                  {renderInlineLinks(p)}
-                </Text>
-              ))}
-            </SectionReveal>
-          </div>
-        </section>
-      ))}
+      {/* Intro */}
+      <section className="px-6 py-10 md:px-12 md:py-16">
+        <div className="mx-auto max-w-3xl">
+          <SectionReveal>
+            <Text variant="body" className="text-stone">
+              {renderInlineLinks(content.intro)}
+            </Text>
+          </SectionReveal>
+        </div>
+      </section>
+
+      {/* Alternating sections, Broadway showroom pattern */}
+      {content.sections.map((section, i) => {
+        const isEven = i % 2 === 0;
+        return (
+          <section
+            key={section.heading}
+            className={`px-6 py-16 md:px-12 md:py-32 ${
+              !isEven ? "bg-linen" : ""
+            }`}
+          >
+            <div className="mx-auto max-w-7xl">
+              <div className="grid grid-cols-1 gap-16 md:grid-cols-2 md:items-center">
+                <SectionReveal>
+                  <Text as="h2">{section.heading}</Text>
+                  {section.paragraphs.map((p, j) => (
+                    <Text key={j} variant="body" className="mt-6 text-stone">
+                      {renderInlineLinks(p)}
+                    </Text>
+                  ))}
+                </SectionReveal>
+
+                <div
+                  className={`relative w-full overflow-hidden ${
+                    isEven ? "aspect-[3/4]" : "aspect-[4/3] md:order-first"
+                  }`}
+                >
+                  <Image
+                    src={section.image}
+                    alt={section.imageAlt}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        );
+      })}
     </>
   );
 }
