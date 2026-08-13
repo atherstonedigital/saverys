@@ -3,34 +3,46 @@
     "title": "Interior design in the Cotswolds | Savery's of Broadway",
     "description": "Full interior design, bespoke upholstery, curtains and soft furnishings from a Cotswolds studio established in 1942. Room schemes and whole houses, designed and made by our own workshop."
   },
-  "heading": "Interior design in the Cotswolds",
+  "hero": {
+    "heading": "Interior design in the Cotswolds",
+    "image": "/images/The-Old-Mill-Broadway-039-scaled-1.webp",
+    "imageAlt": "Sitting room of a Cotswolds stone house designed by Saverys"
+  },
   "intro": "Saverys is an interior design studio rooted in the Cotswolds, established in 1942. We design complete rooms and whole houses, and we make much of what we design: upholstery bench-built in our own workshop, curtains and soft furnishings sewn in-house, furniture built from the frame up.",
   "sections": [
     {
       "heading": "What we do",
       "paragraphs": [
         "Our work covers full interior design, from first conversation to final styling, alongside the individual services that sit inside it. Bespoke sofas and chairs, hand upholstery and reupholstery, made-to-measure curtains and blinds, cushions, headboards and the soft furnishings that finish a room. Clients come to us for a single beautiful chair as often as for an entire house, and both are welcome."
-      ]
+      ],
+      "image": "/images/projects/old-mill-chair.webp",
+      "imageAlt": "Upholstered armchair beside a window in a Cotswolds stone house"
     },
     {
       "heading": "Designing for Cotswolds houses",
       "paragraphs": [
         "The houses of this region ask particular questions. Stone walls hold colour and light differently to plaster. Older cottages have low ceilings, deep windowsills and small openings that change how fabric behaves. Many properties are listed, which shapes what can be fixed, hung and altered. We have spent decades designing for these buildings, and our schemes are built around how a room actually receives light through the day, not how it photographs.",
         "That is also why fabric decisions happen in your rooms rather than ours. We bring samples to your house and look at them in your light, at the times of day you use the room, before anything is ordered."
-      ]
+      ],
+      "image": "/images/The-Old-Mill-Broadway-028-scaled-1 (1).webp",
+      "imageAlt": "Living space in a converted Cotswolds mill with exposed stone walls"
     },
     {
       "heading": "Designed here, made here",
       "paragraphs": [
         "Most design studios specify; we also make. When a scheme calls for a sofa, it is built by our own upholsterers on seasoned hardwood frames with hand-tied springs. When it calls for curtains, they are cut and sewn in our Ludlow workroom. Keeping the making close to the design means quality is checked by the people who will answer for it, lead times are ours to control, and nothing is lost between the drawing and the finished piece."
-      ]
+      ],
+      "image": "/images/upholstery work shop 2.webp",
+      "imageAlt": "Upholstery in progress in the Saverys Broadway workshop"
     },
     {
       "heading": "How a project works",
       "paragraphs": [
         "Every project starts with listening. We talk about how you live, what the room is for and what it should feel like, then develop a scheme with fabrics, finishes and furniture, presented in a way that is easy to react to. From there we handle the ordering, the making and the installation, and we stay involved until the room is complete and feels as though it has always been there.",
         "If you are considering a project in the Cotswolds or beyond, [get in touch](/contact) to arrange a conversation. There is no charge for the first one and no obligation to go further."
-      ]
+      ],
+      "image": "/images/projects/jams-house-living.webp",
+      "imageAlt": "Finished living room scheme with bespoke soft furnishings"
     }
   ]
 }
