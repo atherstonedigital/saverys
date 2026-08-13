@@ -13,7 +13,7 @@ export function generateMetadata(): Metadata {
     seo,
     "/about",
     "Our History — Interior Design Since 1942",
-    "Savery's of Broadway: luxury interior design since 1942. Three decades crafting bespoke Cotswolds interiors with care, quality, and timeless style.",
+    "Savery's of Broadway: luxury interior design since 1942. More than eighty years crafting bespoke Cotswolds interiors with care, quality, and timeless style.",
   );
 }
 

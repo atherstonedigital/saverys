@@ -21,7 +21,7 @@ seoDescription: Expert guidance on choosing upholstery fabric from Savery's of
 
 Choosing upholstery fabric is one of the most consequential decisions in any interior scheme. The fabric you select will determine how a room feels to sit in, how it ages, how light plays across its surfaces, and, practically, how it holds up against the realities of daily life. A poorly chosen fabric on a [beautifully made sofa](/journal/anatomy-of-a-hand-sprung-seat) is a waste of good craftsmanship. A well-chosen one becomes more beautiful with time.
 
-In our [Broadway workshop](/workshop), we've been upholstering furniture by hand for over thirty years. We've seen what lasts, what fades, what pills after a season, and what still looks impeccable after a decade. This guide draws on that experience: not theory, but the accumulated knowledge of working with fabric every day.
+In our [Broadway workshop](/workshop), we've been upholstering furniture by hand for more than eighty years. We've seen what lasts, what fades, what pills after a season, and what still looks impeccable after a decade. This guide draws on that experience: not theory, but the accumulated knowledge of working with fabric every day.
 
 ## Start with how the piece will be used
 

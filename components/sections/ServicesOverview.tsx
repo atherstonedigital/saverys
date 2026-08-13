@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { Text } from "@/components/ui/Text";
 import { SectionReveal } from "@/components/ui/SectionReveal";
+import { renderInlineLinks } from "@/lib/inline-md";
 import { slugify } from "@/lib/utils";
 
 interface Service {
@@ -43,7 +44,7 @@ export function ServicesOverview({ services }: ServicesOverviewProps) {
                         !isEven ? "md:ml-auto" : ""
                       }`}
                     >
-                      {service.description}
+                      {renderInlineLinks(service.description)}
                     </Text>
                     <a
                       href="/contact"
