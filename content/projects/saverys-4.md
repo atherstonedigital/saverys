@@ -1,21 +1,23 @@
 ---
-title: "Elmswood"
-slug: "saverys-4"
-location: "Moreton-in-Marsh, Gloucestershire"
+title: Elmswood
+slug: saverys-4
+location: Moreton-in-Marsh, Gloucestershire
 year: ""
-description: "Elegant restraint in a Georgian dower house. Light, linen, and quietness throughout."
-heroImage: "/images/hero/home.webp"
-heroImageAlt: "Elmswood interior — drawing room with pale sofa, botanical cushions, and a garden view in a Georgian dower house, Moreton-in-Marsh"
+description: Elegant restraint in a Georgian dower house. Light, linen, and
+  quietness throughout.
+heroImage: /images/saverys5_654654121_18159191851434876_2563021976750629333_n.jpg
+heroImageAlt: Elmswood interior — drawing room with pale sofa, botanical
+  cushions, and a garden view in a Georgian dower house, Moreton-in-Marsh
 gallery:
-  - image: "/images/hero/home.webp"
-    alt: "Pale sofa with botanical cushions and garden view"
-    orientation: "landscape"
-  - image: "/images/hero/about.webp"
-    alt: "Floral nursing chair by window"
-    orientation: "portrait"
-  - image: "/images/projects/old-mill-bedroom.webp"
-    alt: "Bedroom dressed in botanical tree-print fabric"
-    orientation: "landscape"
+  - image: /images/hero/home.webp
+    alt: Pale sofa with botanical cushions and garden view
+    orientation: landscape
+  - image: /images/hero/about.webp
+    alt: Floral nursing chair by window
+    orientation: portrait
+  - image: /images/projects/old-mill-bedroom.webp
+    alt: Bedroom dressed in botanical tree-print fabric
+    orientation: landscape
 featured: false
 order: 4
 date: 2026-04-27T00:00:00.000Z
